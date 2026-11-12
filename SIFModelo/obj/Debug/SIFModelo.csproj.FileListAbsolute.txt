@@ -1,0 +1,75 @@
+E:\Versiones en Produccion\ComprasB\SIFModelo\bin\Debug\SIFModelo.dll.config
+E:\Versiones en Produccion\ComprasB\SIFModelo\bin\Debug\SIFModelo.dll
+E:\Versiones en Produccion\ComprasB\SIFModelo\bin\Debug\SIFModelo.pdb
+E:\Versiones en Produccion\ComprasB\SIFModelo\bin\Debug\Oracle.DataAccess.dll
+E:\Versiones en Produccion\ComprasB\SIFModelo\obj\Debug\SIFModelo.csprojResolveAssemblyReference.cache
+E:\Versiones en Produccion\ComprasB\SIFModelo\obj\Debug\SIFModelo.dll
+E:\Versiones en Produccion\ComprasB\SIFModelo\obj\Debug\SIFModelo.pdb
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFModelo\bin\Debug\SIFModelo.dll.config
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFModelo\bin\Debug\SIFModelo.dll
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFModelo\bin\Debug\SIFModelo.pdb
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFModelo\bin\Debug\Oracle.DataAccess.dll
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFModelo\obj\Debug\SIFModelo.csprojResolveAssemblyReference.cache
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFModelo\obj\Debug\SIFModelo.dll
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFModelo\obj\Debug\SIFModelo.pdb
+C:\CODIGO\COMPRAS\COMPRAS\SIFModelo\bin\Debug\SIFModelo.dll.config
+C:\CODIGO\COMPRAS\COMPRAS\SIFModelo\bin\Debug\SIFModelo.dll
+C:\CODIGO\COMPRAS\COMPRAS\SIFModelo\bin\Debug\SIFModelo.pdb
+C:\CODIGO\COMPRAS\COMPRAS\SIFModelo\obj\Debug\SIFModelo.csprojResolveAssemblyReference.cache
+C:\CODIGO\COMPRAS\COMPRAS\SIFModelo\obj\Debug\SIFModelo.dll
+C:\CODIGO\COMPRAS\COMPRAS\SIFModelo\obj\Debug\SIFModelo.pdb
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFModelo\bin\Debug\SIFModelo.dll.config
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFModelo\bin\Debug\SIFModelo.dll
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFModelo\bin\Debug\SIFModelo.pdb
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFModelo\obj\Debug\SIFModelo.csprojResolveAssemblyReference.cache
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFModelo\obj\Debug\SIFModelo.dll
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFModelo\obj\Debug\SIFModelo.pdb
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\bin\Debug\SIFModelo.dll.config
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\bin\Debug\SIFModelo.dll
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\bin\Debug\SIFModelo.pdb
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\obj\Debug\SIFModelo.csprojAssemblyReference.cache
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\obj\Debug\SIFModelo.csproj.CoreCompileInputs.cache
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\obj\Debug\SIFModelo.csproj.CopyComplete
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\obj\Debug\SIFModelo.dll
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\obj\Debug\SIFModelo.pdb
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\bin\Debug\Oracle.DataAccess.dll
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\bin\Debug\SIFModelo.dll.config
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\bin\Debug\SIFModelo.dll
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\bin\Debug\SIFModelo.pdb
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\obj\Debug\SIFModelo.csprojAssemblyReference.cache
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\obj\Debug\SIFModelo.csproj.CoreCompileInputs.cache
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\obj\Debug\SIFModelo.csproj.CopyComplete
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\obj\Debug\SIFModelo.dll
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFModelo\obj\Debug\SIFModelo.pdb
+C:\_codigosProduc\SifCompras\compras\SIFModelo\bin\Debug\SIFModelo.dll.config
+C:\_codigosProduc\SifCompras\compras\SIFModelo\bin\Debug\SIFModelo.dll
+C:\_codigosProduc\SifCompras\compras\SIFModelo\bin\Debug\SIFModelo.pdb
+C:\_codigosProduc\SifCompras\compras\SIFModelo\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\_codigosProduc\SifCompras\compras\SIFModelo\obj\Debug\SIFModelo.csprojAssemblyReference.cache
+C:\_codigosProduc\SifCompras\compras\SIFModelo\obj\Debug\SIFModelo.csproj.CopyComplete
+C:\_codigosProduc\SifCompras\compras\SIFModelo\obj\Debug\SIFModelo.dll
+C:\_codigosProduc\SifCompras\compras\SIFModelo\obj\Debug\SIFModelo.pdb
+C:\FlemingWorkspace\ComprasSIF\ComprasOFA\SIFModelo\bin\Debug\SIFModelo.dll.config
+C:\FlemingWorkspace\ComprasSIF\ComprasOFA\SIFModelo\bin\Debug\SIFModelo.dll
+C:\FlemingWorkspace\ComprasSIF\ComprasOFA\SIFModelo\bin\Debug\SIFModelo.pdb
+C:\FlemingWorkspace\ComprasSIF\ComprasOFA\SIFModelo\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\FlemingWorkspace\ComprasSIF\ComprasOFA\SIFModelo\bin\Debug\Oracle.DataAccess.dll
+C:\FlemingWorkspace\ComprasSIF\ComprasOFA\SIFModelo\obj\Debug\SIFModelo.csproj.AssemblyReference.cache
+C:\FlemingWorkspace\ComprasSIF\ComprasOFA\SIFModelo\obj\Debug\SIFModelo.csproj.CoreCompileInputs.cache
+C:\FlemingWorkspace\ComprasSIF\ComprasOFA\SIFModelo\obj\Debug\SIFModelo.csproj.CopyComplete
+C:\FlemingWorkspace\ComprasSIF\ComprasOFA\SIFModelo\obj\Debug\SIFModelo.dll
+C:\FlemingWorkspace\ComprasSIF\ComprasOFA\SIFModelo\obj\Debug\SIFModelo.pdb
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\bin\Debug\SIFModelo.dll.config
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\bin\Debug\SIFModelo.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\bin\Debug\SIFModelo.pdb
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\bin\Debug\Newtonsoft.Json.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\bin\Debug\Oracle.DataAccess.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\bin\Debug\Newtonsoft.Json.xml
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\obj\Debug\SIFModelo.csproj.AssemblyReference.cache
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\obj\Debug\SIFModelo.csproj.CoreCompileInputs.cache
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\obj\Debug\SIFModelo.csproj.CopyComplete
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\obj\Debug\SIFModelo.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFModelo\obj\Debug\SIFModelo.pdb

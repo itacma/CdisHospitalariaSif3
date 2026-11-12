@@ -1,0 +1,241 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace SIFModelo.OrdenCompra
+{
+    public class InfromacionMayorista
+    {
+        public int ID
+        {
+            get;
+            set;
+        }
+
+        public int TIPO4
+        {
+            get;
+            set;
+        }
+
+        public int TIPO3
+        {
+            get;
+            set;
+        }
+
+
+        public int TIPO2
+        {
+            get;
+            set;
+        }
+
+        public int TIPO1
+        {
+            get;
+            set;
+        }
+
+        public string TIPO_MEDICAMENTO
+        {
+            get;
+            set;
+        }
+
+        public string STATUS
+        {
+            get;
+            set;
+        }
+
+        public int PROVEEDOR_ID
+        {
+            get;
+            set;
+        }
+
+        public SIFModelo.Tipos.SiNo PEDIR
+        {
+            get;
+            set;
+        }
+
+        public DateTime? FECHA_ACTUALIZACION
+        {
+            get;
+            set;
+        }
+
+        public SIFModelo.Tipos.TipoStatusMayorista EDO_COMPRA_SABA
+        {
+            get;
+            set;
+        }
+
+        public SIFModelo.Tipos.TipoStatusMayorista EDO_COMPRA_NADRO
+        {
+            get;
+            set;
+        }
+
+        public SIFModelo.Tipos.TipoStatusMayorista EDO_COMPRA_DROGUEROS
+        {
+            get;
+            set;
+        }
+
+        public SIFModelo.Tipos.TipoStatusMayorista EDO_COMPRA_MARZAM
+        {
+            get;
+            set;
+        }
+
+        public decimal DESCUENTO_SABA
+        {
+            get;
+            set;
+        }
+
+        public decimal DESCUENTO_NADRO
+        {
+            get;
+            set;
+        }
+
+        public decimal DESCUENTO_DROGUEROS
+        {
+            get;
+            set;
+        }
+
+        public decimal DESCUENTO_MARZAM
+        {
+            get;
+            set;
+        }
+
+        public decimal DESCTO_ADICIONAL_SABA
+        {
+            get;
+            set;
+        }
+
+        public decimal DESCTO_ADICIONAL_NADRO
+        {
+            get;
+            set;
+        }
+
+
+        public decimal DESCTO_ADICIONAL_DROGUEROS
+        {
+            get;
+            set;
+        }
+
+        public decimal DESCTO_ADICIONAL_MARZAM
+        {
+            get;
+            set;
+        }
+
+        public SIFModelo.Tipos.ComprarConMayorista COMPRA_CON_MAYORISTA
+        {
+            get;
+            set;
+        }
+
+        public string CODIGO_SABA
+        {
+            get;
+            set;
+        }
+
+        public string CODIGO_NADRO
+        {
+            get;
+            set;
+        }
+
+        public string CODIGO_DROGUEROS
+        {
+            get;
+            set;
+        }
+        public string CODIGO_MARZAM
+        {
+            get;
+            set;
+        }
+
+        public int CANTIDAD_MINIMA_COMPRA
+        {
+            get;
+            set;
+        }
+
+        public int CANTIDAD_COMPRAR
+        {
+            get;
+            set;
+        }
+
+        public string ARTICULO_ID
+        {
+            get;
+            set;
+        }
+
+        public DateTime? PERIODO_COMPRA_INICIO
+        {
+            get;
+            set;
+        }
+
+        public DateTime? PERIODO_COMPRA_FIN
+        {
+            get;
+            set;
+        }
+
+        public SIFModelo.Tipos.SiNo Bloqueado
+        {
+            get;
+            set;
+        }
+
+        public string comprador_id { get; set; }
+        public float PORCENTAJE_IESPS { get; set; }
+
+        public float PORCENTAJE_IVA { get; set; }
+
+        public SIFModelo.Tipos.TipoStatusMayorista EDO_COMPRA
+        {
+            get;
+            set;
+        }
+        public int tipo6
+        {
+            get;
+            set;
+        }
+        public int tipo7
+        {
+            get;
+            set;
+        }
+
+
+        public string colorRGB {
+            get;set;
+        
+        } // Se requiere   un color para antimicrobianos
+        public  int alertaAlComprar {
+            get;set;
+        
+        }
+
+    }
+}

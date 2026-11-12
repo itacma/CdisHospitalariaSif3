@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ControladoDataSet" targetNamespace="http://tempuri.org/ControladoDataSet.xsd" xmlns:mstns="http://tempuri.org/ControladoDataSet.xsd" xmlns="http://tempuri.org/ControladoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" IsAppSettingsProperty="true" Modifier="Public" Name="ConnectionString (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.SIFModelo.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="Oracle.DataAccess.Client" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString5" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Public" Name="ConnectionString5 (Settings)" PropertyReference="ApplicationSettings.SIFModelo.Properties.Settings.GlobalReference.Default.ConnectionString5" Provider="System.Data.OracleClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CONTROLADOSTableAdapter" GeneratorDataComponentClassName="CONTROLADOSTableAdapter" Name="CONTROLADOS" UserDataComponentName="CONTROLADOSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString5 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CONTROLADO.SUCURSAL_ID, CONTROLADO.FOLIO, CONTROLADO.MEDICO_ID, CONTROLADO.FECHA_ENTREGA, 
+                      CONTROLADO.USUARIO_ID, CONTROLADO.REMISION_ID, CONTROLADO.ACTIVO, CONTROLADO.RECETA, 
+                      CONTROLADO.ENTREGA_ID, CONCAT(CONCAT(CAT_USUARIOS.NOMBRE, ' '), CAT_USUARIOS.APELLIDOS) 
+                      AS CAT_USUARIOS_NOMBRE, CONCAT(CONCAT(CAT_USUARIOS_1.NOMBRE, ' '), CAT_USUARIOS_1.APELLIDOS) AS CAT_USUARIOS_RECIBE_NOMBRE, 
+                      CAT_SUCURSALES.NOMBRE AS SUCURSAL_NOMBRE, CONTROLADO.RETENCION_RECETA
+FROM         CONTROLADO INNER JOIN
+                      CAT_USUARIOS ON CONTROLADO.USUARIO_ID = CAT_USUARIOS.USUARIOS_ID INNER JOIN
+                      CAT_SUCURSALES ON CONTROLADO.SUCURSAL_ID = CAT_SUCURSALES.SUCURSALES_ID LEFT OUTER JOIN
+                      CAT_USUARIOS CAT_USUARIOS_1 ON CONTROLADO.ENTREGA_ID = CAT_USUARIOS_1.USUARIOS_ID
+ORDER BY FECHA_ENTREGA DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SUCURSAL_ID" DataSetColumn="SUCURSAL_ID" />
+              <Mapping SourceColumn="FOLIO" DataSetColumn="FOLIO" />
+              <Mapping SourceColumn="MEDICO_ID" DataSetColumn="MEDICO_ID" />
+              <Mapping SourceColumn="FECHA_ENTREGA" DataSetColumn="FECHA_ENTREGA" />
+              <Mapping SourceColumn="USUARIO_ID" DataSetColumn="USUARIO_ID" />
+              <Mapping SourceColumn="REMISION_ID" DataSetColumn="REMISION_ID" />
+              <Mapping SourceColumn="ACTIVO" DataSetColumn="ACTIVO" />
+              <Mapping SourceColumn="RECETA" DataSetColumn="RECETA" />
+              <Mapping SourceColumn="ENTREGA_ID" DataSetColumn="ENTREGA_ID" />
+              <Mapping SourceColumn="CAT_USUARIOS_NOMBRE" DataSetColumn="CAT_USUARIOS_NOMBRE" />
+              <Mapping SourceColumn="CAT_USUARIOS_RECIBE_NOMBRE" DataSetColumn="CAT_USUARIOS_RECIBE_NOMBRE" />
+              <Mapping SourceColumn="SUCURSAL_NOMBRE" DataSetColumn="SUCURSAL_NOMBRE" />
+              <Mapping SourceColumn="RETENCION_RECETA" DataSetColumn="RETENCION_RECETA" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString5 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByFOLIO" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFOLIO" GeneratorSourceName="FillByFOLIO" GetMethodModifier="Public" GetMethodName="GetDataByFOLIO" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFOLIO" UserSourceName="FillByFOLIO">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CONTROLADO.SUCURSAL_ID, CONTROLADO.FOLIO, CONTROLADO.MEDICO_ID, CONTROLADO.FECHA_ENTREGA, CONTROLADO.USUARIO_ID, 
+                      CONTROLADO.REMISION_ID, CONTROLADO.ACTIVO, CONTROLADO.RECETA, CONTROLADO.ENTREGA_ID, CONCAT(CONCAT(CAT_USUARIOS.NOMBRE, ' '), 
+                      CAT_USUARIOS.APELLIDOS) AS CAT_USUARIOS_NOMBRE, CONCAT(CONCAT(CAT_USUARIOS_1.NOMBRE, ' '), CAT_USUARIOS_1.APELLIDOS) 
+                      AS CAT_USUARIOS_RECIBE_NOMBRE, CAT_SUCURSALES.NOMBRE AS SUCURSAL_NOMBRE, CONTROLADO.RETENCION_RECETA
+FROM         CONTROLADO INNER JOIN
+                      CAT_USUARIOS ON CONTROLADO.USUARIO_ID = CAT_USUARIOS.USUARIOS_ID INNER JOIN
+                      CAT_SUCURSALES ON CONTROLADO.SUCURSAL_ID = CAT_SUCURSALES.SUCURSALES_ID LEFT OUTER JOIN
+                      CAT_USUARIOS CAT_USUARIOS_1 ON CONTROLADO.ENTREGA_ID = CAT_USUARIOS_1.USUARIOS_ID
+WHERE     (CONTROLADO.FOLIO LIKE :FOLIO)
+ORDER BY FECHA_ENTREGA DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="FOLIO" ColumnName="FOLIO" DataSourceName="" DataTypeServer="unknown" DbType="AnsiString" Direction="Input" ParameterName="FOLIO" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="FOLIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CONTROLADO_DETTableAdapter" GeneratorDataComponentClassName="CONTROLADO_DETTableAdapter" Name="CONTROLADO_DET" UserDataComponentName="CONTROLADO_DETTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString5 (Settings)" DbObjectName="FARMACIA.CONTROLADO_DET" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM "CONTROLADO_DET" WHERE (("SUCURSAL_ID" = :Original_SUCURSAL_ID) AND ("FOLIO" = :Original_FOLIO) AND ("NUM_PARTIDA" = :Original_NUM_PARTIDA) AND ("ARTICULO_ID" = :Original_ARTICULO_ID) AND ("NOMBRE1" = :Original_NOMBRE1) AND ((:IsNull_NOMBRE2 = 1 AND "NOMBRE2" IS NULL) OR ("NOMBRE2" = :Original_NOMBRE2)) AND ("CANTIDAD" = :Original_CANTIDAD) AND ("PRECIO" = :Original_PRECIO) AND ("IVA" = :Original_IVA) AND ((:IsNull_IMPUESTO_ID = 1 AND "IMPUESTO_ID" IS NULL) OR ("IMPUESTO_ID" = :Original_IMPUESTO_ID)) AND ((:IsNull_DESCUENTO_ID = 1 AND "DESCUENTO_ID" IS NULL) OR ("DESCUENTO_ID" = :Original_DESCUENTO_ID)) AND ("PRECIO_COSTO" = :Original_PRECIO_COSTO) AND ((:IsNull_ACTIVO = 1 AND "ACTIVO" IS NULL) OR ("ACTIVO" = :Original_ACTIVO)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_SUCURSAL_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="SUCURSAL_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_FOLIO" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="FOLIO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_NUM_PARTIDA" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="NUM_PARTIDA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_ARTICULO_ID" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="ARTICULO_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_NOMBRE1" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_NOMBRE2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="NOMBRE2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_NOMBRE2" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_CANTIDAD" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="CANTIDAD" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_PRECIO" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="PRECIO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_IVA" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="IVA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_IMPUESTO_ID" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="IMPUESTO_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_IMPUESTO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="IMPUESTO_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_DESCUENTO_ID" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DESCUENTO_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_DESCUENTO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="DESCUENTO_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_PRECIO_COSTO" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="PRECIO_COSTO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ACTIVO" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="Original_ACTIVO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO "CONTROLADO_DET" ("SUCURSAL_ID", "FOLIO", "NUM_PARTIDA", "ARTICULO_ID", "NOMBRE1", "NOMBRE2", "CANTIDAD", "PRECIO", "IVA", "IMPUESTO_ID", "DESCUENTO_ID", "PRECIO_COSTO", "ACTIVO") VALUES (:SUCURSAL_ID, :FOLIO, :NUM_PARTIDA, :ARTICULO_ID, :NOMBRE1, :NOMBRE2, :CANTIDAD, :PRECIO, :IVA, :IMPUESTO_ID, :DESCUENTO_ID, :PRECIO_COSTO, :ACTIVO)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="SUCURSAL_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="SUCURSAL_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="FOLIO" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="FOLIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="NUM_PARTIDA" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="NUM_PARTIDA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="ARTICULO_ID" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="ARTICULO_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="NOMBRE1" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="NOMBRE2" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="CANTIDAD" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="CANTIDAD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="PRECIO" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="PRECIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="IVA" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="IVA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="IMPUESTO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="IMPUESTO_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="DESCUENTO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="DESCUENTO_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="PRECIO_COSTO" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="PRECIO_COSTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="ACTIVO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     SUCURSAL_ID, FOLIO, NUM_PARTIDA, ARTICULO_ID, NOMBRE1, NOMBRE2, CANTIDAD, PRECIO, IVA, IMPUESTO_ID, DESCUENTO_ID, PRECIO_COSTO, 
+                      ACTIVO
+FROM       CONTROLADO_DET</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE "CONTROLADO_DET" SET "SUCURSAL_ID" = :SUCURSAL_ID, "FOLIO" = :FOLIO, "NUM_PARTIDA" = :NUM_PARTIDA, "ARTICULO_ID" = :ARTICULO_ID, "NOMBRE1" = :NOMBRE1, "NOMBRE2" = :NOMBRE2, "CANTIDAD" = :CANTIDAD, "PRECIO" = :PRECIO, "IVA" = :IVA, "IMPUESTO_ID" = :IMPUESTO_ID, "DESCUENTO_ID" = :DESCUENTO_ID, "PRECIO_COSTO" = :PRECIO_COSTO, "ACTIVO" = :ACTIVO WHERE (("SUCURSAL_ID" = :Original_SUCURSAL_ID) AND ("FOLIO" = :Original_FOLIO) AND ("NUM_PARTIDA" = :Original_NUM_PARTIDA) AND ("ARTICULO_ID" = :Original_ARTICULO_ID) AND ("NOMBRE1" = :Original_NOMBRE1) AND ((:IsNull_NOMBRE2 = 1 AND "NOMBRE2" IS NULL) OR ("NOMBRE2" = :Original_NOMBRE2)) AND ("CANTIDAD" = :Original_CANTIDAD) AND ("PRECIO" = :Original_PRECIO) AND ("IVA" = :Original_IVA) AND ((:IsNull_IMPUESTO_ID = 1 AND "IMPUESTO_ID" IS NULL) OR ("IMPUESTO_ID" = :Original_IMPUESTO_ID)) AND ((:IsNull_DESCUENTO_ID = 1 AND "DESCUENTO_ID" IS NULL) OR ("DESCUENTO_ID" = :Original_DESCUENTO_ID)) AND ("PRECIO_COSTO" = :Original_PRECIO_COSTO) AND ((:IsNull_ACTIVO = 1 AND "ACTIVO" IS NULL) OR ("ACTIVO" = :Original_ACTIVO)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="SUCURSAL_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="SUCURSAL_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="FOLIO" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="FOLIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="NUM_PARTIDA" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="NUM_PARTIDA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="ARTICULO_ID" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="ARTICULO_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="NOMBRE1" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="NOMBRE2" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="CANTIDAD" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="CANTIDAD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="PRECIO" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="PRECIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="IVA" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="IVA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="IMPUESTO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="IMPUESTO_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="DESCUENTO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="DESCUENTO_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="PRECIO_COSTO" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="PRECIO_COSTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="ACTIVO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_SUCURSAL_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="SUCURSAL_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_FOLIO" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="FOLIO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_NUM_PARTIDA" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="NUM_PARTIDA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_ARTICULO_ID" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="ARTICULO_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_NOMBRE1" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_NOMBRE2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="NOMBRE2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_NOMBRE2" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_CANTIDAD" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="CANTIDAD" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_PRECIO" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="PRECIO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_IVA" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="IVA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_IMPUESTO_ID" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="IMPUESTO_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_IMPUESTO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="IMPUESTO_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_DESCUENTO_ID" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DESCUENTO_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_DESCUENTO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="DESCUENTO_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_PRECIO_COSTO" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="PRECIO_COSTO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ACTIVO" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="Original_ACTIVO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SUCURSAL_ID" DataSetColumn="SUCURSAL_ID" />
+              <Mapping SourceColumn="FOLIO" DataSetColumn="FOLIO" />
+              <Mapping SourceColumn="NUM_PARTIDA" DataSetColumn="NUM_PARTIDA" />
+              <Mapping SourceColumn="ARTICULO_ID" DataSetColumn="ARTICULO_ID" />
+              <Mapping SourceColumn="NOMBRE1" DataSetColumn="NOMBRE1" />
+              <Mapping SourceColumn="NOMBRE2" DataSetColumn="NOMBRE2" />
+              <Mapping SourceColumn="CANTIDAD" DataSetColumn="CANTIDAD" />
+              <Mapping SourceColumn="PRECIO" DataSetColumn="PRECIO" />
+              <Mapping SourceColumn="IVA" DataSetColumn="IVA" />
+              <Mapping SourceColumn="IMPUESTO_ID" DataSetColumn="IMPUESTO_ID" />
+              <Mapping SourceColumn="DESCUENTO_ID" DataSetColumn="DESCUENTO_ID" />
+              <Mapping SourceColumn="PRECIO_COSTO" DataSetColumn="PRECIO_COSTO" />
+              <Mapping SourceColumn="ACTIVO" DataSetColumn="ACTIVO" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString5 (Settings)" DbObjectName="FARMACIA.CONTROLADO_DET" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByFOLIO_SUCURSAL" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFOLIO_SUCURSAL" GeneratorSourceName="FillByFOLIO_SUCURSAL" GetMethodModifier="Public" GetMethodName="GetDataByFOLIO_SUCURSAL" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFOLIO_SUCURSAL" UserSourceName="FillByFOLIO_SUCURSAL">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ACTIVO, ARTICULO_ID, CANTIDAD, DESCUENTO_ID, FOLIO, IMPUESTO_ID, IVA, NOMBRE1, NOMBRE2, NUM_PARTIDA, PRECIO, PRECIO_COSTO, SUCURSAL_ID FROM FARMACIA.CONTROLADO_DET WHERE (FOLIO LIKE :FOLIO) AND (SUCURSAL_ID LIKE :SUCURSAL_ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="FOLIO" ColumnName="FOLIO" DataSourceName="FARMACIA.CONTROLADO_DET" DataTypeServer="VARCHAR2(10)" DbType="String" Direction="Input" ParameterName="FOLIO" Precision="0" ProviderType="Varchar2" Scale="0" Size="10" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="SUCURSAL_ID" ColumnName="SUCURSAL_ID" DataSourceName="FARMACIA.CONTROLADO_DET" DataTypeServer="NUMBER" DbType="String" Direction="Input" ParameterName="SUCURSAL_ID" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ControladoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ControladoDataSet" msprop:Generator_UserDSName="ControladoDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CONTROLADOS" msprop:Generator_TableClassName="CONTROLADOSDataTable" msprop:Generator_TableVarName="tableCONTROLADOS" msprop:Generator_TablePropName="CONTROLADOS" msprop:Generator_RowDeletingName="CONTROLADOSRowDeleting" msprop:Generator_RowChangingName="CONTROLADOSRowChanging" msprop:Generator_RowEvHandlerName="CONTROLADOSRowChangeEventHandler" msprop:Generator_RowDeletedName="CONTROLADOSRowDeleted" msprop:Generator_UserTableName="CONTROLADOS" msprop:Generator_RowChangedName="CONTROLADOSRowChanged" msprop:Generator_RowEvArgName="CONTROLADOSRowChangeEvent" msprop:Generator_RowClassName="CONTROLADOSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SUCURSAL_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUCURSAL_ID" msprop:Generator_ColumnPropNameInRow="SUCURSAL_ID" msprop:Generator_ColumnPropNameInTable="SUCURSAL_IDColumn" msprop:Generator_UserColumnName="SUCURSAL_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="FOLIO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" msprop:Generator_UserColumnName="FOLIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MEDICO_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMEDICO_ID" msprop:Generator_ColumnPropNameInRow="MEDICO_ID" msprop:Generator_ColumnPropNameInTable="MEDICO_IDColumn" msprop:Generator_UserColumnName="MEDICO_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHA_ENTREGA" msprop:Generator_ColumnVarNameInTable="columnFECHA_ENTREGA" msprop:Generator_ColumnPropNameInRow="FECHA_ENTREGA" msprop:Generator_ColumnPropNameInTable="FECHA_ENTREGAColumn" msprop:Generator_UserColumnName="FECHA_ENTREGA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="USUARIO_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_ID" msprop:Generator_ColumnPropNameInRow="USUARIO_ID" msprop:Generator_ColumnPropNameInTable="USUARIO_IDColumn" msprop:Generator_UserColumnName="USUARIO_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REMISION_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnREMISION_ID" msprop:Generator_ColumnPropNameInRow="REMISION_ID" msprop:Generator_ColumnPropNameInTable="REMISION_IDColumn" msprop:Generator_UserColumnName="REMISION_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACTIVO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnACTIVO" msprop:Generator_ColumnPropNameInRow="ACTIVO" msprop:Generator_ColumnPropNameInTable="ACTIVOColumn" msprop:Generator_UserColumnName="ACTIVO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RECETA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRECETA" msprop:Generator_ColumnPropNameInRow="RECETA" msprop:Generator_ColumnPropNameInTable="RECETAColumn" msprop:Generator_UserColumnName="RECETA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENTREGA_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnENTREGA_ID" msprop:Generator_ColumnPropNameInRow="ENTREGA_ID" msprop:Generator_ColumnPropNameInTable="ENTREGA_IDColumn" msprop:Generator_UserColumnName="ENTREGA_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_USUARIOS_NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAT_USUARIOS_NOMBRE" msprop:Generator_ColumnPropNameInRow="CAT_USUARIOS_NOMBRE" msprop:Generator_ColumnPropNameInTable="CAT_USUARIOS_NOMBREColumn" msprop:Generator_UserColumnName="CAT_USUARIOS_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_USUARIOS_RECIBE_NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAT_USUARIOS_RECIBE_NOMBRE" msprop:Generator_ColumnPropNameInRow="CAT_USUARIOS_RECIBE_NOMBRE" msprop:Generator_ColumnPropNameInTable="CAT_USUARIOS_RECIBE_NOMBREColumn" msprop:Generator_UserColumnName="CAT_USUARIOS_RECIBE_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUCURSAL_NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUCURSAL_NOMBRE" msprop:Generator_ColumnPropNameInRow="SUCURSAL_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUCURSAL_NOMBREColumn" msprop:Generator_UserColumnName="SUCURSAL_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RETENCION_RECETA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRETENCION_RECETA" msprop:Generator_ColumnPropNameInRow="RETENCION_RECETA" msprop:Generator_ColumnPropNameInTable="RETENCION_RECETAColumn" msprop:Generator_UserColumnName="RETENCION_RECETA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CONTROLADO_DET" msprop:Generator_TableClassName="CONTROLADO_DETDataTable" msprop:Generator_TableVarName="tableCONTROLADO_DET" msprop:Generator_TablePropName="CONTROLADO_DET" msprop:Generator_RowDeletingName="CONTROLADO_DETRowDeleting" msprop:Generator_RowChangingName="CONTROLADO_DETRowChanging" msprop:Generator_RowEvHandlerName="CONTROLADO_DETRowChangeEventHandler" msprop:Generator_RowDeletedName="CONTROLADO_DETRowDeleted" msprop:Generator_UserTableName="CONTROLADO_DET" msprop:Generator_RowChangedName="CONTROLADO_DETRowChanged" msprop:Generator_RowEvArgName="CONTROLADO_DETRowChangeEvent" msprop:Generator_RowClassName="CONTROLADO_DETRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SUCURSAL_ID" msprop:Generator_ColumnVarNameInTable="columnSUCURSAL_ID" msprop:Generator_ColumnPropNameInRow="SUCURSAL_ID" msprop:Generator_ColumnPropNameInTable="SUCURSAL_IDColumn" msprop:Generator_UserColumnName="SUCURSAL_ID" type="xs:short" />
+              <xs:element name="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" msprop:Generator_UserColumnName="FOLIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUM_PARTIDA" msprop:Generator_ColumnVarNameInTable="columnNUM_PARTIDA" msprop:Generator_ColumnPropNameInRow="NUM_PARTIDA" msprop:Generator_ColumnPropNameInTable="NUM_PARTIDAColumn" msprop:Generator_UserColumnName="NUM_PARTIDA" type="xs:short" />
+              <xs:element name="ARTICULO_ID" msprop:Generator_ColumnVarNameInTable="columnARTICULO_ID" msprop:Generator_ColumnPropNameInRow="ARTICULO_ID" msprop:Generator_ColumnPropNameInTable="ARTICULO_IDColumn" msprop:Generator_UserColumnName="ARTICULO_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMBRE1" msprop:Generator_ColumnVarNameInTable="columnNOMBRE1" msprop:Generator_ColumnPropNameInRow="NOMBRE1" msprop:Generator_ColumnPropNameInTable="NOMBRE1Column" msprop:Generator_UserColumnName="NOMBRE1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMBRE2" msprop:Generator_ColumnVarNameInTable="columnNOMBRE2" msprop:Generator_ColumnPropNameInRow="NOMBRE2" msprop:Generator_ColumnPropNameInTable="NOMBRE2Column" msprop:Generator_UserColumnName="NOMBRE2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" msprop:Generator_UserColumnName="CANTIDAD" type="xs:short" />
+              <xs:element name="PRECIO" msprop:Generator_ColumnVarNameInTable="columnPRECIO" msprop:Generator_ColumnPropNameInRow="PRECIO" msprop:Generator_ColumnPropNameInTable="PRECIOColumn" msprop:Generator_UserColumnName="PRECIO" type="xs:double" />
+              <xs:element name="IVA" msprop:Generator_ColumnVarNameInTable="columnIVA" msprop:Generator_ColumnPropNameInRow="IVA" msprop:Generator_ColumnPropNameInTable="IVAColumn" msprop:Generator_UserColumnName="IVA" type="xs:double" />
+              <xs:element name="IMPUESTO_ID" msprop:Generator_ColumnVarNameInTable="columnIMPUESTO_ID" msprop:Generator_ColumnPropNameInRow="IMPUESTO_ID" msprop:Generator_ColumnPropNameInTable="IMPUESTO_IDColumn" msprop:Generator_UserColumnName="IMPUESTO_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="DESCUENTO_ID" msprop:Generator_ColumnVarNameInTable="columnDESCUENTO_ID" msprop:Generator_ColumnPropNameInRow="DESCUENTO_ID" msprop:Generator_ColumnPropNameInTable="DESCUENTO_IDColumn" msprop:Generator_UserColumnName="DESCUENTO_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="PRECIO_COSTO" msprop:Generator_ColumnVarNameInTable="columnPRECIO_COSTO" msprop:Generator_ColumnPropNameInRow="PRECIO_COSTO" msprop:Generator_ColumnPropNameInTable="PRECIO_COSTOColumn" msprop:Generator_UserColumnName="PRECIO_COSTO" type="xs:double" />
+              <xs:element name="ACTIVO" msprop:Generator_ColumnVarNameInTable="columnACTIVO" msprop:Generator_ColumnPropNameInRow="ACTIVO" msprop:Generator_ColumnPropNameInTable="ACTIVOColumn" msprop:Generator_UserColumnName="ACTIVO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="CONTROLADO_DET_CONTROLADOS" msdata:parent="CONTROLADOS" msdata:child="CONTROLADO_DET" msdata:parentkey="FOLIO" msdata:childkey="FOLIO" msprop:Generator_UserChildTable="CONTROLADO_DET" msprop:Generator_ChildPropName="GetCONTROLADO_DETRows" msprop:Generator_UserRelationName="CONTROLADO_DET_CONTROLADOS" msprop:Generator_RelationVarName="relationCONTROLADO_DET_CONTROLADOS" msprop:Generator_UserParentTable="CONTROLADOS" msprop:Generator_ParentPropName="CONTROLADOSRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SIFModelo.Pedido">
+    <Position X="11" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAQAAABBBAEAABBEAAEAQAAQQAAgABwCAACAAAA=</HashCode>
+      <FileName>Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIFModelo.PedidoDetalle">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAYAAAgAQBAAAAACAAAABAQgAAAYAAAABgAAAAAAAA=</HashCode>
+      <FileName>PedidoDetalle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIFModelo.Cotizacion">
+    <Position X="16.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgQAYAAABABAEIIBAEAAEAAAAAQAAgAFwCAACAAAA=</HashCode>
+      <FileName>Cotizacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIFModelo.Devolucion" Collapsed="true">
+    <Position X="20.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAEAAAAACAABAAAAEAAIAEAAAgABAAACAAAAA=</HashCode>
+      <FileName>Devolucion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIFModelo.CotizacionDetalle">
+    <Position X="18.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAYAAIgAQAAAAQACAAAAAAQgAAAYIAAABgAAAAAAAA=</HashCode>
+      <FileName>CotizacionDetalle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIFModelo.Apartado">
+    <Position X="13" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAQAAABBBAEAABBEAAEAQAAQQAAgABwCAACAAAA=</HashCode>
+      <FileName>Apartado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIFModelo.ApartadoDetalle">
+    <Position X="15" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAYAAAgAQBAAAAACAAAABAQgAAAYAAAABgAAAAAAAA=</HashCode>
+      <FileName>ApartadoDetalle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

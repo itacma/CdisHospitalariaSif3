@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CallCenterDataSet" targetNamespace="http://tempuri.org/CallCenterDataSet.xsd" xmlns:mstns="http://tempuri.org/CallCenterDataSet.xsd" xmlns="http://tempuri.org/CallCenterDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Public" Name="ConnectionString (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.SIFModelo.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="Oracle.DataAccess.Client" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CONSULTATableAdapter" GeneratorDataComponentClassName="CONSULTATableAdapter" Name="CONSULTA" UserDataComponentName="CONSULTATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="FARMACIA.CONSULTA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CONSULTA.CONSULTA_ID, CONSULTA.SUCURSAL_ID, CONSULTA.FECHA_CITA, CONSULTA.HORARIO_ID, 
+                      MEDICO_ID, CONSULTA.CLIENTE_ID, CAT_MEDICOS.NOMBRE, CAT_MEDICOS.CED_PROFESIONAL, 
+                      CAT_MEDICOS.REG_SSA, CAT_MEDICOS.ESPECIALIDAD_ID, CAT_MEDICOS.EMAIL, CAT_MEDICOS.TIPO_DIR, 
+                      CAT_MEDICOS.ACTIVO, CAT_MEDICOS.CONSULTA_FARMACIA, CAT_ESPECIALIDAD.NOMBRE AS CAT_ESPECIALIDAD_NOMBRE, 
+                      CAT_CLIENTES.NOMBRE AS CAT_CLIENTE_NOMBRE, CAT_CLIENTES.APE_PATERNO AS CAT_CLIENTES_APE_PATERNO, 
+                      CAT_CLIENTES.APE_MATERNO AS CAT_CLIENTES_APE_MATERNO, HORARIOS.NOMBRE AS HORARIOS_NOMBRE, 
+                      HORARIOS.DIA_SEMANA AS HORARIOS_DIA_SEMANA, HORARIOS.TURNO AS HORARIOS_TURNO, 
+                      HORARIOS.HORA_INICIO AS HORARIOS_HORA_INICIO, HORARIOS.HORA_FIN AS HORARIOS_HORA_FIN
+FROM         CONSULTA INNER JOIN
+                      CAT_MEDICOS ON CONSULTA.MEDICO_ID = CAT_MEDICOS.MEDICOS_ID INNER JOIN
+                      CAT_ESPECIALIDAD ON CAT_MEDICOS.ESPECIALIDAD_ID = CAT_ESPECIALIDAD.ESPECIALIDAD_ID INNER JOIN
+                      CAT_CLIENTES ON CONSULTA.CLIENTE_ID = CAT_CLIENTES.CLIENTES_ID INNER JOIN
+                      HORARIOS ON CONSULTA.HORARIO_ID = HORARIOS.HORARIO_ID
+					</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CONSULTA_ID" DataSetColumn="CONSULTA_ID" />
+              <Mapping SourceColumn="SUCURSAL_ID" DataSetColumn="SUCURSAL_ID" />
+              <Mapping SourceColumn="FECHA_CITA" DataSetColumn="FECHA_CITA" />
+              <Mapping SourceColumn="HORARIO_ID" DataSetColumn="HORARIO_ID" />
+              <Mapping SourceColumn="MEDICO_ID" DataSetColumn="MEDICO_ID" />
+              <Mapping SourceColumn="CLIENTE_ID" DataSetColumn="CLIENTE_ID" />
+              <Mapping SourceColumn="NOMBRE" DataSetColumn="NOMBRE" />
+              <Mapping SourceColumn="CED_PROFESIONAL" DataSetColumn="CED_PROFESIONAL" />
+              <Mapping SourceColumn="REG_SSA" DataSetColumn="REG_SSA" />
+              <Mapping SourceColumn="ESPECIALIDAD_ID" DataSetColumn="ESPECIALIDAD_ID" />
+              <Mapping SourceColumn="EMAIL" DataSetColumn="EMAIL" />
+              <Mapping SourceColumn="TIPO_DIR" DataSetColumn="TIPO_DIR" />
+              <Mapping SourceColumn="ACTIVO" DataSetColumn="ACTIVO" />
+              <Mapping SourceColumn="CONSULTA_FARMACIA" DataSetColumn="CONSULTA_FARMACIA" />
+              <Mapping SourceColumn="CAT_ESPECIALIDAD_NOMBRE" DataSetColumn="CAT_ESPECIALIDAD_NOMBRE" />
+              <Mapping SourceColumn="CAT_CLIENTE_NOMBRE" DataSetColumn="CAT_CLIENTE_NOMBRE" />
+              <Mapping SourceColumn="CAT_CLIENTES_APE_PATERNO" DataSetColumn="CAT_CLIENTES_APE_PATERNO" />
+              <Mapping SourceColumn="CAT_CLIENTES_APE_MATERNO" DataSetColumn="CAT_CLIENTES_APE_MATERNO" />
+              <Mapping SourceColumn="HORARIOS_NOMBRE" DataSetColumn="HORARIOS_NOMBRE" />
+              <Mapping SourceColumn="HORARIOS_DIA_SEMANA" DataSetColumn="HORARIOS_DIA_SEMANA" />
+              <Mapping SourceColumn="HORARIOS_TURNO" DataSetColumn="HORARIOS_TURNO" />
+              <Mapping SourceColumn="HORARIOS_HORA_INICIO" DataSetColumn="HORARIOS_HORA_INICIO" />
+              <Mapping SourceColumn="HORARIOS_HORA_FIN" DataSetColumn="HORARIOS_HORA_FIN" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByMEDICOS_ID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMEDICOS_ID" GeneratorSourceName="FillByMEDICOS_ID" GetMethodModifier="Public" GetMethodName="GetDataByMEDICOS_ID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMEDICOS_ID" UserSourceName="FillByMEDICOS_ID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CONSULTA.CONSULTA_ID FROM FARMACIA.CONSULTA INNER JOIN FARMACIA.CAT_MEDICOS ON CONSULTA.MEDICO_ID = CAT_MEDICOS.MEDICOS_ID INNER JOIN FARMACIA.CAT_ESPECIALIDAD ON CAT_MEDICOS.ESPECIALIDAD_ID = CAT_ESPECIALIDAD.ESPECIALIDAD_ID INNER JOIN FARMACIA.CAT_CLIENTES ON CONSULTA.CLIENTE_ID = CAT_CLIENTES.CLIENTES_ID INNER JOIN FARMACIA.HORARIOS ON CONSULTA.HORARIO_ID = HORARIOS.HORARIO_ID WHERE (CAT_MEDICOS.MEDICOS_ID = :MEDICOS_ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="MEDICOS_ID" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Object" Direction="Input" ParameterName=":MEDICOS_ID" Precision="0" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="FARMACIA.CONSULTA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBySuc" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySuc" GeneratorSourceName="FillBySuc" GetMethodModifier="Public" GetMethodName="GetDataBySuc" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySuc" UserSourceName="FillBySuc">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CONSULTA.CONSULTA_ID, CONSULTA.SUCURSAL_ID, CONSULTA.FECHA_CITA, CONSULTA.HORARIO_ID, 
+                      MEDICO_ID, CONSULTA.CLIENTE_ID, CAT_MEDICOS.NOMBRE, CAT_MEDICOS.CED_PROFESIONAL, 
+                      CAT_MEDICOS.REG_SSA, CAT_MEDICOS.ESPECIALIDAD_ID, CAT_MEDICOS.EMAIL, CAT_MEDICOS.TIPO_DIR, 
+                      CAT_MEDICOS.ACTIVO, CAT_MEDICOS.CONSULTA_FARMACIA, CAT_ESPECIALIDAD.NOMBRE AS CAT_ESPECIALIDAD_NOMBRE, 
+                      CAT_CLIENTES.NOMBRE AS CAT_CLIENTE_NOMBRE, CAT_CLIENTES.APE_PATERNO AS CAT_CLIENTES_APE_PATERNO, 
+                      CAT_CLIENTES.APE_MATERNO AS CAT_CLIENTES_APE_MATERNO, HORARIOS.NOMBRE AS HORARIOS_NOMBRE, 
+                      HORARIOS.DIA_SEMANA AS HORARIOS_DIA_SEMANA, HORARIOS.TURNO AS HORARIOS_TURNO, 
+                      HORARIOS.HORA_INICIO AS HORARIOS_HORA_INICIO, HORARIOS.HORA_FIN AS HORARIOS_HORA_FIN
+FROM         CONSULTA INNER JOIN
+                      CAT_MEDICOS ON CONSULTA.MEDICO_ID = CAT_MEDICOS.MEDICOS_ID INNER JOIN
+                      CAT_ESPECIALIDAD ON CAT_MEDICOS.ESPECIALIDAD_ID = CAT_ESPECIALIDAD.ESPECIALIDAD_ID INNER JOIN
+                      CAT_CLIENTES ON CONSULTA.CLIENTE_ID = CAT_CLIENTES.CLIENTES_ID INNER JOIN
+                      HORARIOS ON CONSULTA.HORARIO_ID = HORARIOS.HORARIO_ID
+where  CONSULTA.SUCURSAL_ID = :SUCURSALid 					</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="SUCURSALid" ColumnName="SUCURSAL_ID" DataSourceName="" DataTypeServer="unknown" DbType="Object" Direction="Input" ParameterName=":SUCURSALid" Precision="0" Scale="0" Size="1024" SourceColumn="SUCURSAL_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HORARIOSTableAdapter" GeneratorDataComponentClassName="HORARIOSTableAdapter" Name="HORARIOS" UserDataComponentName="HORARIOSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="FARMACIA.HORARIOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM "HORARIOS" WHERE (("HORARIO_ID" = :Original_HORARIO_ID) AND ("NOMBRE" = :Original_NOMBRE) AND ("DIA_SEMANA" = :Original_DIA_SEMANA) AND ("TURNO" = :Original_TURNO) AND ((:IsNull_HORA_INICIO = 1 AND "HORA_INICIO" IS NULL) OR ("HORA_INICIO" = :Original_HORA_INICIO)) AND ((:IsNull_HORA_FIN = 1 AND "HORA_FIN" IS NULL) OR ("HORA_FIN" = :Original_HORA_FIN)) AND ((:IsNull_ACTIVO = 1 AND "ACTIVO" IS NULL) OR ("ACTIVO" = :Original_ACTIVO)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_HORARIO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="HORARIO_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_NOMBRE" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_DIA_SEMANA" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="DIA_SEMANA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="Original_TURNO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="TURNO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_HORA_INICIO" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="HORA_INICIO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="Original_HORA_INICIO" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="HORA_INICIO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_HORA_FIN" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="HORA_FIN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="Original_HORA_FIN" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="HORA_FIN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ACTIVO" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="Original_ACTIVO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO "HORARIOS" ("HORARIO_ID", "NOMBRE", "DIA_SEMANA", "TURNO", "HORA_INICIO", "HORA_FIN", "ACTIVO") VALUES (:HORARIO_ID, :NOMBRE, :DIA_SEMANA, :TURNO, :HORA_INICIO, :HORA_FIN, :ACTIVO)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="HORARIO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="HORARIO_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="NOMBRE" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DIA_SEMANA" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="DIA_SEMANA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="TURNO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="TURNO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="HORA_INICIO" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="HORA_INICIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="HORA_FIN" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="HORA_FIN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="ACTIVO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     HORARIO_ID, NOMBRE, DIA_SEMANA, TURNO, HORA_INICIO, HORA_FIN, ACTIVO
+FROM        HORARIOS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE "HORARIOS" SET "HORARIO_ID" = :HORARIO_ID, "NOMBRE" = :NOMBRE, "DIA_SEMANA" = :DIA_SEMANA, "TURNO" = :TURNO, "HORA_INICIO" = :HORA_INICIO, "HORA_FIN" = :HORA_FIN, "ACTIVO" = :ACTIVO WHERE (("HORARIO_ID" = :Original_HORARIO_ID) AND ("NOMBRE" = :Original_NOMBRE) AND ("DIA_SEMANA" = :Original_DIA_SEMANA) AND ("TURNO" = :Original_TURNO) AND ((:IsNull_HORA_INICIO = 1 AND "HORA_INICIO" IS NULL) OR ("HORA_INICIO" = :Original_HORA_INICIO)) AND ((:IsNull_HORA_FIN = 1 AND "HORA_FIN" IS NULL) OR ("HORA_FIN" = :Original_HORA_FIN)) AND ((:IsNull_ACTIVO = 1 AND "ACTIVO" IS NULL) OR ("ACTIVO" = :Original_ACTIVO)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="HORARIO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="HORARIO_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="NOMBRE" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DIA_SEMANA" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="DIA_SEMANA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="TURNO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="TURNO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="HORA_INICIO" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="HORA_INICIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="HORA_FIN" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="HORA_FIN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="ACTIVO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="Original_HORARIO_ID" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="HORARIO_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_NOMBRE" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="NOMBRE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_DIA_SEMANA" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="DIA_SEMANA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="Original_TURNO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="TURNO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_HORA_INICIO" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="HORA_INICIO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="Original_HORA_INICIO" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="HORA_INICIO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_HORA_FIN" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="HORA_FIN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="Original_HORA_FIN" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="HORA_FIN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ACTIVO" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="Original_ACTIVO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ACTIVO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HORARIO_ID" DataSetColumn="HORARIO_ID" />
+              <Mapping SourceColumn="NOMBRE" DataSetColumn="NOMBRE" />
+              <Mapping SourceColumn="DIA_SEMANA" DataSetColumn="DIA_SEMANA" />
+              <Mapping SourceColumn="TURNO" DataSetColumn="TURNO" />
+              <Mapping SourceColumn="HORA_INICIO" DataSetColumn="HORA_INICIO" />
+              <Mapping SourceColumn="HORA_FIN" DataSetColumn="HORA_FIN" />
+              <Mapping SourceColumn="ACTIVO" DataSetColumn="ACTIVO" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="FARMACIA.HORARIOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByActivo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByActivo" GeneratorSourceName="FillByActivo" GetMethodModifier="Public" GetMethodName="GetDataByActivo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByActivo" UserSourceName="FillByActivo">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     HORARIO_ID, NOMBRE, DIA_SEMANA, TURNO, HORA_INICIO, HORA_FIN, ACTIVO
+FROM        HORARIOS
+WHERE     (ACTIVO = 'S')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="QUEJA_SUGERENCIATableAdapter" GeneratorDataComponentClassName="QUEJA_SUGERENCIATableAdapter" Name="QUEJA_SUGERENCIA" UserDataComponentName="QUEJA_SUGERENCIATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     QUEJA_SUGERENCIA.QUEJA_SUGERENCIA_ID, QUEJA_SUGERENCIA.SUCURSAL_ID, QUEJA_SUGERENCIA.FECHA_ALTA, QUEJA_SUGERENCIA.FECHA_SUCESO, 
+                      QUEJA_SUGERENCIA.QUEJA_SUGERENCIA, QUEJA_SUGERENCIA.CLIENTE_ID, QUEJA_SUGERENCIA.COMENTARIO, QUEJA_SUGERENCIA.USER_GENERO_ID, 
+                      QUEJA_SUGERENCIA.USER_LEVANTO_ID, 
+QUEJA_SUGERENCIA.CAT_QUEJA_SUGERENCIA_ID, 
+QUEJA_SUGERENCIA.CAT_QUEJA_SUGERENCIA_TIPO_ID, 
+
+CONCAT(CONCAT(CAT_USUARIOS.NOMBRE, ' '), 
+                      CAT_USUARIOS.APELLIDOS) AS USUARIO_LEVANTA, CONCAT(CONCAT(CAT_USUARIOS_1.NOMBRE, ' '), CAT_USUARIOS_1.APELLIDOS) AS USUARIO_GENERA, 
+                      CAT_SUCURSALES.NOMBRE AS CAT_SUCURSALES_NOMBRE, CAT_CLIENTES.NOMBRE AS CAT_CLIENTES_NOMBRE, 
+                      CAT_CLIENTES.APE_PATERNO AS CAT_CLIENTES_APE_PATERNO, CAT_CLIENTES.APE_MATERNO AS CAT_CLIENTES_APE_MATERNO, 
+                      CAT_QUEJA_SUGERENCIA.NOMBRE AS CAT_QUEJA_SUGERENCIA_NOMBRE
+
+FROM         QUEJA_SUGERENCIA INNER JOIN
+                      CAT_USUARIOS ON QUEJA_SUGERENCIA.USER_LEVANTO_ID = CAT_USUARIOS.USUARIOS_ID INNER JOIN
+                      CAT_SUCURSALES ON QUEJA_SUGERENCIA.SUCURSAL_ID = CAT_SUCURSALES.SUCURSALES_ID INNER JOIN
+                      CAT_CLIENTES ON QUEJA_SUGERENCIA.CLIENTE_ID = CAT_CLIENTES.CLIENTES_ID INNER JOIN
+                      CAT_QUEJA_SUGERENCIA ON 
+                      QUEJA_SUGERENCIA.CAT_QUEJA_SUGERENCIA_ID = CAT_QUEJA_SUGERENCIA.CAT_QUEJA_SUGERENCIA_ID LEFT OUTER JOIN
+                      CAT_USUARIOS CAT_USUARIOS_1 ON QUEJA_SUGERENCIA.USER_GENERO_ID = CAT_USUARIOS_1.USUARIOS_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="QUEJA_SUGERENCIA_ID" DataSetColumn="QUEJA_SUGERENCIA_ID" />
+              <Mapping SourceColumn="FECHA_ALTA" DataSetColumn="FECHA_ALTA" />
+              <Mapping SourceColumn="FECHA_SUCESO" DataSetColumn="FECHA_SUCESO" />
+              <Mapping SourceColumn="QUEJA_SUGERENCIA" DataSetColumn="QUEJA_SUGERENCIA" />
+              <Mapping SourceColumn="CLIENTE_ID" DataSetColumn="CLIENTE_ID" />
+              <Mapping SourceColumn="COMENTARIO" DataSetColumn="COMENTARIO" />
+              <Mapping SourceColumn="USER_GENERO_ID" DataSetColumn="USER_GENERO_ID" />
+              <Mapping SourceColumn="USER_LEVANTO_ID" DataSetColumn="USER_LEVANTO_ID" />
+              <Mapping SourceColumn="CAT_QUEJA_SUGERENCIA_ID" DataSetColumn="CAT_QUEJA_SUGERENCIA_ID" />
+              <Mapping SourceColumn="USUARIO_LEVANTA" DataSetColumn="USUARIO_LEVANTA" />
+              <Mapping SourceColumn="USUARIO_GENERA" DataSetColumn="USUARIO_GENERA" />
+              <Mapping SourceColumn="CAT_SUCURSALES_NOMBRE" DataSetColumn="CAT_SUCURSALES_NOMBRE" />
+              <Mapping SourceColumn="CAT_CLIENTES_NOMBRE" DataSetColumn="CAT_CLIENTES_NOMBRE" />
+              <Mapping SourceColumn="CAT_CLIENTES_APE_PATERNO" DataSetColumn="CAT_CLIENTES_APE_PATERNO" />
+              <Mapping SourceColumn="CAT_CLIENTES_APE_MATERNO" DataSetColumn="CAT_CLIENTES_APE_MATERNO" />
+              <Mapping SourceColumn="CAT_QUEJA_SUGERENCIA_NOMBRE" DataSetColumn="CAT_QUEJA_SUGERENCIA_NOMBRE" />
+              <Mapping SourceColumn="SUCURSAL_ID" DataSetColumn="SUCURSAL_ID1" />
+              <Mapping SourceColumn="CAT_QUEJA_SUGERENCIA_TIPO_ID" DataSetColumn="CAT_QUEJA_SUGERENCIA_TIPO_ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="FARMACIA.QUEJA_SUGERENCIA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByFechas" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFechas" GeneratorSourceName="FillByFechas" GetMethodModifier="Public" GetMethodName="GetDataByFechas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFechas" UserSourceName="FillByFechas">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        QUEJA_SUGERENCIA.QUEJA_SUGERENCIA_ID, QUEJA_SUGERENCIA.SUCURSAL_ID, QUEJA_SUGERENCIA.FECHA_ALTA, QUEJA_SUGERENCIA.FECHA_SUCESO, 
+                         QUEJA_SUGERENCIA.QUEJA_SUGERENCIA, QUEJA_SUGERENCIA.CLIENTE_ID, QUEJA_SUGERENCIA.COMENTARIO, QUEJA_SUGERENCIA.USER_GENERO_ID, 
+                         QUEJA_SUGERENCIA.USER_LEVANTO_ID, QUEJA_SUGERENCIA.CAT_QUEJA_SUGERENCIA_ID, CONCAT(CONCAT(CAT_USUARIOS.NOMBRE, ' '), 
+                         CAT_USUARIOS.APELLIDOS) AS USUARIO_LEVANTA, CONCAT(CONCAT(CAT_USUARIOS_1.NOMBRE, ' '), CAT_USUARIOS_1.APELLIDOS) AS USUARIO_GENERA, 
+                         CAT_SUCURSALES.NOMBRE AS CAT_SUCURSALES_NOMBRE, CAT_CLIENTES.NOMBRE AS CAT_CLIENTES_NOMBRE, 
+                         CAT_CLIENTES.APE_PATERNO AS CAT_CLIENTES_APE_PATERNO, CAT_CLIENTES.APE_MATERNO AS CAT_CLIENTES_APE_MATERNO, 
+                         CAT_QUEJA_SUGERENCIA.NOMBRE AS CAT_QUEJA_SUGERENCIA_NOMBRE, QUEJA_SUGERENCIA.CAT_QUEJA_SUGERENCIA_TIPO_ID, 
+                         QUEJA_SUGERENCIA.SOLUCION, QUEJA_SUGERENCIA.FECHA_SOLUCION, FARMACIA.QUEJA_SUGERENCIA.ACTIVO AS ESTATUS
+FROM            FARMACIA.QUEJA_SUGERENCIA INNER JOIN
+                         FARMACIA.CAT_USUARIOS ON QUEJA_SUGERENCIA.USER_LEVANTO_ID = CAT_USUARIOS.USUARIOS_ID INNER JOIN
+                         FARMACIA.CAT_SUCURSALES ON QUEJA_SUGERENCIA.SUCURSAL_ID = CAT_SUCURSALES.SUCURSALES_ID INNER JOIN
+                         FARMACIA.CAT_CLIENTES ON QUEJA_SUGERENCIA.CLIENTE_ID = CAT_CLIENTES.CLIENTES_ID INNER JOIN
+                         FARMACIA.CAT_QUEJA_SUGERENCIA ON 
+                         QUEJA_SUGERENCIA.CAT_QUEJA_SUGERENCIA_ID = CAT_QUEJA_SUGERENCIA.CAT_QUEJA_SUGERENCIA_ID LEFT OUTER JOIN
+                         FARMACIA.CAT_USUARIOS CAT_USUARIOS_1 ON QUEJA_SUGERENCIA.USER_GENERO_ID = CAT_USUARIOS_1.USUARIOS_ID
+WHERE        (QUEJA_SUGERENCIA.FECHA_ALTA BETWEEN TO_DATE(:FECHA_ALTA1, 'yyyy/mm/dd HH24:MI:SS') AND TO_DATE(:FECHA_ALTA2, 'yyyy/mm/dd HH24:MI:SS')) AND 
+                         (CAT_SUCURSALES.NOMBRE LIKE :SUCURSAL_NOMBRE)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="FECHA_ALTA1" ColumnName="FECHA_ALTA" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName=":FECHA_ALTA1" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="FECHA_ALTA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="FECHA_ALTA2" ColumnName="FECHA_ALTA" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName=":FECHA_ALTA2" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="FECHA_ALTA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="SUCURSAL_NOMBRE" ColumnName="NOMBRE" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName=":SUCURSAL_NOMBRE" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="CAT_SUCURSALES_NOMBRE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CallCenterDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CallCenterDataSet" msprop:Generator_UserDSName="CallCenterDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CONSULTA" msprop:Generator_TableClassName="CONSULTADataTable" msprop:Generator_TableVarName="tableCONSULTA" msprop:Generator_TablePropName="CONSULTA" msprop:Generator_RowDeletingName="CONSULTARowDeleting" msprop:Generator_UserTableName="CONSULTA" msprop:Generator_RowChangingName="CONSULTARowChanging" msprop:Generator_RowEvHandlerName="CONSULTARowChangeEventHandler" msprop:Generator_RowDeletedName="CONSULTARowDeleted" msprop:Generator_RowEvArgName="CONSULTARowChangeEvent" msprop:Generator_RowChangedName="CONSULTARowChanged" msprop:Generator_RowClassName="CONSULTARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CONSULTA_ID" msprop:Generator_ColumnVarNameInTable="columnCONSULTA_ID" msprop:Generator_ColumnPropNameInRow="CONSULTA_ID" msprop:Generator_ColumnPropNameInTable="CONSULTA_IDColumn" msprop:Generator_UserColumnName="CONSULTA_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="SUCURSAL_ID" msprop:Generator_ColumnVarNameInTable="columnSUCURSAL_ID" msprop:Generator_ColumnPropNameInRow="SUCURSAL_ID" msprop:Generator_ColumnPropNameInTable="SUCURSAL_IDColumn" msprop:Generator_UserColumnName="SUCURSAL_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHA_CITA" msprop:Generator_ColumnVarNameInTable="columnFECHA_CITA" msprop:Generator_ColumnPropNameInRow="FECHA_CITA" msprop:Generator_ColumnPropNameInTable="FECHA_CITAColumn" msprop:Generator_UserColumnName="FECHA_CITA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HORARIO_ID" msprop:Generator_ColumnVarNameInTable="columnHORARIO_ID" msprop:Generator_ColumnPropNameInRow="HORARIO_ID" msprop:Generator_ColumnPropNameInTable="HORARIO_IDColumn" msprop:Generator_UserColumnName="HORARIO_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="MEDICO_ID" msprop:Generator_ColumnVarNameInTable="columnMEDICO_ID" msprop:Generator_ColumnPropNameInRow="MEDICO_ID" msprop:Generator_ColumnPropNameInTable="MEDICO_IDColumn" msprop:Generator_UserColumnName="MEDICO_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="CLIENTE_ID" msprop:Generator_ColumnVarNameInTable="columnCLIENTE_ID" msprop:Generator_ColumnPropNameInRow="CLIENTE_ID" msprop:Generator_ColumnPropNameInTable="CLIENTE_IDColumn" msprop:Generator_UserColumnName="CLIENTE_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CED_PROFESIONAL" msprop:Generator_ColumnVarNameInTable="columnCED_PROFESIONAL" msprop:Generator_ColumnPropNameInRow="CED_PROFESIONAL" msprop:Generator_ColumnPropNameInTable="CED_PROFESIONALColumn" msprop:Generator_UserColumnName="CED_PROFESIONAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REG_SSA" msprop:Generator_ColumnVarNameInTable="columnREG_SSA" msprop:Generator_ColumnPropNameInRow="REG_SSA" msprop:Generator_ColumnPropNameInTable="REG_SSAColumn" msprop:Generator_UserColumnName="REG_SSA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESPECIALIDAD_ID" msprop:Generator_ColumnVarNameInTable="columnESPECIALIDAD_ID" msprop:Generator_ColumnPropNameInRow="ESPECIALIDAD_ID" msprop:Generator_ColumnPropNameInTable="ESPECIALIDAD_IDColumn" msprop:Generator_UserColumnName="ESPECIALIDAD_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="EMAIL" msprop:Generator_ColumnVarNameInTable="columnEMAIL" msprop:Generator_ColumnPropNameInRow="EMAIL" msprop:Generator_ColumnPropNameInTable="EMAILColumn" msprop:Generator_UserColumnName="EMAIL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_DIR" msprop:Generator_ColumnVarNameInTable="columnTIPO_DIR" msprop:Generator_ColumnPropNameInRow="TIPO_DIR" msprop:Generator_ColumnPropNameInTable="TIPO_DIRColumn" msprop:Generator_UserColumnName="TIPO_DIR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACTIVO" msprop:Generator_ColumnVarNameInTable="columnACTIVO" msprop:Generator_ColumnPropNameInRow="ACTIVO" msprop:Generator_ColumnPropNameInTable="ACTIVOColumn" msprop:Generator_UserColumnName="ACTIVO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONSULTA_FARMACIA" msprop:Generator_ColumnVarNameInTable="columnCONSULTA_FARMACIA" msprop:Generator_ColumnPropNameInRow="CONSULTA_FARMACIA" msprop:Generator_ColumnPropNameInTable="CONSULTA_FARMACIAColumn" msprop:Generator_UserColumnName="CONSULTA_FARMACIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_ESPECIALIDAD_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnCAT_ESPECIALIDAD_NOMBRE" msprop:Generator_ColumnPropNameInRow="CAT_ESPECIALIDAD_NOMBRE" msprop:Generator_ColumnPropNameInTable="CAT_ESPECIALIDAD_NOMBREColumn" msprop:Generator_UserColumnName="CAT_ESPECIALIDAD_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_CLIENTE_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnCAT_CLIENTE_NOMBRE" msprop:Generator_ColumnPropNameInRow="CAT_CLIENTE_NOMBRE" msprop:Generator_ColumnPropNameInTable="CAT_CLIENTE_NOMBREColumn" msprop:Generator_UserColumnName="CAT_CLIENTE_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_CLIENTES_APE_PATERNO" msprop:Generator_ColumnVarNameInTable="columnCAT_CLIENTES_APE_PATERNO" msprop:Generator_ColumnPropNameInRow="CAT_CLIENTES_APE_PATERNO" msprop:Generator_ColumnPropNameInTable="CAT_CLIENTES_APE_PATERNOColumn" msprop:Generator_UserColumnName="CAT_CLIENTES_APE_PATERNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_CLIENTES_APE_MATERNO" msprop:Generator_ColumnVarNameInTable="columnCAT_CLIENTES_APE_MATERNO" msprop:Generator_ColumnPropNameInRow="CAT_CLIENTES_APE_MATERNO" msprop:Generator_ColumnPropNameInTable="CAT_CLIENTES_APE_MATERNOColumn" msprop:Generator_UserColumnName="CAT_CLIENTES_APE_MATERNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HORARIOS_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnHORARIOS_NOMBRE" msprop:Generator_ColumnPropNameInRow="HORARIOS_NOMBRE" msprop:Generator_ColumnPropNameInTable="HORARIOS_NOMBREColumn" msprop:Generator_UserColumnName="HORARIOS_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HORARIOS_DIA_SEMANA" msprop:Generator_ColumnVarNameInTable="columnHORARIOS_DIA_SEMANA" msprop:Generator_ColumnPropNameInRow="HORARIOS_DIA_SEMANA" msprop:Generator_ColumnPropNameInTable="HORARIOS_DIA_SEMANAColumn" msprop:Generator_UserColumnName="HORARIOS_DIA_SEMANA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HORARIOS_TURNO" msprop:Generator_ColumnVarNameInTable="columnHORARIOS_TURNO" msprop:Generator_ColumnPropNameInRow="HORARIOS_TURNO" msprop:Generator_ColumnPropNameInTable="HORARIOS_TURNOColumn" msprop:Generator_UserColumnName="HORARIOS_TURNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HORARIOS_HORA_INICIO" msprop:Generator_ColumnVarNameInTable="columnHORARIOS_HORA_INICIO" msprop:Generator_ColumnPropNameInRow="HORARIOS_HORA_INICIO" msprop:Generator_ColumnPropNameInTable="HORARIOS_HORA_INICIOColumn" msprop:Generator_UserColumnName="HORARIOS_HORA_INICIO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HORARIOS_HORA_FIN" msprop:Generator_ColumnVarNameInTable="columnHORARIOS_HORA_FIN" msprop:Generator_ColumnPropNameInRow="HORARIOS_HORA_FIN" msprop:Generator_ColumnPropNameInTable="HORARIOS_HORA_FINColumn" msprop:Generator_UserColumnName="HORARIOS_HORA_FIN" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HORARIOS" msprop:Generator_TableClassName="HORARIOSDataTable" msprop:Generator_TableVarName="tableHORARIOS" msprop:Generator_TablePropName="HORARIOS" msprop:Generator_RowDeletingName="HORARIOSRowDeleting" msprop:Generator_UserTableName="HORARIOS" msprop:Generator_RowChangingName="HORARIOSRowChanging" msprop:Generator_RowEvHandlerName="HORARIOSRowChangeEventHandler" msprop:Generator_RowDeletedName="HORARIOSRowDeleted" msprop:Generator_RowEvArgName="HORARIOSRowChangeEvent" msprop:Generator_RowChangedName="HORARIOSRowChanged" msprop:Generator_RowClassName="HORARIOSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HORARIO_ID" msprop:Generator_ColumnVarNameInTable="columnHORARIO_ID" msprop:Generator_ColumnPropNameInRow="HORARIO_ID" msprop:Generator_ColumnPropNameInTable="HORARIO_IDColumn" msprop:Generator_UserColumnName="HORARIO_ID" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIA_SEMANA" msprop:Generator_ColumnVarNameInTable="columnDIA_SEMANA" msprop:Generator_ColumnPropNameInRow="DIA_SEMANA" msprop:Generator_ColumnPropNameInTable="DIA_SEMANAColumn" msprop:Generator_UserColumnName="DIA_SEMANA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TURNO" msprop:Generator_ColumnVarNameInTable="columnTURNO" msprop:Generator_ColumnPropNameInRow="TURNO" msprop:Generator_ColumnPropNameInTable="TURNOColumn" msprop:Generator_UserColumnName="TURNO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HORA_INICIO" msprop:Generator_ColumnVarNameInTable="columnHORA_INICIO" msprop:Generator_ColumnPropNameInRow="HORA_INICIO" msprop:Generator_ColumnPropNameInTable="HORA_INICIOColumn" msprop:Generator_UserColumnName="HORA_INICIO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HORA_FIN" msprop:Generator_ColumnVarNameInTable="columnHORA_FIN" msprop:Generator_ColumnPropNameInRow="HORA_FIN" msprop:Generator_ColumnPropNameInTable="HORA_FINColumn" msprop:Generator_UserColumnName="HORA_FIN" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACTIVO" msprop:Generator_ColumnVarNameInTable="columnACTIVO" msprop:Generator_ColumnPropNameInRow="ACTIVO" msprop:Generator_ColumnPropNameInTable="ACTIVOColumn" msprop:Generator_UserColumnName="ACTIVO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="QUEJA_SUGERENCIA" msprop:Generator_TableClassName="QUEJA_SUGERENCIADataTable" msprop:Generator_TableVarName="tableQUEJA_SUGERENCIA" msprop:Generator_TablePropName="QUEJA_SUGERENCIA" msprop:Generator_RowDeletingName="QUEJA_SUGERENCIARowDeleting" msprop:Generator_UserTableName="QUEJA_SUGERENCIA" msprop:Generator_RowChangingName="QUEJA_SUGERENCIARowChanging" msprop:Generator_RowEvHandlerName="QUEJA_SUGERENCIARowChangeEventHandler" msprop:Generator_RowDeletedName="QUEJA_SUGERENCIARowDeleted" msprop:Generator_RowEvArgName="QUEJA_SUGERENCIARowChangeEvent" msprop:Generator_RowChangedName="QUEJA_SUGERENCIARowChanged" msprop:Generator_RowClassName="QUEJA_SUGERENCIARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="QUEJA_SUGERENCIA_ID" msprop:Generator_ColumnVarNameInTable="columnQUEJA_SUGERENCIA_ID" msprop:Generator_ColumnPropNameInRow="QUEJA_SUGERENCIA_ID" msprop:Generator_ColumnPropNameInTable="QUEJA_SUGERENCIA_IDColumn" msprop:Generator_UserColumnName="QUEJA_SUGERENCIA_ID" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="SUCURSAL_ID" msprop:Generator_ColumnVarNameInTable="columnSUCURSAL_ID" msprop:Generator_ColumnPropNameInRow="SUCURSAL_ID" msprop:Generator_ColumnPropNameInTable="SUCURSAL_IDColumn" msprop:Generator_UserColumnName="SUCURSAL_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHA_ALTA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA_ALTA" msprop:Generator_ColumnPropNameInRow="FECHA_ALTA" msprop:Generator_ColumnPropNameInTable="FECHA_ALTAColumn" msprop:Generator_UserColumnName="FECHA_ALTA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA_SUCESO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA_SUCESO" msprop:Generator_ColumnPropNameInRow="FECHA_SUCESO" msprop:Generator_ColumnPropNameInTable="FECHA_SUCESOColumn" msprop:Generator_UserColumnName="FECHA_SUCESO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QUEJA_SUGERENCIA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQUEJA_SUGERENCIA" msprop:Generator_ColumnPropNameInRow="QUEJA_SUGERENCIA" msprop:Generator_ColumnPropNameInTable="QUEJA_SUGERENCIAColumn" msprop:Generator_UserColumnName="QUEJA_SUGERENCIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLIENTE_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCLIENTE_ID" msprop:Generator_ColumnPropNameInRow="CLIENTE_ID" msprop:Generator_ColumnPropNameInTable="CLIENTE_IDColumn" msprop:Generator_UserColumnName="CLIENTE_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="COMENTARIO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCOMENTARIO" msprop:Generator_ColumnPropNameInRow="COMENTARIO" msprop:Generator_ColumnPropNameInTable="COMENTARIOColumn" msprop:Generator_UserColumnName="COMENTARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USER_GENERO_ID" msprop:Generator_ColumnVarNameInTable="columnUSER_GENERO_ID" msprop:Generator_ColumnPropNameInRow="USER_GENERO_ID" msprop:Generator_ColumnPropNameInTable="USER_GENERO_IDColumn" msprop:Generator_UserColumnName="USER_GENERO_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USER_LEVANTO_ID" msprop:Generator_ColumnVarNameInTable="columnUSER_LEVANTO_ID" msprop:Generator_ColumnPropNameInRow="USER_LEVANTO_ID" msprop:Generator_ColumnPropNameInTable="USER_LEVANTO_IDColumn" msprop:Generator_UserColumnName="USER_LEVANTO_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_QUEJA_SUGERENCIA_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAT_QUEJA_SUGERENCIA_ID" msprop:Generator_ColumnPropNameInRow="CAT_QUEJA_SUGERENCIA_ID" msprop:Generator_ColumnPropNameInTable="CAT_QUEJA_SUGERENCIA_IDColumn" msprop:Generator_UserColumnName="CAT_QUEJA_SUGERENCIA_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="USUARIO_LEVANTA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_LEVANTA" msprop:Generator_ColumnPropNameInRow="USUARIO_LEVANTA" msprop:Generator_ColumnPropNameInTable="USUARIO_LEVANTAColumn" msprop:Generator_UserColumnName="USUARIO_LEVANTA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USUARIO_GENERA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_GENERA" msprop:Generator_ColumnPropNameInRow="USUARIO_GENERA" msprop:Generator_ColumnPropNameInTable="USUARIO_GENERAColumn" msprop:Generator_UserColumnName="USUARIO_GENERA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_SUCURSALES_NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAT_SUCURSALES_NOMBRE" msprop:Generator_ColumnPropNameInRow="CAT_SUCURSALES_NOMBRE" msprop:Generator_ColumnPropNameInTable="CAT_SUCURSALES_NOMBREColumn" msprop:Generator_UserColumnName="CAT_SUCURSALES_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_CLIENTES_NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAT_CLIENTES_NOMBRE" msprop:Generator_ColumnPropNameInRow="CAT_CLIENTES_NOMBRE" msprop:Generator_ColumnPropNameInTable="CAT_CLIENTES_NOMBREColumn" msprop:Generator_UserColumnName="CAT_CLIENTES_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_CLIENTES_APE_PATERNO" msdata:ReadOnly="true" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="CAT_CLIENTES_APE_PATERNO" msprop:Generator_ColumnVarNameInTable="columnCAT_CLIENTES_APE_PATERNO" msprop:Generator_ColumnPropNameInTable="CAT_CLIENTES_APE_PATERNOColumn" msprop:Generator_UserColumnName="CAT_CLIENTES_APE_PATERNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_CLIENTES_APE_MATERNO" msdata:ReadOnly="true" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="CAT_CLIENTES_APE_MATERNO" msprop:Generator_ColumnVarNameInTable="columnCAT_CLIENTES_APE_MATERNO" msprop:Generator_ColumnPropNameInTable="CAT_CLIENTES_APE_MATERNOColumn" msprop:Generator_UserColumnName="CAT_CLIENTES_APE_MATERNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAT_QUEJA_SUGERENCIA_NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAT_QUEJA_SUGERENCIA_NOMBRE" msprop:Generator_ColumnPropNameInRow="CAT_QUEJA_SUGERENCIA_NOMBRE" msprop:Generator_ColumnPropNameInTable="CAT_QUEJA_SUGERENCIA_NOMBREColumn" msprop:Generator_UserColumnName="CAT_QUEJA_SUGERENCIA_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUCURSAL_ID1" msdata:ReadOnly="true" msdata:Caption="SUCURSAL_ID" msprop:Generator_ColumnVarNameInTable="columnSUCURSAL_ID1" msprop:Generator_ColumnPropNameInRow="SUCURSAL_ID1" msprop:Generator_ColumnPropNameInTable="SUCURSAL_ID1Column" msprop:Generator_UserColumnName="SUCURSAL_ID1" type="xs:short" minOccurs="0" />
+              <xs:element name="CAT_QUEJA_SUGERENCIA_TIPO_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAT_QUEJA_SUGERENCIA_TIPO_ID" msprop:Generator_ColumnPropNameInRow="CAT_QUEJA_SUGERENCIA_TIPO_ID" msprop:Generator_ColumnPropNameInTable="CAT_QUEJA_SUGERENCIA_TIPO_IDColumn" msprop:Generator_UserColumnName="CAT_QUEJA_SUGERENCIA_TIPO_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="SOLUCION" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="SOLUCION" msprop:Generator_ColumnVarNameInTable="columnSOLUCION" msprop:Generator_ColumnPropNameInTable="SOLUCIONColumn" msprop:Generator_UserColumnName="SOLUCION" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_SOLUCION" msprop:Generator_ColumnVarNameInTable="columnFECHA_SOLUCION" msprop:Generator_ColumnPropNameInRow="FECHA_SOLUCION" msprop:Generator_ColumnPropNameInTable="FECHA_SOLUCIONColumn" msprop:Generator_UserColumnName="FECHA_SOLUCION" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" msprop:Generator_UserColumnName="ESTATUS" type="xs:string" minOccurs="0" />
+              <xs:element name="CAT_QUEJA_SUGERENCIA_TIPO_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnCAT_QUEJA_SUGERENCIA_TIPO_NOMBRE" msprop:Generator_ColumnPropNameInRow="CAT_QUEJA_SUGERENCIA_TIPO_NOMBRE" msprop:Generator_ColumnPropNameInTable="CAT_QUEJA_SUGERENCIA_TIPO_NOMBREColumn" msprop:Generator_UserColumnName="CAT_QUEJA_SUGERENCIA_TIPO_NOMBRE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

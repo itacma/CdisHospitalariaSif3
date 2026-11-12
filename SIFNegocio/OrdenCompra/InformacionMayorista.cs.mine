@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace SIFNegocio.OrdenCompra
+{
+    public class InformacionMayorista
+    {
+
+        public SIFModelo.OrdenCompra.InfromacionMayorista InformacionMayoristaPorArticulo(SIFModelo.Articulo articulo)
+        {
+            if (articulo == null)
+            {
+                articulo = new  SIFModelo.Articulo();
+            }
+
+            return SIFDatos.OrdenCompra.InformacionMayorista.InformacionMayoristaPorArticulo(articulo);
+        }
+
+        public bool GuardaInformacionMayorista(SIFModelo.OrdenCompra.InfromacionMayorista mayorista)
+        {
+            return SIFDatos.OrdenCompra.InformacionMayorista.GuardarInformacionMayorista(mayorista);
+        }
+
+        public string TipoMedicamentoMayorista(SIFModelo.OrdenCompra.InfromacionMayorista mayorista)
+        {
+            return SIFDatos.OrdenCompra.InformacionMayorista.TipoMedicamentoMayorista(mayorista);
+        }
+
+        public bool actualizaEstadoMayorsita(SIFModelo.OrdenCompra.InfromacionMayorista mayorista, bool? esLinea)
+        {
+            return SIFDatos.OrdenCompra.InformacionMayorista.actualizaEstadoMayorsita(mayorista, esLinea);
+        }
+
+        public string GuardarInfClientMayorista(SIFModelo.OrdenCompra.InfromacionMayorista mayorista)
+        {
+            return SIFDatos.OrdenCompra.InformacionMayorista.GuardarInfCliMayorista(mayorista);
+        }
+        public bool actualizaCompradorArticuloMay(String articuloid,String  accesoid) {
+
+            return SIFDatos.OrdenCompra.InformacionMayorista.actualizaCompradorArticuloMay(articuloid, accesoid);
+        }
+
+
+
+    }
+}

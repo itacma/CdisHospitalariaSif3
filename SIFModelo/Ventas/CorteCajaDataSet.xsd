@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CorteCajaDataSet" targetNamespace="http://tempuri.org/CorteCajaDataSet.xsd" xmlns:mstns="http://tempuri.org/CorteCajaDataSet.xsd" xmlns="http://tempuri.org/CorteCajaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Public" Name="ConnectionString (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.SIFModelo.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="Oracle.DataAccess.Client" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_PAGOS_DETALLETableAdapter" GeneratorDataComponentClassName="V_PAGOS_DETALLETableAdapter" Name="V_PAGOS_DETALLE" UserDataComponentName="V_PAGOS_DETALLETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PAGOS_DET.NUM_PAGO, PAGOS_DET.SUCURSAL_ID, PAGOS_DET.FECHA, PAGOS_DET.TIPOPAGO_ID, PAGOS_DET.COMISION, PAGOS_DET.IMPORTE, 
+                         PAGOS_DET.NUM_CUENTA, CAT_SUCURSALES.NOMBRE AS SUCURSAL_NOMBRE, CAT_TIPO_PAGO.NOMBRE AS TIPO_PAGO, 
+                         CAT_CAJAS.NOMBRE AS CAJA_NOMBRE, PAGOS.REMISION_ID
+FROM            PAGOS_DET INNER JOIN
+                         CAT_SUCURSALES ON PAGOS_DET.SUCURSAL_ID = CAT_SUCURSALES.SUCURSALES_ID INNER JOIN
+                         CAT_TIPO_PAGO ON PAGOS_DET.TIPOPAGO_ID = CAT_TIPO_PAGO.TIPO_PAGO_ID INNER JOIN
+                         PAGOS ON PAGOS_DET.NUM_PAGO = PAGOS.NUM_PAGO AND PAGOS_DET.REMISION_ID = PAGOS.REMISION_ID INNER JOIN
+                         CAT_CAJAS ON PAGOS.CAJA_ID = CAT_CAJAS.CAJAS_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NUM_PAGO" DataSetColumn="NUM_PAGO" />
+              <Mapping SourceColumn="SUCURSAL_ID" DataSetColumn="SUCURSAL_ID" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="TIPOPAGO_ID" DataSetColumn="TIPOPAGO_ID" />
+              <Mapping SourceColumn="COMISION" DataSetColumn="COMISION" />
+              <Mapping SourceColumn="IMPORTE" DataSetColumn="IMPORTE" />
+              <Mapping SourceColumn="NUM_CUENTA" DataSetColumn="NUM_CUENTA" />
+              <Mapping SourceColumn="SUCURSAL_NOMBRE" DataSetColumn="SUCURSAL_NOMBRE" />
+              <Mapping SourceColumn="TIPO_PAGO" DataSetColumn="TIPO_PAGO" />
+              <Mapping SourceColumn="CAJA_NOMBRE" DataSetColumn="CAJA_NOMBRE" />
+              <Mapping SourceColumn="REMISION_ID" DataSetColumn="REMISION_ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBySucursalCajaFecha" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySucursalCajaFecha" GeneratorSourceName="FillBySucursalCajaFecha" GetMethodModifier="Public" GetMethodName="GetDataBySucursalCajaFecha" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySucursalCajaFecha" UserSourceName="FillBySucursalCajaFecha">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PAGOS_DET.NUM_PAGO, PAGOS_DET.SUCURSAL_ID, PAGOS_DET.FECHA, PAGOS_DET.TIPOPAGO_ID, PAGOS_DET.COMISION, PAGOS_DET.IMPORTE, 
+                         PAGOS_DET.NUM_CUENTA, CAT_SUCURSALES.NOMBRE AS SUCURSAL_NOMBRE, CAT_TIPO_PAGO.NOMBRE AS TIPO_PAGO, 
+                         CAT_CAJAS.NOMBRE AS CAJA_NOMBRE, PAGOS.REMISION_ID
+FROM            PAGOS_DET INNER JOIN
+                         CAT_SUCURSALES ON PAGOS_DET.SUCURSAL_ID = CAT_SUCURSALES.SUCURSALES_ID INNER JOIN
+                         CAT_TIPO_PAGO ON PAGOS_DET.TIPOPAGO_ID = CAT_TIPO_PAGO.TIPO_PAGO_ID INNER JOIN
+                         PAGOS ON PAGOS_DET.REMISION_ID = PAGOS.REMISION_ID INNER JOIN
+                         CAT_CAJAS ON PAGOS.CAJA_ID = CAT_CAJAS.CAJAS_ID
+WHERE     PAGOS.ACTIVO='S' AND    (PAGOS.SUCURSAL_ID = :SucursalID) AND (PAGOS.CAJA_ID = :CajaID) AND (PAGOS.FECHA &gt;= TO_DATE(:Fecha1, 'dd/mm/yyyy HH24:mi:ss')) 
+AND PAGOS.FECHA &lt;= TO_DATE(:Fecha2, 'dd/mm/yyyy HH24:mi:ss')  </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="SucursalID" ColumnName="SUCURSAL_ID" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="SucursalID" Precision="0" ProviderType="Int32" Scale="0" Size="1024" SourceColumn="SUCURSAL_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CajaID" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="CajaID" Precision="0" ProviderType="Int32" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Fecha1" ColumnName="FECHA" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="Fecha1" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Fecha2" ColumnName="FECHA" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="Fecha2" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_VALORESTableAdapter" GeneratorDataComponentClassName="V_VALORESTableAdapter" Name="V_VALORES" UserDataComponentName="V_VALORESTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        VALORES.SEC, VALORES.SUCURSAL_ID, VALORES.CAJA_ID, VALORES.CAJERO_ID, VALORES.RECOLECCION_NOMBRE, VALORES.DENOMINACIONES_ID, 
+                         VALORES.CANTIDAD, VALORES.IMPORTE, VALORES.TOTAL, VALORES.FECHA, VALORES.SUPERVISOR, VALORES.ACTIVO, 
+                         CAT_SUCURSALES.NOMBRE AS SUCURSAL, CAT_CAJAS.NOMBRE AS CAJA, CONCAT(CONCAT(CAT_USUARIOS.NOMBRE, ' '), CAT_USUARIOS.APELLIDOS) 
+                         AS SUPERVISOR_NOMBRE, DENOMINACIONES.NOMBRE AS DENOMINACION, CONCAT(CONCAT(CAT_USUARIOS_1.NOMBRE, ' '), CAT_USUARIOS_1.APELLIDOS) 
+                         AS CAJERO
+FROM            VALORES INNER JOIN
+                         CAT_SUCURSALES ON VALORES.SUCURSAL_ID = CAT_SUCURSALES.SUCURSALES_ID INNER JOIN
+                         CAT_CAJAS ON VALORES.CAJA_ID = CAT_CAJAS.CAJAS_ID AND VALORES.SUCURSAL_ID = CAT_CAJAS.SUCURSAL_ID INNER JOIN
+                         DENOMINACIONES ON VALORES.DENOMINACIONES_ID = DENOMINACIONES.DENOMINACIONES_ID INNER JOIN
+                         CAT_USUARIOS CAT_USUARIOS_1 ON VALORES.CAJERO_ID = CAT_USUARIOS_1.USUARIOS_ID INNER JOIN
+                         CAT_USUARIOS CAT_USUARIOS ON VALORES.SUPERVISOR = CAT_USUARIOS.USUARIOS_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SEC" DataSetColumn="SEC" />
+              <Mapping SourceColumn="SUCURSAL_ID" DataSetColumn="SUCURSAL_ID" />
+              <Mapping SourceColumn="CAJA_ID" DataSetColumn="CAJA_ID" />
+              <Mapping SourceColumn="CAJERO_ID" DataSetColumn="CAJERO_ID" />
+              <Mapping SourceColumn="RECOLECCION_NOMBRE" DataSetColumn="RECOLECCION_NOMBRE" />
+              <Mapping SourceColumn="DENOMINACIONES_ID" DataSetColumn="DENOMINACIONES_ID" />
+              <Mapping SourceColumn="CANTIDAD" DataSetColumn="CANTIDAD" />
+              <Mapping SourceColumn="IMPORTE" DataSetColumn="IMPORTE" />
+              <Mapping SourceColumn="TOTAL" DataSetColumn="TOTAL" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="SUPERVISOR" DataSetColumn="SUPERVISOR" />
+              <Mapping SourceColumn="ACTIVO" DataSetColumn="ACTIVO" />
+              <Mapping SourceColumn="SUCURSAL" DataSetColumn="SUCURSAL" />
+              <Mapping SourceColumn="CAJA" DataSetColumn="CAJA" />
+              <Mapping SourceColumn="DENOMINACION" DataSetColumn="DENOMINACION" />
+              <Mapping SourceColumn="CAJERO" DataSetColumn="CAJERO" />
+              <Mapping SourceColumn="SUPERVISOR_NOMBRE" DataSetColumn="SUPERVISOR_NOMBRE" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBySucursalCajaFecha" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySucursalCajaFecha" GeneratorSourceName="FillBySucursalCajaFecha" GetMethodModifier="Public" GetMethodName="GetDataBySucursalCajaFecha" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySucursalCajaFecha" UserSourceName="FillBySucursalCajaFecha">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        VALORES.SEC, VALORES.SUCURSAL_ID, VALORES.CAJA_ID, VALORES.CAJERO_ID, VALORES.RECOLECCION_NOMBRE, VALORES.DENOMINACIONES_ID, 
+                         VALORES.CANTIDAD, VALORES.IMPORTE, VALORES.TOTAL, VALORES.FECHA, VALORES.SUPERVISOR, VALORES.ACTIVO, 
+                         CAT_SUCURSALES.NOMBRE AS SUCURSAL, CAT_CAJAS.NOMBRE AS CAJA, CONCAT(CONCAT(CAT_USUARIOS.NOMBRE, ' '), CAT_USUARIOS.APELLIDOS) 
+                         AS SUPERVISOR_NOMBRE, DENOMINACIONES.NOMBRE AS DENOMINACION, CONCAT(CONCAT(CAT_USUARIOS_1.NOMBRE, ' '), CAT_USUARIOS_1.APELLIDOS) 
+                         AS CAJERO
+FROM            VALORES INNER JOIN
+                         CAT_SUCURSALES ON VALORES.SUCURSAL_ID = CAT_SUCURSALES.SUCURSALES_ID INNER JOIN
+                         CAT_CAJAS ON VALORES.CAJA_ID = CAT_CAJAS.CAJAS_ID AND VALORES.SUCURSAL_ID = CAT_CAJAS.SUCURSAL_ID INNER JOIN
+                         DENOMINACIONES ON VALORES.DENOMINACIONES_ID = DENOMINACIONES.DENOMINACIONES_ID INNER JOIN
+                         CAT_USUARIOS CAT_USUARIOS_1 ON VALORES.CAJERO_ID = CAT_USUARIOS_1.USUARIOS_ID INNER JOIN
+                         CAT_USUARIOS CAT_USUARIOS ON VALORES.SUPERVISOR = CAT_USUARIOS.USUARIOS_ID WHERE        (VALORES.SUCURSAL_ID = :SucursalID) AND (VALORES.CAJA_ID = :CajaID) AND (VALORES.FECHA &gt;= TO_DATE(:Fecha1, 'dd/mm/yyyy HH24:mi:ss')) 
+AND (VALORES.FECHA &lt;= TO_DATE(:Fecha2, 'dd/mm/yyyy HH24:mi:ss') ) 
+ AND VALORES.ACTIVO NOT LIKE 'N'</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="SucursalID" ColumnName="SUCURSAL_ID" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="SucursalID" Precision="0" ProviderType="Int32" Scale="0" Size="1024" SourceColumn="SUCURSAL_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CajaID" ColumnName="CAJA_ID" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="CajaID" Precision="0" ProviderType="Int32" Scale="0" Size="1024" SourceColumn="CAJA_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Fecha1" ColumnName="FECHA" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="Fecha1" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Fecha2" ColumnName="FECHA" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="Fecha2" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_VALORES_CONDENSADOTableAdapter" GeneratorDataComponentClassName="V_VALORES_CONDENSADOTableAdapter" Name="V_VALORES_CONDENSADO" UserDataComponentName="V_VALORES_CONDENSADOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(VALORES.IMPORTE) AS IMPORTE, DENOMINACIONES.NOMBRE AS DENOMINACION
+FROM            VALORES INNER JOIN
+                         DENOMINACIONES ON VALORES.DENOMINACIONES_ID = DENOMINACIONES.DENOMINACIONES_ID
+GROUP BY VALORES.denominaciones_id, DENOMINACIONES.NOMBRE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IMPORTE" DataSetColumn="IMPORTE" />
+              <Mapping SourceColumn="DENOMINACION" DataSetColumn="DENOMINACION" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByCajaSucursalFecha" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCajaSucursalFecha" GeneratorSourceName="FillByCajaSucursalFecha" GetMethodModifier="Public" GetMethodName="GetDataByCajaSucursalFecha" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCajaSucursalFecha" UserSourceName="FillByCajaSucursalFecha">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(VALORES.IMPORTE) AS IMPORTE, DENOMINACIONES.NOMBRE AS DENOMINACION
+FROM            VALORES INNER JOIN
+                         DENOMINACIONES ON VALORES.DENOMINACIONES_ID = DENOMINACIONES.DENOMINACIONES_ID
+WHERE        (VALORES.SUCURSAL_ID = :SucursalID) AND (VALORES.CAJA_ID = :CajaID) AND (VALORES.FECHA &gt;= TO_DATE(:Fecha1, 'dd/mm/yyyy HH24:mi:ss')) 
+AND  (VALORES.FECHA &lt;= TO_DATE(:Fecha2, 'dd/mm/yyyy HH24:mi:ss') ) 
+AND VALORES.ACTIVO NOT LIKE 'N'
+GROUP BY VALORES.denominaciones_id, DENOMINACIONES.NOMBRE
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="SucursalID" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="SucursalID" Precision="0" ProviderType="Int32" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CajaID" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="CajaID" Precision="0" ProviderType="Int32" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Fecha1" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="Fecha1" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Fecha2" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="Fecha2" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_PAGOS_CONDENSADOTableAdapter" GeneratorDataComponentClassName="V_PAGOS_CONDENSADOTableAdapter" Name="V_PAGOS_CONDENSADO" UserDataComponentName="V_PAGOS_CONDENSADOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="FARMACIA.CAT_TIPO_PAGO" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(PAGOS_DET.IMPORTE) AS IMPORTE, FARMACIA.CAT_TIPO_PAGO.NOMBRE AS TIPO_PAGO
+FROM            FARMACIA.PAGOS_DET INNER JOIN
+                         FARMACIA.CAT_SUCURSALES ON PAGOS_DET.SUCURSAL_ID = CAT_SUCURSALES.SUCURSALES_ID INNER JOIN
+                         FARMACIA.CAT_TIPO_PAGO ON PAGOS_DET.TIPOPAGO_ID = CAT_TIPO_PAGO.TIPO_PAGO_ID INNER JOIN
+                         FARMACIA.PAGOS ON PAGOS_DET.NUM_PAGO = PAGOS.NUM_PAGO AND PAGOS_DET.REMISION_ID = PAGOS.REMISION_ID INNER JOIN
+                         FARMACIA.CAT_CAJAS ON PAGOS.CAJA_ID = CAT_CAJAS.CAJAS_ID
+GROUP BY FARMACIA.CAT_TIPO_PAGO.NOMBRE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IMPORTE" DataSetColumn="IMPORTE" />
+              <Mapping SourceColumn="TIPO_PAGO" DataSetColumn="TIPO_PAGO" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByCajaSucursalFecha" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCajaSucursalFecha" GeneratorSourceName="FillByCajaSucursalFecha" GetMethodModifier="Public" GetMethodName="GetDataByCajaSucursalFecha" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCajaSucursalFecha" UserSourceName="FillByCajaSucursalFecha">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(PAGOS_DET.IMPORTE) AS IMPORTE, CAT_TIPO_PAGO.NOMBRE AS TIPO_PAGO
+FROM            PAGOS_DET INNER JOIN
+                         CAT_SUCURSALES ON PAGOS_DET.SUCURSAL_ID = CAT_SUCURSALES.SUCURSALES_ID INNER JOIN
+                         CAT_TIPO_PAGO ON PAGOS_DET.TIPOPAGO_ID = CAT_TIPO_PAGO.TIPO_PAGO_ID INNER JOIN
+                         PAGOS ON  PAGOS_DET.REMISION_ID = PAGOS.REMISION_ID INNER JOIN
+                         CAT_CAJAS ON PAGOS.CAJA_ID = CAT_CAJAS.CAJAS_ID
+WHERE    PAGOS.ACTIVO='S' AND    (PAGOS.SUCURSAL_ID = :SucursalID) AND (PAGOS.CAJA_ID = :CajaID) AND (PAGOS.FECHA &gt;= TO_DATE(:Fecha1, 'dd/mm/yyyy HH24:mi:ss'))
+AND  PAGOS.FECHA &lt;= TO_DATE(:Fecha2, 'dd/mm/yyyy HH24:mi:ss') 
+GROUP BY CAT_TIPO_PAGO.NOMBRE</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="SucursalID" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="SucursalID" Precision="0" ProviderType="Int32" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CajaID" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="CajaID" Precision="0" ProviderType="Int32" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Fecha1" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="Fecha1" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Fecha2" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="Fecha2" Precision="0" ProviderType="Varchar2" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CORTE_CAJA_PAGOSTableAdapter" GeneratorDataComponentClassName="CORTE_CAJA_PAGOSTableAdapter" Name="CORTE_CAJA_PAGOS" UserDataComponentName="CORTE_CAJA_PAGOSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT PAGOS.REMISION_ID, PAGOS.FECHA, PAGOS.DOC_PAGO, PAGOS.IMPORTE_IVA, CONTROL_CAJAS.FECHA_APERTURA, CONTROL_CAJAS.CAJA_ID, CONTROL_CAJAS.CAJERO_ID, PAGOS.ACTIVO, CAT_TIPO_PAGO.NOMBRE, PAGOS_DET.IMPORTE, PAGOS_DET.TIPOPAGO_ID
+ FROM   FARMACIA.CAT_TIPO_PAGO CAT_TIPO_PAGO INNER JOIN ((FARMACIA.PAGOS PAGOS INNER JOIN FARMACIA.CONTROL_CAJAS CONTROL_CAJAS ON (PAGOS.SUCURSAL_ID=CONTROL_CAJAS.SUCURSAL_ID) AND (PAGOS.CAJA_ID=CONTROL_CAJAS.CAJA_ID)) INNER JOIN FARMACIA.PAGOS_DET PAGOS_DET ON (PAGOS.SUCURSAL_ID=PAGOS_DET.SUCURSAL_ID) AND (PAGOS.REMISION_ID=PAGOS_DET.REMISION_ID)) ON CAT_TIPO_PAGO.TIPO_PAGO_ID=PAGOS_DET.TIPOPAGO_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="REMISION_ID" DataSetColumn="REMISION_ID" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="DOC_PAGO" DataSetColumn="DOC_PAGO" />
+              <Mapping SourceColumn="IMPORTE_IVA" DataSetColumn="IMPORTE_IVA" />
+              <Mapping SourceColumn="FECHA_APERTURA" DataSetColumn="FECHA_APERTURA" />
+              <Mapping SourceColumn="CAJA_ID" DataSetColumn="CAJA_ID" />
+              <Mapping SourceColumn="CAJERO_ID" DataSetColumn="CAJERO_ID" />
+              <Mapping SourceColumn="ACTIVO" DataSetColumn="ACTIVO" />
+              <Mapping SourceColumn="NOMBRE" DataSetColumn="NOMBRE" />
+              <Mapping SourceColumn="IMPORTE" DataSetColumn="IMPORTE" />
+              <Mapping SourceColumn="TIPOPAGO_ID" DataSetColumn="TIPOPAGO_ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT PAGOS.REMISION_ID, PAGOS.FECHA, PAGOS.DOC_PAGO, PAGOS.IMPORTE_IVA, CONTROL_CAJAS.FECHA_APERTURA, CONTROL_CAJAS.CAJA_ID, CONTROL_CAJAS.CAJERO_ID, PAGOS.ACTIVO, CAT_TIPO_PAGO.NOMBRE, PAGOS_DET.IMPORTE, PAGOS_DET.TIPOPAGO_ID
+ FROM   FARMACIA.CAT_TIPO_PAGO CAT_TIPO_PAGO INNER JOIN ((FARMACIA.PAGOS PAGOS INNER JOIN FARMACIA.CONTROL_CAJAS CONTROL_CAJAS ON (PAGOS.SUCURSAL_ID=CONTROL_CAJAS.SUCURSAL_ID) AND (PAGOS.CAJA_ID=CONTROL_CAJAS.CAJA_ID)) INNER JOIN FARMACIA.PAGOS_DET PAGOS_DET ON (PAGOS.SUCURSAL_ID=PAGOS_DET.SUCURSAL_ID) AND (PAGOS.REMISION_ID=PAGOS_DET.REMISION_ID)) ON CAT_TIPO_PAGO.TIPO_PAGO_ID=PAGOS_DET.TIPOPAGO_ID
+ WHERE  (PAGOS.FECHA&gt;=TO_DATE (:FECHA1, 'DD-MM-YYYY HH24:MI:SS') AND PAGOS.FECHA&lt;TO_DATE (FECHA2, 'DD-MM-YYYY HH24:MI:SS')) AND CONTROL_CAJAS.CAJA_ID=:CAJA_ID AND CONTROL_CAJAS.CAJERO_ID=:CAJERO_ID AND PAGOS.ACTIVO='S' AND (CONTROL_CAJAS.FECHA_APERTURA&gt;=TO_DATE (:FECHA1, 'DD-MM-YYYY HH24:MI:SS') AND CONTROL_CAJAS.FECHA_APERTURA&lt;TO_DATE (:FECHA2, 'DD-MM-YYYY HH24:MI:SS'))
+ ORDER BY PAGOS_DET.TIPOPAGO_ID, PAGOS.REMISION_ID
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="FECHA1" ColumnName="FECHA" DataSourceName="FARMACIA.PAGOS" DataTypeServer="DATE" DbType="String" Direction="Input" ParameterName="FECHA1" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CAJA_ID" ColumnName="CAJA_ID" DataSourceName="FARMACIA.CONTROL_CAJAS" DataTypeServer="NUMBER" DbType="Int32" Direction="Input" ParameterName="CAJA_ID" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="CAJA_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CAJERO_ID" ColumnName="CAJERO_ID" DataSourceName="FARMACIA.CONTROL_CAJAS" DataTypeServer="NUMBER" DbType="Int32" Direction="Input" ParameterName="CAJERO_ID" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="CAJERO_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="FECHA2" ColumnName="FECHA_APERTURA" DataSourceName="FARMACIA.CONTROL_CAJAS" DataTypeServer="DATE" DbType="String" Direction="Input" ParameterName="FECHA2" Precision="0" ProviderType="Varchar2" Scale="0" Size="0" SourceColumn="FECHA_APERTURA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CorteCajaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CorteCajaDataSet" msprop:Generator_UserDSName="CorteCajaDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_PAGOS_DETALLE" msprop:Generator_TableClassName="V_PAGOS_DETALLEDataTable" msprop:Generator_TableVarName="tableV_PAGOS_DETALLE" msprop:Generator_TablePropName="V_PAGOS_DETALLE" msprop:Generator_RowDeletingName="V_PAGOS_DETALLERowDeleting" msprop:Generator_UserTableName="V_PAGOS_DETALLE" msprop:Generator_RowChangingName="V_PAGOS_DETALLERowChanging" msprop:Generator_RowEvHandlerName="V_PAGOS_DETALLERowChangeEventHandler" msprop:Generator_RowDeletedName="V_PAGOS_DETALLERowDeleted" msprop:Generator_RowEvArgName="V_PAGOS_DETALLERowChangeEvent" msprop:Generator_RowChangedName="V_PAGOS_DETALLERowChanged" msprop:Generator_RowClassName="V_PAGOS_DETALLERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUM_PAGO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNUM_PAGO" msprop:Generator_ColumnPropNameInRow="NUM_PAGO" msprop:Generator_ColumnPropNameInTable="NUM_PAGOColumn" msprop:Generator_UserColumnName="NUM_PAGO" type="xs:short" minOccurs="0" />
+              <xs:element name="SUCURSAL_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUCURSAL_ID" msprop:Generator_ColumnPropNameInRow="SUCURSAL_ID" msprop:Generator_ColumnPropNameInTable="SUCURSAL_IDColumn" msprop:Generator_UserColumnName="SUCURSAL_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIPOPAGO_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIPOPAGO_ID" msprop:Generator_ColumnPropNameInRow="TIPOPAGO_ID" msprop:Generator_ColumnPropNameInTable="TIPOPAGO_IDColumn" msprop:Generator_UserColumnName="TIPOPAGO_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="COMISION" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCOMISION" msprop:Generator_ColumnPropNameInRow="COMISION" msprop:Generator_ColumnPropNameInTable="COMISIONColumn" msprop:Generator_UserColumnName="COMISION" type="xs:float" minOccurs="0" />
+              <xs:element name="IMPORTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" msprop:Generator_UserColumnName="IMPORTE" type="xs:double" minOccurs="0" />
+              <xs:element name="NUM_CUENTA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNUM_CUENTA" msprop:Generator_ColumnPropNameInRow="NUM_CUENTA" msprop:Generator_ColumnPropNameInTable="NUM_CUENTAColumn" msprop:Generator_UserColumnName="NUM_CUENTA" type="xs:short" minOccurs="0" />
+              <xs:element name="SUCURSAL_NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUCURSAL_NOMBRE" msprop:Generator_ColumnPropNameInRow="SUCURSAL_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUCURSAL_NOMBREColumn" msprop:Generator_UserColumnName="SUCURSAL_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_PAGO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIPO_PAGO" msprop:Generator_ColumnPropNameInRow="TIPO_PAGO" msprop:Generator_ColumnPropNameInTable="TIPO_PAGOColumn" msprop:Generator_UserColumnName="TIPO_PAGO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAJA_NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAJA_NOMBRE" msprop:Generator_ColumnPropNameInRow="CAJA_NOMBRE" msprop:Generator_ColumnPropNameInTable="CAJA_NOMBREColumn" msprop:Generator_UserColumnName="CAJA_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REMISION_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnREMISION_ID" msprop:Generator_ColumnPropNameInRow="REMISION_ID" msprop:Generator_ColumnPropNameInTable="REMISION_IDColumn" msprop:Generator_UserColumnName="REMISION_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_VALORES" msprop:Generator_TableClassName="V_VALORESDataTable" msprop:Generator_TableVarName="tableV_VALORES" msprop:Generator_TablePropName="V_VALORES" msprop:Generator_RowDeletingName="V_VALORESRowDeleting" msprop:Generator_UserTableName="V_VALORES" msprop:Generator_RowChangingName="V_VALORESRowChanging" msprop:Generator_RowEvHandlerName="V_VALORESRowChangeEventHandler" msprop:Generator_RowDeletedName="V_VALORESRowDeleted" msprop:Generator_RowEvArgName="V_VALORESRowChangeEvent" msprop:Generator_RowChangedName="V_VALORESRowChanged" msprop:Generator_RowClassName="V_VALORESRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SEC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSEC" msprop:Generator_ColumnPropNameInRow="SEC" msprop:Generator_ColumnPropNameInTable="SECColumn" msprop:Generator_UserColumnName="SEC" type="xs:short" minOccurs="0" />
+              <xs:element name="SUCURSAL_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUCURSAL_ID" msprop:Generator_ColumnPropNameInRow="SUCURSAL_ID" msprop:Generator_ColumnPropNameInTable="SUCURSAL_IDColumn" msprop:Generator_UserColumnName="SUCURSAL_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="CAJA_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAJA_ID" msprop:Generator_ColumnPropNameInRow="CAJA_ID" msprop:Generator_ColumnPropNameInTable="CAJA_IDColumn" msprop:Generator_UserColumnName="CAJA_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="CAJERO_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAJERO_ID" msprop:Generator_ColumnPropNameInRow="CAJERO_ID" msprop:Generator_ColumnPropNameInTable="CAJERO_IDColumn" msprop:Generator_UserColumnName="CAJERO_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="RECOLECCION_NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRECOLECCION_NOMBRE" msprop:Generator_ColumnPropNameInRow="RECOLECCION_NOMBRE" msprop:Generator_ColumnPropNameInTable="RECOLECCION_NOMBREColumn" msprop:Generator_UserColumnName="RECOLECCION_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DENOMINACIONES_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDENOMINACIONES_ID" msprop:Generator_ColumnPropNameInRow="DENOMINACIONES_ID" msprop:Generator_ColumnPropNameInTable="DENOMINACIONES_IDColumn" msprop:Generator_UserColumnName="DENOMINACIONES_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="CANTIDAD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" msprop:Generator_UserColumnName="CANTIDAD" type="xs:double" minOccurs="0" />
+              <xs:element name="IMPORTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" msprop:Generator_UserColumnName="IMPORTE" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" msprop:Generator_UserColumnName="TOTAL" type="xs:double" minOccurs="0" />
+              <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SUPERVISOR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUPERVISOR" msprop:Generator_ColumnPropNameInRow="SUPERVISOR" msprop:Generator_ColumnPropNameInTable="SUPERVISORColumn" msprop:Generator_UserColumnName="SUPERVISOR" type="xs:short" minOccurs="0" />
+              <xs:element name="ACTIVO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnACTIVO" msprop:Generator_ColumnPropNameInRow="ACTIVO" msprop:Generator_ColumnPropNameInTable="ACTIVOColumn" msprop:Generator_UserColumnName="ACTIVO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUCURSAL" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUCURSAL" msprop:Generator_ColumnPropNameInRow="SUCURSAL" msprop:Generator_ColumnPropNameInTable="SUCURSALColumn" msprop:Generator_UserColumnName="SUCURSAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAJA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAJA" msprop:Generator_ColumnPropNameInRow="CAJA" msprop:Generator_ColumnPropNameInTable="CAJAColumn" msprop:Generator_UserColumnName="CAJA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DENOMINACION" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDENOMINACION" msprop:Generator_ColumnPropNameInRow="DENOMINACION" msprop:Generator_ColumnPropNameInTable="DENOMINACIONColumn" msprop:Generator_UserColumnName="DENOMINACION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAJERO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAJERO" msprop:Generator_ColumnPropNameInRow="CAJERO" msprop:Generator_ColumnPropNameInTable="CAJEROColumn" msprop:Generator_UserColumnName="CAJERO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUPERVISOR_NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUPERVISOR_NOMBRE" msprop:Generator_ColumnPropNameInRow="SUPERVISOR_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUPERVISOR_NOMBREColumn" msprop:Generator_UserColumnName="SUPERVISOR_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_VALORES_CONDENSADO" msprop:Generator_TableClassName="V_VALORES_CONDENSADODataTable" msprop:Generator_TableVarName="tableV_VALORES_CONDENSADO" msprop:Generator_TablePropName="V_VALORES_CONDENSADO" msprop:Generator_RowDeletingName="V_VALORES_CONDENSADORowDeleting" msprop:Generator_UserTableName="V_VALORES_CONDENSADO" msprop:Generator_RowChangingName="V_VALORES_CONDENSADORowChanging" msprop:Generator_RowEvHandlerName="V_VALORES_CONDENSADORowChangeEventHandler" msprop:Generator_RowDeletedName="V_VALORES_CONDENSADORowDeleted" msprop:Generator_RowEvArgName="V_VALORES_CONDENSADORowChangeEvent" msprop:Generator_RowChangedName="V_VALORES_CONDENSADORowChanged" msprop:Generator_RowClassName="V_VALORES_CONDENSADORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IMPORTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" msprop:Generator_UserColumnName="IMPORTE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DENOMINACION" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDENOMINACION" msprop:Generator_ColumnPropNameInRow="DENOMINACION" msprop:Generator_ColumnPropNameInTable="DENOMINACIONColumn" msprop:Generator_UserColumnName="DENOMINACION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_PAGOS_CONDENSADO" msprop:Generator_TableClassName="V_PAGOS_CONDENSADODataTable" msprop:Generator_TableVarName="tableV_PAGOS_CONDENSADO" msprop:Generator_TablePropName="V_PAGOS_CONDENSADO" msprop:Generator_RowDeletingName="V_PAGOS_CONDENSADORowDeleting" msprop:Generator_UserTableName="V_PAGOS_CONDENSADO" msprop:Generator_RowChangingName="V_PAGOS_CONDENSADORowChanging" msprop:Generator_RowEvHandlerName="V_PAGOS_CONDENSADORowChangeEventHandler" msprop:Generator_RowDeletedName="V_PAGOS_CONDENSADORowDeleted" msprop:Generator_RowEvArgName="V_PAGOS_CONDENSADORowChangeEvent" msprop:Generator_RowChangedName="V_PAGOS_CONDENSADORowChanged" msprop:Generator_RowClassName="V_PAGOS_CONDENSADORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IMPORTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" msprop:Generator_UserColumnName="IMPORTE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TIPO_PAGO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIPO_PAGO" msprop:Generator_ColumnPropNameInRow="TIPO_PAGO" msprop:Generator_ColumnPropNameInTable="TIPO_PAGOColumn" msprop:Generator_UserColumnName="TIPO_PAGO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CORTE_CAJA_PAGOS" msprop:Generator_TableClassName="CORTE_CAJA_PAGOSDataTable" msprop:Generator_TableVarName="tableCORTE_CAJA_PAGOS" msprop:Generator_TablePropName="CORTE_CAJA_PAGOS" msprop:Generator_RowDeletingName="CORTE_CAJA_PAGOSRowDeleting" msprop:Generator_UserTableName="CORTE_CAJA_PAGOS" msprop:Generator_RowChangingName="CORTE_CAJA_PAGOSRowChanging" msprop:Generator_RowEvHandlerName="CORTE_CAJA_PAGOSRowChangeEventHandler" msprop:Generator_RowDeletedName="CORTE_CAJA_PAGOSRowDeleted" msprop:Generator_RowEvArgName="CORTE_CAJA_PAGOSRowChangeEvent" msprop:Generator_RowChangedName="CORTE_CAJA_PAGOSRowChanged" msprop:Generator_RowClassName="CORTE_CAJA_PAGOSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REMISION_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnREMISION_ID" msprop:Generator_ColumnPropNameInRow="REMISION_ID" msprop:Generator_ColumnPropNameInTable="REMISION_IDColumn" msprop:Generator_UserColumnName="REMISION_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DOC_PAGO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDOC_PAGO" msprop:Generator_ColumnPropNameInRow="DOC_PAGO" msprop:Generator_ColumnPropNameInTable="DOC_PAGOColumn" msprop:Generator_UserColumnName="DOC_PAGO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IMPORTE_IVA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIMPORTE_IVA" msprop:Generator_ColumnPropNameInRow="IMPORTE_IVA" msprop:Generator_ColumnPropNameInTable="IMPORTE_IVAColumn" msprop:Generator_UserColumnName="IMPORTE_IVA" type="xs:double" minOccurs="0" />
+              <xs:element name="FECHA_APERTURA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA_APERTURA" msprop:Generator_ColumnPropNameInRow="FECHA_APERTURA" msprop:Generator_ColumnPropNameInTable="FECHA_APERTURAColumn" msprop:Generator_UserColumnName="FECHA_APERTURA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CAJA_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAJA_ID" msprop:Generator_ColumnPropNameInRow="CAJA_ID" msprop:Generator_ColumnPropNameInTable="CAJA_IDColumn" msprop:Generator_UserColumnName="CAJA_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="CAJERO_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAJERO_ID" msprop:Generator_ColumnPropNameInRow="CAJERO_ID" msprop:Generator_ColumnPropNameInTable="CAJERO_IDColumn" msprop:Generator_UserColumnName="CAJERO_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="ACTIVO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnACTIVO" msprop:Generator_ColumnPropNameInRow="ACTIVO" msprop:Generator_ColumnPropNameInTable="ACTIVOColumn" msprop:Generator_UserColumnName="ACTIVO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMBRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IMPORTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" msprop:Generator_UserColumnName="IMPORTE" type="xs:double" minOccurs="0" />
+              <xs:element name="TIPOPAGO_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIPOPAGO_ID" msprop:Generator_ColumnPropNameInRow="TIPOPAGO_ID" msprop:Generator_ColumnPropNameInTable="TIPOPAGO_IDColumn" msprop:Generator_UserColumnName="TIPOPAGO_ID" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,3225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{451D65F5-F255-49B9-B49B-ED11BCC45618}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIF</RootNamespace>
+    <AssemblyName>SIF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>3.12.7.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.7.4137.9688, Culture=neutral, PublicKeyToken=a4292a325f69b123, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrashReporter.NET">
+      <HintPath>Referencias\CrashReporter.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Versiones trabajadas\Versiones\28 feb\SIF3VentasOFA\Farmacia\Referencias\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Versiones trabajadas\Versiones\28 feb\SIF3VentasOFA\Farmacia\Referencias\CrystalDecisions.Data.AdoDotNetInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Versiones trabajadas\Versiones\28 feb\SIF3VentasOFA\Farmacia\Referencias\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Versiones trabajadas\Versiones\28 feb\SIF3VentasOFA\Farmacia\Referencias\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Versiones trabajadas\Versiones\28 feb\SIF3VentasOFA\Farmacia\Referencias\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=10.4.0.2, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencias\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=10.4.0.2, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencias\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=10.4.0.2, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencias\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.2, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencias\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=10.4.0.2, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencias\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Equin.ApplicationFramework.BindingListView, Version=1.2.4598.14330, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencias\Equin.ApplicationFramework.BindingListView.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel, Version=2.0.1.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencias\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.10.0.25332, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.10.0\lib\net40\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.10.0.25333, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.10.0\lib\net40\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.10.0.25333, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.10.0\lib\net40\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.10.0.25331, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.10.0\lib\portable-net40+sl50+win+wpa81+wp80\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.51.0.2335, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v3.1.51.0.2335\lib\net40\Google.Apis.Drive.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.10.0.25332, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.10.0\lib\net40\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Referencias\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencias\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="sif_tools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=029dcfe38402cbc1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencias\sif_tools.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zlib.Portable, Version=1.11.0.0, Culture=neutral, PublicKeyToken=431cba815f6a8b5b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\CorteCajaDataSet.Designer.cs">
+      <DependentUpon>CorteCajaDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\SIFDataSet.cs">
+      <DependentUpon>SIFDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SIFDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIFDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Funciones.cs" />
+    <Compile Include="Helpers\ConnectionString.cs" />
+    <Compile Include="Helpers\ConfigDBSettings.cs" />
+    <Compile Include="Helpers\ConfigSettings.cs" />
+    <Compile Include="Helpers\ErrorLog.cs" />
+    <Compile Include="Helpers\IsType.cs" />
+    <Compile Include="Helpers\Reflect.cs" />
+    <Compile Include="Helpers\Sesion.cs" />
+    <Compile Include="Helpers\SIFUtils.cs" />
+    <Compile Include="Helpers\T_NUMERIC_TAB.cs" />
+    <Compile Include="Helpers\T_VARCHAR_TAB.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Templates\CalculadoraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Templates\CalculadoraForm.Designer.cs">
+      <DependentUpon>CalculadoraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\capturaCaducidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Templates\capturaCaducidad.Designer.cs">
+      <DependentUpon>capturaCaducidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\CatalogoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Templates\CatalogoUserControl.Designer.cs">
+      <DependentUpon>CatalogoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ListaUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Templates\ListaUserControl.Designer.cs">
+      <DependentUpon>ListaUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Templates\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\MenuUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Templates\MenuUserControl.Designer.cs">
+      <DependentUpon>MenuUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\SplashCreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Templates\SplashCreenForm.Designer.cs">
+      <DependentUpon>SplashCreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Actualizador\ProgresoDescarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Actualizador\ProgresoDescarga.designer.cs">
+      <DependentUpon>ProgresoDescarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Almacen\ConsultaOrdenesCompraUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Almacen\ConsultaOrdenesCompraUserControl.Designer.cs">
+      <DependentUpon>ConsultaOrdenesCompraUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Almacen\RecepcionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Almacen\RecepcionUserControl.Designer.cs">
+      <DependentUpon>RecepcionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Almacen\IncidenciaAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Almacen\IncidenciaAlmacenUserControl.Designer.cs">
+      <DependentUpon>IncidenciaAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Almacen\IncidenciasAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Almacen\IncidenciasAlmacenUserControl.Designer.cs">
+      <DependentUpon>IncidenciasAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Articulos\ArticuloUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Articulos\ArticuloUserControl.Designer.cs">
+      <DependentUpon>ArticuloUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Articulos\DescuentoEspecialProveedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Articulos\DescuentoEspecialProveedorForm.Designer.cs">
+      <DependentUpon>DescuentoEspecialProveedorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Articulos\DetalleArticuloForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Articulos\DetalleArticuloForm.Designer.cs">
+      <DependentUpon>DetalleArticuloForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Articulos\OfertasMayoristaUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Articulos\OfertasMayoristaUserControl.Designer.cs">
+      <DependentUpon>OfertasMayoristaUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Articulos\ProductosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Articulos\ProductosUserControl.Designer.cs">
+      <DependentUpon>ProductosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Articulos\TransferMayoristasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Articulos\TransferMayoristasForm.Designer.cs">
+      <DependentUpon>TransferMayoristasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\CatQuejasSugTipoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\CatQuejasSugTipoUserControl.Designer.cs">
+      <DependentUpon>CatQuejasSugTipoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\CatQuejasSugUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\CatQuejasSugUserControl.Designer.cs">
+      <DependentUpon>CatQuejasSugUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\CofirmacionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\CofirmacionForm.Designer.cs">
+      <DependentUpon>CofirmacionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\ConsultasDermaForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\ConsultasDermaForm.Designer.cs">
+      <DependentUpon>ConsultasDermaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\CotizacionClienteMayoreoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\CotizacionClienteMayoreoUserControl.Designer.cs">
+      <DependentUpon>CotizacionClienteMayoreoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\CotizacionesClienteMayoreoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\CotizacionesClienteMayoreoUserControl.Designer.cs">
+      <DependentUpon>CotizacionesClienteMayoreoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\CotizacionesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\CotizacionesUserControl.Designer.cs">
+      <DependentUpon>CotizacionesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\CotizacionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\CotizacionUserControl.Designer.cs">
+      <DependentUpon>CotizacionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\ImporteApartadoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\ImporteApartadoUser.Designer.cs">
+      <DependentUpon>ImporteApartadoUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\QuejasSugerenciasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\QuejasSugerenciasUserControl.Designer.cs">
+      <DependentUpon>QuejasSugerenciasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallCenter\QuejaSugerenciaUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CallCenter\QuejaSugerenciaUserControl.Designer.cs">
+      <DependentUpon>QuejaSugerenciaUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\AgregaArticuloInvFisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\AgregaArticuloInvFisForm.Designer.cs">
+      <DependentUpon>AgregaArticuloInvFisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ArticuloEditarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ArticuloEditarForm.Designer.cs">
+      <DependentUpon>ArticuloEditarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ArticuloExistenciasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ArticuloExistenciasForm.Designer.cs">
+      <DependentUpon>ArticuloExistenciasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ArticuloMayoristasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ArticuloMayoristasForm.Designer.cs">
+      <DependentUpon>ArticuloMayoristasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ArticuloPreciosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ArticuloPreciosForm.Designer.cs">
+      <DependentUpon>ArticuloPreciosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\AsignarComprador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\AsignarComprador.Designer.cs">
+      <DependentUpon>AsignarComprador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\CambiarContrasenhaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\CambiarContrasenhaUsuario.Designer.cs">
+      <DependentUpon>CambiarContrasenhaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\CambiarContrasenhaUsuarioLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\CambiarContrasenhaUsuarioLogin.Designer.cs">
+      <DependentUpon>CambiarContrasenhaUsuarioLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\CarrierSKUUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\CarrierSKUUserControl.Designer.cs">
+      <DependentUpon>CarrierSKUUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\BancosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\BancosUserControl.Designer.cs">
+      <DependentUpon>BancosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\CajasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\CajasUserControl.Designer.cs">
+      <DependentUpon>CajasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\CatArticulosBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\CatArticulosBaja.Designer.cs">
+      <DependentUpon>CatArticulosBaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ClaveArticuloForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ClaveArticuloForm.Designer.cs">
+      <DependentUpon>ClaveArticuloForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ArticuloUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ArticuloUserControl.Designer.cs">
+      <DependentUpon>ArticuloUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\CatalogoDescuentosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\CatalogoDescuentosUserControl.Designer.cs">
+      <DependentUpon>CatalogoDescuentosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ClienteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ClienteControl.Designer.cs">
+      <DependentUpon>ClienteControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\CarrierUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\CarrierUserControl.Designer.cs">
+      <DependentUpon>CarrierUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ConvenioClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ConvenioClienteForm.Designer.cs">
+      <DependentUpon>ConvenioClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\frmCompradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\frmCompradores.Designer.cs">
+      <DependentUpon>frmCompradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\frmImagenesArticuloIdGoogleDrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\frmImagenesArticuloIdGoogleDrive.Designer.cs">
+      <DependentUpon>frmImagenesArticuloIdGoogleDrive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ImportarCatArticulosSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ImportarCatArticulosSub.Designer.cs">
+      <DependentUpon>ImportarCatArticulosSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\InventarioFisicoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\InventarioFisicoUserControl.Designer.cs">
+      <DependentUpon>InventarioFisicoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ListaPromocionNewConfForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ListaPromocionNewConfForm.Designer.cs">
+      <DependentUpon>ListaPromocionNewConfForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\LocalizacionLinea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\LocalizacionLinea.Designer.cs">
+      <DependentUpon>LocalizacionLinea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Comercializacion\AdminFacturas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Comercializacion\AdminFacturas.Designer.cs">
+      <DependentUpon>AdminFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Comercializacion\AdminSaldos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Comercializacion\AdminSaldos.Designer.cs">
+      <DependentUpon>AdminSaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Comercializacion\AgregarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Comercializacion\AgregarFactura.Designer.cs">
+      <DependentUpon>AgregarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Comercializacion\Comercializacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Comercializacion\Comercializacion.Designer.cs">
+      <DependentUpon>Comercializacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Comercializacion\ConsultarSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Comercializacion\ConsultarSaldo.Designer.cs">
+      <DependentUpon>ConsultarSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Comercializacion\Saldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Comercializacion\Saldos.Designer.cs">
+      <DependentUpon>Saldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Comercializacion\SeleccionarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Comercializacion\SeleccionarCliente.Designer.cs">
+      <DependentUpon>SeleccionarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Complementos\frmSelecionCaducidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Complementos\frmSelecionCaducidad.Designer.cs">
+      <DependentUpon>frmSelecionCaducidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Complementos\frmTimbradoCartaPorte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Complementos\frmTimbradoCartaPorte.Designer.cs">
+      <DependentUpon>frmTimbradoCartaPorte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Complementos\LoteYCaducidadUbicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Complementos\LoteYCaducidadUbicaciones.Designer.cs">
+      <DependentUpon>LoteYCaducidadUbicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Documentacion\Documentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Documentacion\Documentacion.Designer.cs">
+      <DependentUpon>Documentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Extras\frmEmbarque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Extras\frmEmbarque.Designer.cs">
+      <DependentUpon>frmEmbarque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Extras\ProgresoExpImpFileExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Extras\ProgresoExpImpFileExcel.Designer.cs">
+      <DependentUpon>ProgresoExpImpFileExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmAjustesJHup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAjustesJHup.Designer.cs">
+      <DependentUpon>frmAjustesJHup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\ControlCaducidadesSalidasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\ControlCaducidadesSalidasUserControl.Designer.cs">
+      <DependentUpon>ControlCaducidadesSalidasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\controlCaducidadesSelectUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\controlCaducidadesSelectUserControl.Designer.cs">
+      <DependentUpon>controlCaducidadesSelectUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\frmCapturaCaducidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\frmCapturaCaducidades.Designer.cs">
+      <DependentUpon>frmCapturaCaducidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\frmRegistraCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\frmRegistraCad.Designer.cs">
+      <DependentUpon>frmRegistraCad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\frmRegistraCaducidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\frmRegistraCaducidad.Designer.cs">
+      <DependentUpon>frmRegistraCaducidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\ImpFileTraspasoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\ImpFileTraspasoSelect.Designer.cs">
+      <DependentUpon>ImpFileTraspasoSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\PNCCaducidadUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\PNCCaducidadUserControl.Designer.cs">
+      <DependentUpon>PNCCaducidadUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\PNCEditarUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\PNCEditarUserControl.Designer.cs">
+      <DependentUpon>PNCEditarUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\PNCNuevoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\PNCNuevoUserControl.Designer.cs">
+      <DependentUpon>PNCNuevoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\ProductoNoConformeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\ProductoNoConformeUserControl.Designer.cs">
+      <DependentUpon>ProductoNoConformeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\SelectFilas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\SelectFilas.Designer.cs">
+      <DependentUpon>SelectFilas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\SubRogacionClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\SubRogacionClienteForm.Designer.cs">
+      <DependentUpon>SubRogacionClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ExistenciaSucForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ExistenciaSucForm.Designer.cs">
+      <DependentUpon>ExistenciaSucForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\LocalizacionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\LocalizacionUserControl.Designer.cs">
+      <DependentUpon>LocalizacionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ProveedoresControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ProveedoresControl.Designer.cs">
+      <DependentUpon>ProveedoresControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\DireccionMedicoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\DireccionMedicoForm.Designer.cs">
+      <DependentUpon>DireccionMedicoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\DireccionClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\DireccionClienteForm.Designer.cs">
+      <DependentUpon>DireccionClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ListaSucursalVentaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ListaSucursalVentaForm.Designer.cs">
+      <DependentUpon>ListaSucursalVentaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ListaTipoMedicamentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ListaTipoMedicamentoForm.Designer.cs">
+      <DependentUpon>ListaTipoMedicamentoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\SSAControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\SSAControl.Designer.cs">
+      <DependentUpon>SSAControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\SucursalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\SucursalForm.Designer.cs">
+      <DependentUpon>SucursalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\UsuarioIDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\UsuarioIDForm.Designer.cs">
+      <DependentUpon>UsuarioIDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ValesDevolucionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ValesDevolucionUserControl.Designer.cs">
+      <DependentUpon>ValesDevolucionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoDevolucionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoDevolucionUserControl.Designer.cs">
+      <DependentUpon>TipoDevolucionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\UsuarioCajeroUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\UsuarioCajeroUserControl.Designer.cs">
+      <DependentUpon>UsuarioCajeroUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\SucursalesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\SucursalesUserControl.Designer.cs">
+      <DependentUpon>SucursalesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoPagoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoPagoUserControl.Designer.cs">
+      <DependentUpon>TipoPagoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoMovimientoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoMovimientoUserControl.Designer.cs">
+      <DependentUpon>TipoMovimientoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\MedicosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\MedicosUserControl.Designer.cs">
+      <DependentUpon>MedicosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\UsuarioUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\UsuarioUserControl.Designer.cs">
+      <DependentUpon>UsuarioUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoMedicamentoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoMedicamentoUserControl.Designer.cs">
+      <DependentUpon>TipoMedicamentoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\MonedasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\MonedasUserControl.Designer.cs">
+      <DependentUpon>MonedasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\EspecialidadUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\EspecialidadUserControl.Designer.cs">
+      <DependentUpon>EspecialidadUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoClienteUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoClienteUserControl.Designer.cs">
+      <DependentUpon>TipoClienteUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\ImpuestoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\ImpuestoUserControl.Designer.cs">
+      <DependentUpon>ImpuestoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoCambioUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Catalogos\TipoCambioUserControl.Designer.cs">
+      <DependentUpon>TipoCambioUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConfiguracionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConfiguracionForm.Designer.cs">
+      <DependentUpon>ConfiguracionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Configuracion\ConciliacionPfizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Configuracion\ConciliacionPfizerForm.Designer.cs">
+      <DependentUpon>ConciliacionPfizerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Configuracion\ConciliacionNadroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Configuracion\ConciliacionNadroForm.Designer.cs">
+      <DependentUpon>ConciliacionNadroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\AjusteAlmacenComprasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\AjusteAlmacenComprasUserControl.Designer.cs">
+      <DependentUpon>AjusteAlmacenComprasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\AjusteAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\AjusteAlmacenUserControl.Designer.cs">
+      <DependentUpon>AjusteAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\AjustesAlmacenComprasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\AjustesAlmacenComprasUserControl.Designer.cs">
+      <DependentUpon>AjustesAlmacenComprasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\AjustesAlmacenComprasUserControl_2.cs" />
+    <Compile Include="View\Inventario\AjustesAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\AjustesAlmacenUserControl.Designer.cs">
+      <DependentUpon>AjustesAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\CalculoEOQUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\CalculoEOQUserControl.Designer.cs">
+      <DependentUpon>CalculoEOQUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\CatEquivalenciasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\CatEquivalenciasUserControl.Designer.cs">
+      <DependentUpon>CatEquivalenciasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\ConsultaArticuloUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\ConsultaArticuloUserControl.Designer.cs">
+      <DependentUpon>ConsultaArticuloUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\ConversioAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\ConversioAlmacenUserControl.Designer.cs">
+      <DependentUpon>ConversioAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\ConversionAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\ConversionAlmacenUserControl.Designer.cs">
+      <DependentUpon>ConversionAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\DestruccionAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\DestruccionAlmacenUserControl.designer.cs">
+      <DependentUpon>DestruccionAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\DestruccionesAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\DestruccionesAlmacenUserControl.designer.cs">
+      <DependentUpon>DestruccionesAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\DevolucionAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\DevolucionAlmacenUserControl.Designer.cs">
+      <DependentUpon>DevolucionAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\DevolucionesAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\DevolucionesAlmacenUserControl.Designer.cs">
+      <DependentUpon>DevolucionesAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\Error.Designer.cs">
+      <DependentUpon>Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\frmRecepcionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\frmRecepcionControl.Designer.cs">
+      <DependentUpon>frmRecepcionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\ImportarPedidoMotivoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\ImportarPedidoMotivoSelect.Designer.cs">
+      <DependentUpon>ImportarPedidoMotivoSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\KardexAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\KardexAlmacenUserControl.Designer.cs">
+      <DependentUpon>KardexAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\PedidoAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\PedidoAlmacenUserControl.Designer.cs">
+      <DependentUpon>PedidoAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\PedidosAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\PedidosAlmacenUserControl.Designer.cs">
+      <DependentUpon>PedidosAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\RecepcionDevolucionTrapasoAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\RecepcionDevolucionTrapasoAlmacenUserControl.Designer.cs">
+      <DependentUpon>RecepcionDevolucionTrapasoAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\RecepcionTrapasoAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\RecepcionTrapasoAlmacenUserControl.Designer.cs">
+      <DependentUpon>RecepcionTrapasoAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\RecepcionTraspasosAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\RecepcionTraspasosAlmacenUserControl.Designer.cs">
+      <DependentUpon>RecepcionTraspasosAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\TrapasoAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\TrapasoAlmacenUserControl.Designer.cs">
+      <DependentUpon>TrapasoAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\TraspasosAlmacenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\TraspasosAlmacenUserControl.Designer.cs">
+      <DependentUpon>TraspasosAlmacenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Inventario\UbicacionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Inventario\UbicacionForm.Designer.cs">
+      <DependentUpon>UbicacionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Marketing\fmrSendUserEmailEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Marketing\fmrSendUserEmailEdicion.Designer.cs">
+      <DependentUpon>fmrSendUserEmailEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Marketing\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Marketing\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Marketing\SenEmailClientsAndCollaborators.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Marketing\SenEmailClientsAndCollaborators.Designer.cs">
+      <DependentUpon>SenEmailClientsAndCollaborators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\AlmacenMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\AlmacenMenu.Designer.cs">
+      <DependentUpon>AlmacenMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\CatalogosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\CatalogosUserControl.Designer.cs">
+      <DependentUpon>CatalogosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\ComprasMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\ComprasMenu.Designer.cs">
+      <DependentUpon>ComprasMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\CatMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\CatMenu.Designer.cs">
+      <DependentUpon>CatMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\Compras\ComprasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\Compras\ComprasUserControl.Designer.cs">
+      <DependentUpon>ComprasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\ConfiguracionMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\ConfiguracionMenu.Designer.cs">
+      <DependentUpon>ConfiguracionMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\CatalogosSegUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\CatalogosSegUserControl.Designer.cs">
+      <DependentUpon>CatalogosSegUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\gestionAdministrativaGeneral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\gestionAdministrativaGeneral.Designer.cs">
+      <DependentUpon>gestionAdministrativaGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\gestionAdministrativaMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\gestionAdministrativaMenu.Designer.cs">
+      <DependentUpon>gestionAdministrativaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\InventarioMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\InventarioMenu.Designer.cs">
+      <DependentUpon>InventarioMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\VentasMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\VentasMenu.Designer.cs">
+      <DependentUpon>VentasMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\Ventas\CajaUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\Ventas\CajaUserControl.Designer.cs">
+      <DependentUpon>CajaUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\Ventas\ControladosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Menu\Ventas\ControladosUserControl.Designer.cs">
+      <DependentUpon>ControladosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModificacionLotesCaducidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ModificacionLotesCaducidades.Designer.cs">
+      <DependentUpon>ModificacionLotesCaducidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AjusteInventarioDetallesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AjusteInventarioDetallesUserControl.Designer.cs">
+      <DependentUpon>AjusteInventarioDetallesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AjusteInventarioUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AjusteInventarioUserControl.Designer.cs">
+      <DependentUpon>AjusteInventarioUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AplicarOfertaUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AplicarOfertaUserControl.Designer.cs">
+      <DependentUpon>AplicarOfertaUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AsignacionPreciosFinalizaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AsignacionPreciosFinalizaForm.Designer.cs">
+      <DependentUpon>AsignacionPreciosFinalizaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AsignacionPreciosOrdenCompraDetallesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AsignacionPreciosOrdenCompraDetallesUserControl.Designer.cs">
+      <DependentUpon>AsignacionPreciosOrdenCompraDetallesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AsignacionPreciosOrdenCompraUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\AsignacionPreciosOrdenCompraUserControl.Designer.cs">
+      <DependentUpon>AsignacionPreciosOrdenCompraUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\BonificacionDetallesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\BonificacionDetallesUserControl.Designer.cs">
+      <DependentUpon>BonificacionDetallesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\BonificacionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\BonificacionUserControl.Designer.cs">
+      <DependentUpon>BonificacionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ClienteCompraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ClienteCompraForm.Designer.cs">
+      <DependentUpon>ClienteCompraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ConsultaOfertasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ConsultaOfertasUserControl.Designer.cs">
+      <DependentUpon>ConsultaOfertasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\controlCaducidadesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\controlCaducidadesUserControl.Designer.cs">
+      <DependentUpon>controlCaducidadesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\CorteCajaForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\CorteCajaForm.Designer.cs">
+      <DependentUpon>CorteCajaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\CuentasPagarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\CuentasPagarControl.Designer.cs">
+      <DependentUpon>CuentasPagarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\DevolucionOrdenCompraDetallesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\DevolucionOrdenCompraDetallesUserControl.designer.cs">
+      <DependentUpon>DevolucionOrdenCompraDetallesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\DevolucionReposicionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\DevolucionReposicionControl.Designer.cs">
+      <DependentUpon>DevolucionReposicionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\DevolucionReposicionDetallesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\DevolucionReposicionDetallesUserControl.Designer.cs">
+      <DependentUpon>DevolucionReposicionDetallesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\FabricantesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\FabricantesControl.Designer.cs">
+      <DependentUpon>FabricantesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\FacturaDetallesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\FacturaDetallesUserControl.Designer.cs">
+      <DependentUpon>FacturaDetallesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\FacturasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\FacturasUserControl.Designer.cs">
+      <DependentUpon>FacturasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\fechaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\fechaForm.Designer.cs">
+      <DependentUpon>fechaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\FechasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\FechasForm.Designer.cs">
+      <DependentUpon>FechasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\FoliosGeneradosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\FoliosGeneradosForm.Designer.cs">
+      <DependentUpon>FoliosGeneradosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\frmNewNotaDeCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\frmNewNotaDeCredito.Designer.cs">
+      <DependentUpon>frmNewNotaDeCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\frmSelectNotaDeCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\frmSelectNotaDeCredito.Designer.cs">
+      <DependentUpon>frmSelectNotaDeCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\IncidenciasCompras.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\IncidenciasCompras.designer.cs">
+      <DependentUpon>IncidenciasCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\InventarioFechaTipoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\InventarioFechaTipoForm.Designer.cs">
+      <DependentUpon>InventarioFechaTipoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\LaboratoriosControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\LaboratoriosControl.Designer.cs">
+      <DependentUpon>LaboratoriosControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\LoteCaducidadDetallesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\LoteCaducidadDetallesUserControl.Designer.cs">
+      <DependentUpon>LoteCaducidadDetallesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ManejoDescuentosDetalleUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ManejoDescuentosDetalleUserControl.Designer.cs">
+      <DependentUpon>ManejoDescuentosDetalleUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ManejoDescuentosDetalleUserControlV2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ManejoDescuentosDetalleUserControlV2.Designer.cs">
+      <DependentUpon>ManejoDescuentosDetalleUserControlV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ManejoDescuentosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ManejoDescuentosUserControl.Designer.cs">
+      <DependentUpon>ManejoDescuentosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\NotasDeCreditoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\NotasDeCreditoControl.Designer.cs">
+      <DependentUpon>NotasDeCreditoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\NotasDeCreditoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\NotasDeCreditoUserControl.Designer.cs">
+      <DependentUpon>NotasDeCreditoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\NuevoArticuloCompraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\NuevoArticuloCompraForm.Designer.cs">
+      <DependentUpon>NuevoArticuloCompraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\NuevoListaOfertaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\NuevoListaOfertaForm.Designer.cs">
+      <DependentUpon>NuevoListaOfertaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\NumeroFacturaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\NumeroFacturaForm.Designer.cs">
+      <DependentUpon>NumeroFacturaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\OfertasCompraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\OfertasCompraForm.Designer.cs">
+      <DependentUpon>OfertasCompraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\OfertasComprasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\OfertasComprasUserControl.Designer.cs">
+      <DependentUpon>OfertasComprasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\OfertasMayoristasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\OfertasMayoristasUserControl.Designer.cs">
+      <DependentUpon>OfertasMayoristasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\OrdenCompraUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\OrdenCompraUserControl.Designer.cs">
+      <DependentUpon>OrdenCompraUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\OrdenesCompraUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\OrdenesCompraUserControl.Designer.cs">
+      <DependentUpon>OrdenesCompraUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ProveedoresControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ProveedoresControl.Designer.cs">
+      <DependentUpon>ProveedoresControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\RecepcionOrdenCompraDetallesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\RecepcionOrdenCompraDetallesUserControl.Designer.cs">
+      <DependentUpon>RecepcionOrdenCompraDetallesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\RecepcionOrdenCompraUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\RecepcionOrdenCompraUserControl.Designer.cs">
+      <DependentUpon>RecepcionOrdenCompraUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ReposicionOrdenCompraDetallesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ReposicionOrdenCompraDetallesUserControl.designer.cs">
+      <DependentUpon>ReposicionOrdenCompraDetallesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\SeleccionaMayoristaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\SeleccionaMayoristaForm.Designer.cs">
+      <DependentUpon>SeleccionaMayoristaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ModoPagoOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\ModoPagoOC.Designer.cs">
+      <DependentUpon>ModoPagoOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\SucursalVirtual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\SucursalVirtual.Designer.cs">
+      <DependentUpon>SucursalVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\TipoMedicamentoComprasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\TipoMedicamentoComprasUserControl.Designer.cs">
+      <DependentUpon>TipoMedicamentoComprasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdenCompra\TipoMovimientoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdenCompra\TipoMovimientoForm.Designer.cs">
+      <DependentUpon>TipoMovimientoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reportes\Inventarios\PedidoAlmacenCrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PedidoAlmacenCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\Inventarios\IncidenciaRecepcionAlmacenCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncidenciaRecepcionAlmacenCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\Inventarios\RecepcionAlmacenCrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecepcionAlmacenCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\Inventarios\ReporteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\Inventarios\ReporteForm.Designer.cs">
+      <DependentUpon>ReporteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reportes\Inventarios\TraspasoAlmacenCrystalReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\OrdenCompra\OrdenCompra.cs">
+      <DependentUpon>OrdenCompra.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\OrdenCompra\OrdenCompraCrystalReport1.cs">
+      <DependentUpon>OrdenCompraCrystalReport.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\OrdenCompra\OrdenCompraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\OrdenCompra\OrdenCompraForm.Designer.cs">
+      <DependentUpon>OrdenCompraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reportes\ReportesAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\ReportesAdmin.Designer.cs">
+      <DependentUpon>ReportesAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reportes\Venta\ConciliacionTAEForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\Venta\ConciliacionTAEForm.Designer.cs">
+      <DependentUpon>ConciliacionTAEForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reportes\Venta\CorteCajaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\Venta\CorteCajaForm.Designer.cs">
+      <DependentUpon>CorteCajaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reportes\Venta\CorteDeCaja.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CorteDeCaja.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\frmImpresion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reportes\frmImpresion.Designer.cs">
+      <DependentUpon>frmImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Seguridad\BitacoraUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Seguridad\BitacoraUserControl.Designer.cs">
+      <DependentUpon>BitacoraUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Seguridad\CompradorLaboratorioUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Seguridad\CompradorLaboratorioUserControl.Designer.cs">
+      <DependentUpon>CompradorLaboratorioUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Seguridad\PrivilegiosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Seguridad\PrivilegiosUserControl.Designer.cs">
+      <DependentUpon>PrivilegiosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Seguridad\TiposUsuarioUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Seguridad\TiposUsuarioUserControl.Designer.cs">
+      <DependentUpon>TiposUsuarioUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\AnexoTipoValeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\AnexoTipoValeForm.Designer.cs">
+      <DependentUpon>AnexoTipoValeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\CatalogoSubrogacionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\CatalogoSubrogacionUserControl.Designer.cs">
+      <DependentUpon>CatalogoSubrogacionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\ArticulosSubrogacionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\ArticulosSubrogacionUserControl.Designer.cs">
+      <DependentUpon>ArticulosSubrogacionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\TicketCreditoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\TicketCreditoUserControl.Designer.cs">
+      <DependentUpon>TicketCreditoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\PagoFacturasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\PagoFacturasUserControl.Designer.cs">
+      <DependentUpon>PagoFacturasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\CotizacionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\CotizacionUserControl.Designer.cs">
+      <DependentUpon>CotizacionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\GeneraFacturasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\GeneraFacturasUserControl.Designer.cs">
+      <DependentUpon>GeneraFacturasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\LicitacionesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\LicitacionesUserControl.Designer.cs">
+      <DependentUpon>LicitacionesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\FacturasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\FacturasUserControl.Designer.cs">
+      <DependentUpon>FacturasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\CamposForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\CamposForm.Designer.cs">
+      <DependentUpon>CamposForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Subrogacion\ActualizacionValesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Subrogacion\ActualizacionValesUserControl.Designer.cs">
+      <DependentUpon>ActualizacionValesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\ApartadosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\ApartadosUserControl.designer.cs">
+      <DependentUpon>ApartadosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\ApartadoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\ApartadoUserControl.Designer.cs">
+      <DependentUpon>ApartadoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\ApartadoEspecialUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\ApartadoEspecialUserControl.Designer.cs">
+      <DependentUpon>ApartadoEspecialUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\ArticulosIsstepForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\ArticulosIsstepForm.Designer.cs">
+      <DependentUpon>ArticulosIsstepForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\CantidadDevueltaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\CantidadDevueltaForm.Designer.cs">
+      <DependentUpon>CantidadDevueltaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\ControlCajaMonedasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\ControlCajaMonedasForm.Designer.cs">
+      <DependentUpon>ControlCajaMonedasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\ControlCajasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\ControlCajasUserControl.Designer.cs">
+      <DependentUpon>ControlCajasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\CajaUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\CajaUsuarioForm.Designer.cs">
+      <DependentUpon>CajaUsuarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\CancelacionTicketUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\CancelacionTicketUserControl.Designer.cs">
+      <DependentUpon>CancelacionTicketUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\AltaTurnoCajeraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\AltaTurnoCajeraForm.Designer.cs">
+      <DependentUpon>AltaTurnoCajeraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\AccesoUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\AccesoUsuarioForm.Designer.cs">
+      <DependentUpon>AccesoUsuarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\ControladosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\ControladosUserControl.Designer.cs">
+      <DependentUpon>ControladosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\ControladoUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\ControladoUsuarioForm.Designer.cs">
+      <DependentUpon>ControladoUsuarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\Cliente18Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\Cliente18Form.Designer.cs">
+      <DependentUpon>Cliente18Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\HupDereForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\HupDereForm.Designer.cs">
+      <DependentUpon>HupDereForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\HupMedicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\HupMedicForm.Designer.cs">
+      <DependentUpon>HupMedicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\RecetaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\RecetaForm.Designer.cs">
+      <DependentUpon>RecetaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\CorreccionValoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\CorreccionValoresForm.Designer.cs">
+      <DependentUpon>CorreccionValoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\CorteCajaUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\CorteCajaUserControl.Designer.cs">
+      <DependentUpon>CorteCajaUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\CotizacionInmediataUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\CotizacionInmediataUserControl.Designer.cs">
+      <DependentUpon>CotizacionInmediataUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\FacturaVistaPreviaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\FacturaVistaPreviaForm.Designer.cs">
+      <DependentUpon>FacturaVistaPreviaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\FechasFacturaGlobalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\FechasFacturaGlobalForm.Designer.cs">
+      <DependentUpon>FechasFacturaGlobalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\frmMotivoDevTraspaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\frmMotivoDevTraspaso.Designer.cs">
+      <DependentUpon>frmMotivoDevTraspaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\TiempoAireTelcelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\TiempoAireTelcelForm.Designer.cs">
+      <DependentUpon>TiempoAireTelcelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\MotivoCancelacionCantidadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\MotivoCancelacionCantidadForm.Designer.cs">
+      <DependentUpon>MotivoCancelacionCantidadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\NumeroValeDevolucionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\NumeroValeDevolucionForm.Designer.cs">
+      <DependentUpon>NumeroValeDevolucionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\PedidosCATUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\PedidosCATUserControl.Designer.cs">
+      <DependentUpon>PedidosCATUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\FaltantesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\FaltantesForm.Designer.cs">
+      <DependentUpon>FaltantesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\FolioControladoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\FolioControladoUserControl.Designer.cs">
+      <DependentUpon>FolioControladoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\FacturasUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\FacturasUserControl.Designer.cs">
+      <DependentUpon>FacturasUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\CotizacionesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\CotizacionesUserControl.Designer.cs">
+      <DependentUpon>CotizacionesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\DevolucionesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\DevolucionesUserControl.Designer.cs">
+      <DependentUpon>DevolucionesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\IngresaFolioControladoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\IngresaFolioControladoForm.Designer.cs">
+      <DependentUpon>IngresaFolioControladoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\frmActiveCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\frmActiveCard.Designer.cs">
+      <DependentUpon>frmActiveCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\MotivoCancelacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\MotivoCancelacion.Designer.cs">
+      <DependentUpon>MotivoCancelacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\NadroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\NadroForm.Designer.cs">
+      <DependentUpon>NadroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\CotizacionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\CotizacionUserControl.Designer.cs">
+      <DependentUpon>CotizacionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\DescuentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\DescuentoForm.Designer.cs">
+      <DependentUpon>DescuentoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\ValeSubrogacionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\ValeSubrogacionForm.Designer.cs">
+      <DependentUpon>ValeSubrogacionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\PagoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\PagoForm.Designer.cs">
+      <DependentUpon>PagoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\PedidosUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\PedidosUserControl.Designer.cs">
+      <DependentUpon>PedidosUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\PedidoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\PedidoUserControl.Designer.cs">
+      <DependentUpon>PedidoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\PfizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\PfizerForm.Designer.cs">
+      <DependentUpon>PfizerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\RecetaMedicoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\RecetaMedicoForm.Designer.cs">
+      <DependentUpon>RecetaMedicoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\RecoleccionValoresUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\RecoleccionValoresUserControl.Designer.cs">
+      <DependentUpon>RecoleccionValoresUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\TiempoAireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\TiempoAireForm.Designer.cs">
+      <DependentUpon>TiempoAireForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\VentaPedidoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\VentaPedidoUserControl.Designer.cs">
+      <DependentUpon>VentaPedidoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\VentasPagoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\VentasPagoUserControl.Designer.cs">
+      <DependentUpon>VentasPagoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\VentaUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\VentaUserControl.Designer.cs">
+      <DependentUpon>VentaUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\VentaUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ventas\VentaUsuarioForm.Designer.cs">
+      <DependentUpon>VentaUsuarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Wallpaper\WallPaper.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\CalculadoraForm.resx">
+      <DependentUpon>CalculadoraForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\capturaCaducidad.resx">
+      <DependentUpon>capturaCaducidad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\CatalogoUserControl.resx">
+      <DependentUpon>CatalogoUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\ListaUserControl.resx">
+      <DependentUpon>ListaUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\MenuUserControl.resx">
+      <DependentUpon>MenuUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\SplashCreenForm.resx">
+      <DependentUpon>SplashCreenForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Actualizador\ProgresoDescarga.resx">
+      <DependentUpon>ProgresoDescarga.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Almacen\ConsultaOrdenesCompraUserControl.resx">
+      <DependentUpon>ConsultaOrdenesCompraUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Almacen\RecepcionUserControl.resx">
+      <DependentUpon>RecepcionUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Almacen\IncidenciaAlmacenUserControl.resx">
+      <DependentUpon>IncidenciaAlmacenUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Almacen\IncidenciasAlmacenUserControl.resx">
+      <DependentUpon>IncidenciasAlmacenUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Articulos\ArticuloUserControl.resx">
+      <DependentUpon>ArticuloUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Articulos\DescuentoEspecialProveedorForm.resx">
+      <DependentUpon>DescuentoEspecialProveedorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Articulos\DetalleArticuloForm.resx">
+      <DependentUpon>DetalleArticuloForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Articulos\OfertasMayoristaUserControl.resx">
+      <DependentUpon>OfertasMayoristaUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Articulos\TransferMayoristasForm.resx">
+      <DependentUpon>TransferMayoristasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\CatQuejasSugTipoUserControl.resx">
+      <DependentUpon>CatQuejasSugTipoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\CatQuejasSugUserControl.resx">
+      <DependentUpon>CatQuejasSugUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\CofirmacionForm.resx">
+      <DependentUpon>CofirmacionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\ConsultasDermaForm.resx">
+      <DependentUpon>ConsultasDermaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\CotizacionClienteMayoreoUserControl.resx">
+      <DependentUpon>CotizacionClienteMayoreoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\CotizacionesClienteMayoreoUserControl.resx">
+      <DependentUpon>CotizacionesClienteMayoreoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\CotizacionesUserControl.resx">
+      <DependentUpon>CotizacionesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\CotizacionUserControl.resx">
+      <DependentUpon>CotizacionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\ImporteApartadoUser.resx">
+      <DependentUpon>ImporteApartadoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\QuejasSugerenciasUserControl.resx">
+      <DependentUpon>QuejasSugerenciasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CallCenter\QuejaSugerenciaUserControl.resx">
+      <DependentUpon>QuejaSugerenciaUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\AgregaArticuloInvFisForm.resx">
+      <DependentUpon>AgregaArticuloInvFisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ArticuloEditarForm.resx">
+      <DependentUpon>ArticuloEditarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ArticuloExistenciasForm.resx">
+      <DependentUpon>ArticuloExistenciasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ArticuloMayoristasForm.resx">
+      <DependentUpon>ArticuloMayoristasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ArticuloPreciosForm.resx">
+      <DependentUpon>ArticuloPreciosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\AsignarComprador.resx">
+      <DependentUpon>AsignarComprador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\CambiarContrasenhaUsuario.resx">
+      <DependentUpon>CambiarContrasenhaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\CambiarContrasenhaUsuarioLogin.resx">
+      <DependentUpon>CambiarContrasenhaUsuarioLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\CarrierSKUUserControl.resx">
+      <DependentUpon>CarrierSKUUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\BancosUserControl.resx">
+      <DependentUpon>BancosUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\CajasUserControl.resx">
+      <DependentUpon>CajasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\CatArticulosBaja.resx">
+      <DependentUpon>CatArticulosBaja.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ClaveArticuloForm.resx">
+      <DependentUpon>ClaveArticuloForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ArticuloUserControl.resx">
+      <DependentUpon>ArticuloUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\CatalogoDescuentosUserControl.resx">
+      <DependentUpon>CatalogoDescuentosUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ClienteControl.resx">
+      <DependentUpon>ClienteControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\CarrierUserControl.resx">
+      <DependentUpon>CarrierUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ConvenioClienteForm.resx">
+      <DependentUpon>ConvenioClienteForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\frmCompradores.resx">
+      <DependentUpon>frmCompradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\frmImagenesArticuloIdGoogleDrive.resx">
+      <DependentUpon>frmImagenesArticuloIdGoogleDrive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ImportarCatArticulosSub.resx">
+      <DependentUpon>ImportarCatArticulosSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\InventarioFisicoUserControl.resx">
+      <DependentUpon>InventarioFisicoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ListaPromocionNewConfForm.resx">
+      <DependentUpon>ListaPromocionNewConfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\LocalizacionLinea.resx">
+      <DependentUpon>LocalizacionLinea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Comercializacion\AdminFacturas.resx">
+      <DependentUpon>AdminFacturas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Comercializacion\AdminSaldos.resx">
+      <DependentUpon>AdminSaldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Comercializacion\AgregarFactura.resx">
+      <DependentUpon>AgregarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Comercializacion\Comercializacion.resx">
+      <DependentUpon>Comercializacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Comercializacion\ConsultarSaldo.resx">
+      <DependentUpon>ConsultarSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Comercializacion\Saldos.resx">
+      <DependentUpon>Saldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Comercializacion\SeleccionarCliente.resx">
+      <DependentUpon>SeleccionarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Complementos\frmSelecionCaducidad.resx">
+      <DependentUpon>frmSelecionCaducidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Complementos\frmTimbradoCartaPorte.resx">
+      <DependentUpon>frmTimbradoCartaPorte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Complementos\LoteYCaducidadUbicaciones.resx">
+      <DependentUpon>LoteYCaducidadUbicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Documentacion\Documentacion.resx">
+      <DependentUpon>Documentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Extras\frmEmbarque.resx">
+      <DependentUpon>frmEmbarque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Extras\ProgresoExpImpFileExcel.resx">
+      <DependentUpon>ProgresoExpImpFileExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmAjustesJHup.resx">
+      <DependentUpon>frmAjustesJHup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\ControlCaducidadesSalidasUserControl.resx">
+      <DependentUpon>ControlCaducidadesSalidasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\controlCaducidadesSelectUserControl.resx">
+      <DependentUpon>controlCaducidadesSelectUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\frmCapturaCaducidades.resx">
+      <DependentUpon>frmCapturaCaducidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\frmRegistraCad.resx">
+      <DependentUpon>frmRegistraCad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\frmRegistraCaducidad.resx">
+      <DependentUpon>frmRegistraCaducidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\ImpFileTraspasoSelect.resx">
+      <DependentUpon>ImpFileTraspasoSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\PNCEditarUserControl.resx">
+      <DependentUpon>PNCEditarUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\PNCNuevoUserControl.resx">
+      <DependentUpon>PNCNuevoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\ProductoNoConformeUserControl.resx">
+      <DependentUpon>ProductoNoConformeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\SelectFilas.resx">
+      <DependentUpon>SelectFilas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\SubRogacionClienteForm.resx">
+      <DependentUpon>SubRogacionClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ExistenciaSucForm.resx">
+      <DependentUpon>ExistenciaSucForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\LocalizacionUserControl.resx">
+      <DependentUpon>LocalizacionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ProveedoresControl.resx">
+      <DependentUpon>ProveedoresControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\DireccionMedicoForm.resx">
+      <DependentUpon>DireccionMedicoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\DireccionClienteForm.resx">
+      <DependentUpon>DireccionClienteForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ListaSucursalVentaForm.resx">
+      <DependentUpon>ListaSucursalVentaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ListaTipoMedicamentoForm.resx">
+      <DependentUpon>ListaTipoMedicamentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\SSAControl.resx">
+      <DependentUpon>SSAControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\SucursalForm.resx">
+      <DependentUpon>SucursalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\UsuarioIDForm.resx">
+      <DependentUpon>UsuarioIDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ValesDevolucionUserControl.resx">
+      <DependentUpon>ValesDevolucionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\TipoDevolucionUserControl.resx">
+      <DependentUpon>TipoDevolucionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\UsuarioCajeroUserControl.resx">
+      <DependentUpon>UsuarioCajeroUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\SucursalesUserControl.resx">
+      <DependentUpon>SucursalesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\TipoPagoUserControl.resx">
+      <DependentUpon>TipoPagoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\TipoMovimientoUserControl.resx">
+      <DependentUpon>TipoMovimientoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\MedicosUserControl.resx">
+      <DependentUpon>MedicosUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\UsuarioUserControl.resx">
+      <DependentUpon>UsuarioUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\TipoMedicamentoUserControl.resx">
+      <DependentUpon>TipoMedicamentoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\MonedasUserControl.resx">
+      <DependentUpon>MonedasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\EspecialidadUserControl.resx">
+      <DependentUpon>EspecialidadUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\TipoClienteUserControl.resx">
+      <DependentUpon>TipoClienteUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\ImpuestoUserControl.resx">
+      <DependentUpon>ImpuestoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Catalogos\TipoCambioUserControl.resx">
+      <DependentUpon>TipoCambioUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConfiguracionForm.resx">
+      <DependentUpon>ConfiguracionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Configuracion\ConciliacionPfizerForm.resx">
+      <DependentUpon>ConciliacionPfizerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Configuracion\ConciliacionNadroForm.resx">
+      <DependentUpon>ConciliacionNadroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\AjusteAlmacenComprasUserControl.resx">
+      <DependentUpon>AjusteAlmacenComprasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\AjusteAlmacenUserControl.resx">
+      <DependentUpon>AjusteAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\AjustesAlmacenComprasUserControl.resx">
+      <DependentUpon>AjustesAlmacenComprasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\AjustesAlmacenUserControl.resx">
+      <DependentUpon>AjustesAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\CalculoEOQUserControl.resx">
+      <DependentUpon>CalculoEOQUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\CatEquivalenciasUserControl.resx">
+      <DependentUpon>CatEquivalenciasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\ConsultaArticuloUserControl.resx">
+      <DependentUpon>ConsultaArticuloUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\ConversioAlmacenUserControl.resx">
+      <DependentUpon>ConversioAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\ConversionAlmacenUserControl.resx">
+      <DependentUpon>ConversionAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\DestruccionAlmacenUserControl.resx">
+      <DependentUpon>DestruccionAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\DestruccionesAlmacenUserControl.resx">
+      <DependentUpon>DestruccionesAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\DevolucionAlmacenUserControl.resx">
+      <DependentUpon>DevolucionAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\DevolucionesAlmacenUserControl.resx">
+      <DependentUpon>DevolucionesAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\Error.resx">
+      <DependentUpon>Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\frmRecepcionControl.resx">
+      <DependentUpon>frmRecepcionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\ImportarPedidoMotivoSelect.resx">
+      <DependentUpon>ImportarPedidoMotivoSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\KardexAlmacenUserControl.resx">
+      <DependentUpon>KardexAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\PedidoAlmacenUserControl.resx">
+      <DependentUpon>PedidoAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\PedidosAlmacenUserControl.resx">
+      <DependentUpon>PedidosAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\RecepcionDevolucionTrapasoAlmacenUserControl.resx">
+      <DependentUpon>RecepcionDevolucionTrapasoAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\RecepcionTrapasoAlmacenUserControl.resx">
+      <DependentUpon>RecepcionTrapasoAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\RecepcionTraspasosAlmacenUserControl.resx">
+      <DependentUpon>RecepcionTraspasosAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\TrapasoAlmacenUserControl.resx">
+      <DependentUpon>TrapasoAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\TraspasosAlmacenUserControl.resx">
+      <DependentUpon>TraspasosAlmacenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Inventario\UbicacionForm.resx">
+      <DependentUpon>UbicacionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Marketing\fmrSendUserEmailEdicion.resx">
+      <DependentUpon>fmrSendUserEmailEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Marketing\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Marketing\SenEmailClientsAndCollaborators.resx" />
+    <EmbeddedResource Include="View\Menu\AlmacenMenu.resx">
+      <DependentUpon>AlmacenMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\CatalogosUserControl.resx">
+      <DependentUpon>CatalogosUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\ComprasMenu.resx">
+      <DependentUpon>ComprasMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\CatMenu.resx">
+      <DependentUpon>CatMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\Compras\ComprasUserControl.resx">
+      <DependentUpon>ComprasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\ConfiguracionMenu.resx">
+      <DependentUpon>ConfiguracionMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\CatalogosSegUserControl.resx">
+      <DependentUpon>CatalogosSegUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\InventarioMenu.resx">
+      <DependentUpon>InventarioMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\VentasMenu.resx">
+      <DependentUpon>VentasMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\Ventas\CajaUserControl.resx">
+      <DependentUpon>CajaUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\Ventas\ControladosUserControl.resx">
+      <DependentUpon>ControladosUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ModificacionLotesCaducidades.resx">
+      <DependentUpon>ModificacionLotesCaducidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\AjusteInventarioDetallesUserControl.resx">
+      <DependentUpon>AjusteInventarioDetallesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\AjusteInventarioUserControl.resx">
+      <DependentUpon>AjusteInventarioUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\AplicarOfertaUserControl.resx">
+      <DependentUpon>AplicarOfertaUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\AsignacionPreciosFinalizaForm.resx">
+      <DependentUpon>AsignacionPreciosFinalizaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\AsignacionPreciosOrdenCompraDetallesUserControl.resx">
+      <DependentUpon>AsignacionPreciosOrdenCompraDetallesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\AsignacionPreciosOrdenCompraUserControl.resx">
+      <DependentUpon>AsignacionPreciosOrdenCompraUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\BonificacionDetallesUserControl.resx">
+      <DependentUpon>BonificacionDetallesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\BonificacionUserControl.resx">
+      <DependentUpon>BonificacionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\ClienteCompraForm.resx">
+      <DependentUpon>ClienteCompraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\ConsultaOfertasUserControl.resx">
+      <DependentUpon>ConsultaOfertasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\controlCaducidadesUserControl.resx">
+      <DependentUpon>controlCaducidadesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\CorteCajaForm.resx">
+      <DependentUpon>CorteCajaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\CuentasPagarControl.resx">
+      <DependentUpon>CuentasPagarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\DevolucionOrdenCompraDetallesUserControl.resx">
+      <DependentUpon>DevolucionOrdenCompraDetallesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\DevolucionReposicionControl.resx">
+      <DependentUpon>DevolucionReposicionControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\DevolucionReposicionDetallesUserControl.resx">
+      <DependentUpon>DevolucionReposicionDetallesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\FabricantesControl.resx">
+      <DependentUpon>FabricantesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\FacturaDetallesUserControl.resx">
+      <DependentUpon>FacturaDetallesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\FacturasUserControl.resx">
+      <DependentUpon>FacturasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\fechaForm.resx">
+      <DependentUpon>fechaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\FechasForm.resx">
+      <DependentUpon>FechasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\FoliosGeneradosForm.resx">
+      <DependentUpon>FoliosGeneradosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\frmNewNotaDeCredito.resx">
+      <DependentUpon>frmNewNotaDeCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\frmSelectNotaDeCredito.resx">
+      <DependentUpon>frmSelectNotaDeCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\IncidenciasCompras.resx">
+      <DependentUpon>IncidenciasCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\InventarioFechaTipoForm.resx">
+      <DependentUpon>InventarioFechaTipoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\LaboratoriosControl.resx">
+      <DependentUpon>LaboratoriosControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\LoteCaducidadDetallesUserControl.resx">
+      <DependentUpon>LoteCaducidadDetallesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\ManejoDescuentosDetalleUserControl.resx">
+      <DependentUpon>ManejoDescuentosDetalleUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\ManejoDescuentosDetalleUserControlV2.resx">
+      <DependentUpon>ManejoDescuentosDetalleUserControlV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\ManejoDescuentosUserControl.resx">
+      <DependentUpon>ManejoDescuentosUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\NotasDeCreditoControl.resx">
+      <DependentUpon>NotasDeCreditoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\NotasDeCreditoUserControl.resx">
+      <DependentUpon>NotasDeCreditoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\NuevoArticuloCompraForm.resx">
+      <DependentUpon>NuevoArticuloCompraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\NuevoListaOfertaForm.resx">
+      <DependentUpon>NuevoListaOfertaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\NumeroFacturaForm.resx">
+      <DependentUpon>NumeroFacturaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\OfertasCompraForm.resx">
+      <DependentUpon>OfertasCompraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\OfertasComprasUserControl.resx">
+      <DependentUpon>OfertasComprasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\OfertasMayoristasUserControl.resx">
+      <DependentUpon>OfertasMayoristasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\OrdenCompraUserControl.resx">
+      <DependentUpon>OrdenCompraUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\OrdenesCompraUserControl.resx">
+      <DependentUpon>OrdenesCompraUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\ProveedoresControl.resx">
+      <DependentUpon>ProveedoresControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\RecepcionOrdenCompraDetallesUserControl.resx">
+      <DependentUpon>RecepcionOrdenCompraDetallesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\RecepcionOrdenCompraUserControl.resx">
+      <DependentUpon>RecepcionOrdenCompraUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\ReposicionOrdenCompraDetallesUserControl.resx">
+      <DependentUpon>ReposicionOrdenCompraDetallesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\SeleccionaMayoristaForm.resx">
+      <DependentUpon>SeleccionaMayoristaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\ModoPagoOC.resx">
+      <DependentUpon>ModoPagoOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\SucursalVirtual.resx">
+      <DependentUpon>SucursalVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\TipoMedicamentoComprasUserControl.resx">
+      <DependentUpon>TipoMedicamentoComprasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdenCompra\TipoMovimientoForm.resx">
+      <DependentUpon>TipoMovimientoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\Inventarios\IncidenciaRecepcionAlmacenCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IncidenciaRecepcionAlmacenCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\Inventarios\PedidoAlmacenCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PedidoAlmacenCrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\Inventarios\RecepcionAlmacenCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RecepcionAlmacenCrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\Inventarios\ReporteForm.resx">
+      <DependentUpon>ReporteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\Inventarios\TraspasoAlmacenCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TraspasoAlmacenCrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\OrdenCompra\OrdenCompra.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrdenCompra.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\OrdenCompra\OrdenCompraCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrdenCompraCrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\OrdenCompra\OrdenCompraForm.resx">
+      <DependentUpon>OrdenCompraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\ReportesAdmin.resx">
+      <DependentUpon>ReportesAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\Venta\ConciliacionTAEForm.resx">
+      <DependentUpon>ConciliacionTAEForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\Venta\CorteCajaForm.resx">
+      <DependentUpon>CorteCajaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\Venta\CorteDeCaja.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CorteDeCaja.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes\frmImpresion.resx">
+      <DependentUpon>frmImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Seguridad\BitacoraUserControl.resx">
+      <DependentUpon>BitacoraUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Seguridad\CompradorLaboratorioUserControl.resx">
+      <DependentUpon>CompradorLaboratorioUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Seguridad\PrivilegiosUserControl.resx">
+      <DependentUpon>PrivilegiosUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Seguridad\TiposUsuarioUserControl.resx">
+      <DependentUpon>TiposUsuarioUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\AnexoTipoValeForm.resx">
+      <DependentUpon>AnexoTipoValeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\CatalogoSubrogacionUserControl.resx">
+      <DependentUpon>CatalogoSubrogacionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\ArticulosSubrogacionUserControl.resx">
+      <DependentUpon>ArticulosSubrogacionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\TicketCreditoUserControl.resx">
+      <DependentUpon>TicketCreditoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\PagoFacturasUserControl.resx">
+      <DependentUpon>PagoFacturasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\CotizacionUserControl.resx">
+      <DependentUpon>CotizacionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\GeneraFacturasUserControl.resx">
+      <DependentUpon>GeneraFacturasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\LicitacionesUserControl.resx">
+      <DependentUpon>LicitacionesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\FacturasUserControl.resx">
+      <DependentUpon>FacturasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\CamposForm.resx">
+      <DependentUpon>CamposForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Subrogacion\ActualizacionValesUserControl.resx">
+      <DependentUpon>ActualizacionValesUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\ApartadosUserControl.resx">
+      <DependentUpon>ApartadosUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\ApartadoUserControl.resx">
+      <DependentUpon>ApartadoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\ApartadoEspecialUserControl.resx">
+      <DependentUpon>ApartadoEspecialUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\ArticulosIsstepForm.resx">
+      <DependentUpon>ArticulosIsstepForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\CantidadDevueltaForm.resx">
+      <DependentUpon>CantidadDevueltaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\ControlCajaMonedasForm.resx">
+      <DependentUpon>ControlCajaMonedasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\ControlCajasUserControl.resx">
+      <DependentUpon>ControlCajasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\CajaUsuarioForm.resx">
+      <DependentUpon>CajaUsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\CancelacionTicketUserControl.resx">
+      <DependentUpon>CancelacionTicketUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\AltaTurnoCajeraForm.resx">
+      <DependentUpon>AltaTurnoCajeraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\AccesoUsuarioForm.resx">
+      <DependentUpon>AccesoUsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\ControladosUserControl.resx">
+      <DependentUpon>ControladosUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\ControladoUsuarioForm.resx">
+      <DependentUpon>ControladoUsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\Cliente18Form.resx">
+      <DependentUpon>Cliente18Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\HupDereForm.resx">
+      <DependentUpon>HupDereForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\HupMedicForm.resx">
+      <DependentUpon>HupMedicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\RecetaForm.resx">
+      <DependentUpon>RecetaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\CorreccionValoresForm.resx">
+      <DependentUpon>CorreccionValoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\CorteCajaUserControl.resx">
+      <DependentUpon>CorteCajaUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\CotizacionInmediataUserControl.resx">
+      <DependentUpon>CotizacionInmediataUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\FacturaVistaPreviaForm.resx">
+      <DependentUpon>FacturaVistaPreviaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\FechasFacturaGlobalForm.resx">
+      <DependentUpon>FechasFacturaGlobalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\frmMotivoDevTraspaso.resx">
+      <DependentUpon>frmMotivoDevTraspaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\TiempoAireTelcelForm.resx">
+      <DependentUpon>TiempoAireTelcelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\MotivoCancelacionCantidadForm.resx">
+      <DependentUpon>MotivoCancelacionCantidadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\NumeroValeDevolucionForm.resx">
+      <DependentUpon>NumeroValeDevolucionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\PedidosCATUserControl.resx">
+      <DependentUpon>PedidosCATUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\FaltantesForm.resx">
+      <DependentUpon>FaltantesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\FolioControladoUserControl.resx">
+      <DependentUpon>FolioControladoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\FacturasUserControl.resx">
+      <DependentUpon>FacturasUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\CotizacionesUserControl.resx">
+      <DependentUpon>CotizacionesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\DevolucionesUserControl.resx">
+      <DependentUpon>DevolucionesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\IngresaFolioControladoForm.resx">
+      <DependentUpon>IngresaFolioControladoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\frmActiveCard.resx">
+      <DependentUpon>frmActiveCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\MotivoCancelacion.resx">
+      <DependentUpon>MotivoCancelacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\NadroForm.resx">
+      <DependentUpon>NadroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\CotizacionUserControl.resx">
+      <DependentUpon>CotizacionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\DescuentoForm.resx">
+      <DependentUpon>DescuentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\ValeSubrogacionForm.resx">
+      <DependentUpon>ValeSubrogacionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\PagoForm.resx">
+      <DependentUpon>PagoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\PedidosUserControl.resx">
+      <DependentUpon>PedidosUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\PedidoUserControl.resx">
+      <DependentUpon>PedidoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\PfizerForm.resx">
+      <DependentUpon>PfizerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\RecetaMedicoForm.resx">
+      <DependentUpon>RecetaMedicoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\RecoleccionValoresUserControl.resx">
+      <DependentUpon>RecoleccionValoresUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\TiempoAireForm.resx">
+      <DependentUpon>TiempoAireForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\VentaPedidoUserControl.resx">
+      <DependentUpon>VentaPedidoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\VentasPagoUserControl.resx">
+      <DependentUpon>VentasPagoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\VentaUserControl.resx">
+      <DependentUpon>VentaUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ventas\VentaUsuarioForm.resx">
+      <DependentUpon>VentaUsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="credentials.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\CorteCajaDataSet.xsc">
+      <DependentUpon>CorteCajaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CorteCajaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CorteCajaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CorteCajaDataSet.xss">
+      <DependentUpon>CorteCajaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\SIFDataSet.xsc">
+      <DependentUpon>SIFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\SIFDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIFDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\SIFDataSet.xss">
+      <DependentUpon>SIFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\add_city_boy.ttf" />
+    <None Include="Resources\Check2.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\trebuchet.ttf" />
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Market.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Market.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID_Add_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Market_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Left_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power Button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table of Contents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table of Contents_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backButton.PressedImage.png" />
+    <None Include="Resources\calendar.png" />
+    <Content Include="Resources\CAT_TIPO_MEDICAMENTO1.png" />
+    <None Include="Resources\ReporMedi.png" />
+    <None Include="Resources\compraLogoDev.png" />
+    <None Include="Resources\compraLogoDevHover.png" />
+    <None Include="Resources\compraLogoRepo.png" />
+    <None Include="Resources\compraLogoRepoHover.png" />
+    <None Include="Resources\Eliminar.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\file_icon.png" />
+    <None Include="Resources\Import1.png" />
+    <None Include="Resources\Import.png" />
+    <Content Include="Resources\Payments.png" />
+    <Content Include="Resources\Payments1.png" />
+    <None Include="Resources\warning2.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\Destrucciones4.png" />
+    <None Include="Resources\Destrucciones4.bmp" />
+    <None Include="Resources\Destrucciones3.png" />
+    <None Include="Resources\Destrucciones2.png" />
+    <None Include="Resources\Destrucciones.png" />
+    <None Include="Resources\ColumnChooser.png" />
+    <None Include="Resources\CreditCard2.png" />
+    <None Include="Resources\ShieldUser.png" />
+    <None Include="Resources\U-turn1.png" />
+    <None Include="Resources\U-turn.png" />
+    <None Include="Resources\Discount.png" />
+    <None Include="Resources\EQUIVALENCIA.png" />
+    <None Include="Resources\EQUIVALENCIAS3.png" />
+    <None Include="Resources\EQUIVALENCIAS2.png" />
+    <None Include="Resources\EQUIVALENCIAS1.png" />
+    <None Include="Resources\EQUIVALENCIAS.png" />
+    <None Include="Resources\User-Earth.png" />
+    <None Include="Resources\Scale.png" />
+    <None Include="Resources\Download22.png" />
+    <None Include="Resources\Download12.png" />
+    <None Include="Resources\Download21.png" />
+    <None Include="Resources\Download11.png" />
+    <None Include="Resources\Upload21.png" />
+    <None Include="Resources\Upload11.png" />
+    <None Include="Resources\Upload2.png" />
+    <None Include="Resources\Upload1.png" />
+    <None Include="Resources\Download2.png" />
+    <None Include="Resources\Download1.png" />
+    <None Include="Resources\devoluciones1.png" />
+    <None Include="Resources\RECIBIR.png" />
+    <None Include="Resources\enviar_w.png" />
+    <None Include="Resources\DUPLICAR_W.png" />
+    <None Include="Resources\devoluciones.png" />
+    <None Include="Resources\Cancel5.png" />
+    <None Include="Resources\Cancel4.png" />
+    <None Include="Resources\DUPLICAR.png" />
+    <None Include="Resources\IMPRIMIR.png" />
+    <None Include="Resources\ENVIAR.png" />
+    <None Include="Resources\facturar1.png" />
+    <None Include="Resources\Facturar.png" />
+    <None Include="Resources\TAE1.png" />
+    <None Include="Resources\TAE.png" />
+    <None Include="Resources\MultiRecargas1.png" />
+    <None Include="Resources\MultiRecargas.png" />
+    <None Include="Resources\ConsultaWS.png" />
+    <None Include="Resources\Exchange.png" />
+    <None Include="Resources\Cent1.png" />
+    <None Include="Resources\Cent.png" />
+    <None Include="Resources\Date1.png" />
+    <None Include="Resources\Date.png" />
+    <None Include="Resources\Factura.png" />
+    <None Include="Resources\Box-Add1.png" />
+    <None Include="Resources\Box-Add.png" />
+    <None Include="Resources\Split1.png" />
+    <None Include="Resources\Split.png" />
+    <None Include="Resources\Merge1.png" />
+    <None Include="Resources\Merge.png" />
+    <None Include="Resources\CertificateAdd1.png" />
+    <None Include="Resources\CertificateAdd.png" />
+    <None Include="Resources\BoxConsulta.png" />
+    <None Include="Resources\SaveAs1.png" />
+    <None Include="Resources\SaveAs.png" />
+    <None Include="Resources\LockInformation1.png" />
+    <None Include="Resources\LockInformation.png" />
+    <None Include="Resources\Bid1.png" />
+    <None Include="Resources\Bid.png" />
+    <None Include="Resources\ListView1.png" />
+    <None Include="Resources\ListView.png" />
+    <None Include="Resources\Grouping1.png" />
+    <None Include="Resources\Grouping.png" />
+    <None Include="Resources\Printer1.png" />
+    <None Include="Resources\Printer.png" />
+    <None Include="Resources\ShoppingCart1.png" />
+    <None Include="Resources\ShoppingCart.png" />
+    <None Include="Resources\Junk1.png" />
+    <None Include="Resources\Junk.png" />
+    <None Include="Resources\SMS.png" />
+    <None Include="Resources\SendMail.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Plug.png" />
+    <None Include="Resources\PieChart.png" />
+    <None Include="Resources\PieChart1.png" />
+    <None Include="Resources\iusacell1.png" />
+    <None Include="Resources\tipodecliente.png" />
+    <None Include="Resources\tipodecambio.png" />
+    <None Include="Resources\impuestos.png" />
+    <None Include="Resources\TableofContents16.png" />
+    <None Include="Resources\FilterDelete16.png" />
+    <None Include="Resources\Especialidad16.png" />
+    <None Include="Resources\User16.png" />
+    <None Include="Resources\Save32.png" />
+    <None Include="Resources\Open16.png" />
+    <None Include="Resources\CAT_CLIENTE_CONVENIO.png" />
+    <None Include="Resources\CAT_DESCUENTOS.png" />
+    <None Include="Resources\CAT_ESPECIALIDAD.png" />
+    <None Include="Resources\CAT_TIPO_MOV_INV.png" />
+    <None Include="Resources\CAT_TIPO_DEVOLUCION.png" />
+    <None Include="Resources\CAT_VALES_DEV.png" />
+    <None Include="Resources\CAT_BANCOS.png" />
+    <None Include="Resources\monedas.png" />
+    <None Include="Resources\CAT_CLA_SSA.png" />
+    <None Include="Resources\CAT_TIPO_MEDICAMENTO.png" />
+    <None Include="Resources\CAT_ARTICULOS.png" />
+    <None Include="Resources\DeleteDocument1.png" />
+    <None Include="Resources\DeleteDocument.png" />
+    <None Include="Resources\EditDocument1.png" />
+    <None Include="Resources\EditDocument.png" />
+    <None Include="Resources\NewDocument1.png" />
+    <None Include="Resources\NewDocument.png" />
+    <None Include="Resources\FundTool1.png" />
+    <None Include="Resources\Export1.png" />
+    <None Include="Resources\Export.png" />
+    <None Include="Resources\Cancel3.png" />
+    <None Include="Resources\Cancel2.png" />
+    <None Include="Resources\fondo_v3.png" />
+    <None Include="Resources\loginBack.png" />
+    <None Include="Resources\BoxNewTool1.png" />
+    <None Include="Resources\BoxNewTool.png" />
+    <None Include="Resources\LogoutTool1.png" />
+    <None Include="Resources\LogoutTool.png" />
+    <None Include="Resources\LabTool1.png" />
+    <None Include="Resources\LabTool.png" />
+    <None Include="Resources\CalculatorTool1.png" />
+    <None Include="Resources\CalculatorTool.png" />
+    <None Include="Resources\PagoNotasVenta.png" />
+    <None Include="Resources\IngresoCajera.png" />
+    <None Include="Resources\CancelacionTicket1.png" />
+    <None Include="Resources\FolioControlado.png" />
+    <None Include="Resources\ConversiondePiezas.png" />
+    <None Include="Resources\ConsultadeProductos.png" />
+    <None Include="Resources\Kardex.png" />
+    <None Include="Resources\recepcióndeTraspasos.png" />
+    <None Include="Resources\Enviodetraspasos.png" />
+    <None Include="Resources\Pedido a inventario.png" />
+    <None Include="Resources\clientesconvenio.png" />
+    <None Include="Resources\traspaso.png" />
+    <None Include="Resources\incidencias.png" />
+    <None Include="Resources\bultos.png" />
+    <None Include="Resources\Medicos.png" />
+    <None Include="Resources\TipoPago.png" />
+    <None Include="Resources\Cajas.png" />
+    <None Include="Resources\InventarioFisico.png" />
+    <None Include="Resources\ubicaciones.png" />
+    <None Include="Resources\Productos.png" />
+    <None Include="Resources\Sucursales.png" />
+    <None Include="Resources\Permisos.png" />
+    <None Include="Resources\EoQ.png" />
+    <None Include="Resources\clientes.png" />
+    <None Include="Resources\usuarios.png" />
+    <None Include="Resources\descto.png" />
+    <None Include="Resources\Replace Data.png" />
+    <None Include="Resources\bonificacion.png" />
+    <None Include="Resources\loginBack.jpg" />
+    <None Include="Resources\Sucursal.ico" />
+    <None Include="Resources\Syringe.png" />
+    <None Include="Resources\BoxBack.png" />
+    <None Include="Resources\Box Software.png" />
+    <None Include="Resources\Money transfer.png" />
+    <None Include="Resources\Box add.png" />
+    <None Include="Resources\PharmacistFemale.png" />
+    <None Include="Resources\PharmacistMale.png" />
+    <None Include="Resources\nextel.png" />
+    <None Include="Resources\unefon.jpg" />
+    <None Include="Resources\iusacell.png" />
+    <None Include="Resources\movi.jpg" />
+    <None Include="Resources\telcel.jpg" />
+    <None Include="Resources\MobileTool1.png" />
+    <None Include="Resources\DeleteBinTool1.png" />
+    <None Include="Resources\SaveTool1.png" />
+    <None Include="Resources\IDCardTool1.png" />
+    <None Include="Resources\TableContentsTool1.png" />
+    <None Include="Resources\UserFindTool1.png" />
+    <None Include="Resources\DeleteTool1.png" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\FundTool.png" />
+    <None Include="Resources\MobileTool.png" />
+    <None Include="Resources\DeleteBinTool.png" />
+    <None Include="Resources\SaveTool.png" />
+    <None Include="Resources\IDCardTool.png" />
+    <None Include="Resources\TableContentsTool.png" />
+    <None Include="Resources\UserFindTool.png" />
+    <None Include="Resources\DeleteTool.png" />
+    <None Include="Resources\CancelacionTicket.png" />
+    <None Include="Resources\Market_white.png" />
+    <None Include="Resources\Keyboard_1.png" />
+    <None Include="Resources\Keyboard.png" />
+    <None Include="Resources\Venta21.png" />
+    <None Include="Resources\inventario2.png" />
+    <None Include="Resources\inventario1.png" />
+    <None Include="Resources\configuracion2.png" />
+    <None Include="Resources\configuracion1.png" />
+    <None Include="Resources\cat1.png" />
+    <None Include="Resources\configuracion.png" />
+    <None Include="Resources\inventario.png" />
+    <None Include="Resources\cat.png" />
+    <None Include="Resources\Venta3.png" />
+    <None Include="Resources\Venta2.png" />
+    <None Include="Resources\Venta1.png" />
+    <None Include="Resources\Venta.png" />
+    <None Include="Resources\logoSplash.png" />
+    <None Include="Resources\HelpCAT1.png" />
+    <None Include="Resources\ColorScheme.png" />
+    <None Include="Resources\VentaToolTip.png" />
+    <None Include="Resources\background_blue.png" />
+    <None Include="Resources\BoxInv.png" />
+    <None Include="Resources\Gold.png" />
+    <None Include="Resources\Home loan.png" />
+    <None Include="Resources\Cheque.png" />
+    <None Include="Resources\Surgeon.png" />
+    <None Include="Resources\HelpCAT.png" />
+    <None Include="Resources\Phone Book.png" />
+    <None Include="Resources\First Aid Kit CAT.png" />
+    <None Include="Resources\BoxCAT.png" />
+    <None Include="Resources\TagCAT.png" />
+    <None Include="Resources\Dial Up Connection.png" />
+    <None Include="Resources\Document Chart.png" />
+    <None Include="Resources\First Aid Kit.png" />
+    <None Include="Resources\Filler.png" />
+    <None Include="Resources\Insurance Bill.png" />
+    <None Include="Resources\Certificate Information.png" />
+    <None Include="Resources\Faltantes.png" />
+    <None Include="Resources\Transaction fee.png" />
+    <None Include="Resources\Counting machine.png" />
+    <None Include="Resources\Box.png" />
+    <None Include="Resources\Tag.png" />
+    <None Include="Resources\background_red1.png" />
+    <None Include="Resources\fondo_azul1.jpg" />
+    <None Include="Resources\IDCard_1.png" />
+    <None Include="Resources\IDCard.png" />
+    <None Include="Resources\IDWrong.png" />
+    <None Include="Resources\IDWrong_1.png" />
+    <None Include="Resources\background_red.png" />
+    <None Include="Resources\fondo_azul.jpg" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\Lab.png" />
+    <None Include="Resources\Lab_1.png" />
+    <None Include="Resources\Mobile.png" />
+    <None Include="Resources\Mobile_1.png" />
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\Add_1.png" />
+    <None Include="Resources\administracion.png" />
+    <None Include="Resources\administracion1.png" />
+    <None Include="Resources\almacen.png" />
+    <None Include="Resources\AddTool.png" />
+    <None Include="Resources\AddTool1.png" />
+    <Content Include="icono.ico" />
+    <None Include="Resources\AcercaDe.png" />
+    <None Include="Resources\AltaProductos.png" />
+    <None Include="Resources\AjustesInventario.png" />
+    <None Include="Resources\ajustesInventario1.png" />
+    <None Include="Resources\AltaMedico.png" />
+    <None Include="Resources\ActivaTarjeta.png" />
+    <None Include="Resources\ABRIR.png" />
+    <None Include="Resources\ABRIR1.png" />
+    <None Include="Resources\ActualizacionVales.png" />
+    <Content Include="Resources\Background\fondo-azul.jpg" />
+    <Content Include="Resources\Background\fondo-rojo.jpg" />
+    <None Include="Resources\Clean_1.png" />
+    <None Include="Resources\Clean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIFModelo\SIFModelo.csproj">
+      <Project>{D7641ACB-267B-4A3D-8B2A-20EBA04A7B93}</Project>
+      <Name>SIFModelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIFNegocio\SIFNegocio.csproj">
+      <Project>{FC94AE17-3DCE-49BA-9329-AB7AD4F56C17}</Project>
+      <Name>SIFNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

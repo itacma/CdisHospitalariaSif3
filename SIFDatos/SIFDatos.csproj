@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8BC169A-DED0-40C1-A4E2-F602EC7563BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIFDatos</RootNamespace>
+    <AssemblyName>SIFDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.2, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Farmacia\Referencias\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Farmacia\Referencias\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.14.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Almacen\BultosAlmacen.cs" />
+    <Compile Include="Apartado.cs" />
+    <Compile Include="Bancos.cs" />
+    <Compile Include="CaducidadesSalidas.cs" />
+    <Compile Include="caducidades.cs" />
+    <Compile Include="Cajas.cs" />
+    <Compile Include="Articulos.cs" />
+    <Compile Include="CallCenter\CatQuejaSug.cs" />
+    <Compile Include="CallCenter\CatQuejaSugTipo.cs" />
+    <Compile Include="CallCenter\ConsultasDerma.cs" />
+    <Compile Include="CallCenter\Horarios.cs" />
+    <Compile Include="CallCenter\QuejasSugerencias.cs" />
+    <Compile Include="Catalogo\MotivoPedido.cs" />
+    <Compile Include="ClientesConvenio.cs" />
+    <Compile Include="Cajeros.cs" />
+    <Compile Include="ClasificacionSSA.cs" />
+    <Compile Include="Clientes.cs" />
+    <Compile Include="Compradores.cs" />
+    <Compile Include="Configuracion.cs" />
+    <Compile Include="Controlado.cs" />
+    <Compile Include="ClientesSubrogacion.cs" />
+    <Compile Include="cotizacionesClienteMayorista.cs" />
+    <Compile Include="Derechohabientes.cs" />
+    <Compile Include="EpGol\DatosConfiguracionEpGo.cs" />
+    <Compile Include="EpGol\EpGoRemision.cs" />
+    <Compile Include="Extras\Parametros.cs" />
+    <Compile Include="Inventario\BonificacionesAlmacen.cs" />
+    <Compile Include="Inventario\DestruccionesAlmacen.cs" />
+    <Compile Include="Inventario\PNCDatos.cs" />
+    <Compile Include="Marketing\SendEmail.cs" />
+    <Compile Include="OrdenCompra\NotasDeCredito.cs" />
+    <Compile Include="OrdenCompra\ODCIVARCHAR2LISTFactory.cs" />
+    <Compile Include="OrdenCompra\OrdenCompraRecibe.cs" />
+    <Compile Include="ReportesArdmin\Comercializacion.cs" />
+    <Compile Include="ReportesArdmin\reportesAdmin.cs" />
+    <Compile Include="TipoMedicamentoCompras.cs" />
+    <Compile Include="Helpers\Audita.cs" />
+    <Compile Include="Inventario\InventarioFisico.cs" />
+    <Compile Include="OrdenCompra\InformacionMayorista.cs" />
+    <Compile Include="Subrogacion\ArticulosSubrogacion.cs" />
+    <Compile Include="Subrogacion\Subrogacion.cs" />
+    <Compile Include="ValesSubrogacion.cs" />
+    <Compile Include="Cotizaciones.cs" />
+    <Compile Include="Denominaciones.cs" />
+    <Compile Include="Extras\Carriers.cs" />
+    <Compile Include="Extras\CarrierSKU.cs" />
+    <Compile Include="Extras\Estado.cs" />
+    <Compile Include="Inventario\AjustesAlmacen.cs" />
+    <Compile Include="Inventario\ConversionAlmacen.cs" />
+    <Compile Include="Inventario\EOQ.cs" />
+    <Compile Include="Inventario\EquivalenciasAlmacen.cs" />
+    <Compile Include="Inventario\Faltantes.cs" />
+    <Compile Include="Inventario\Inventario.cs" />
+    <Compile Include="Inventario\KardexAlmacen.cs" />
+    <Compile Include="Inventario\PedidosAlmacen.cs" />
+    <Compile Include="Inventario\TraspasoAlmacen.cs" />
+    <Compile Include="OfertasCompras.cs" />
+    <Compile Include="OrdenCompra\Bonificacion.cs" />
+    <Compile Include="OrdenCompra\AjusteInventario.cs" />
+    <Compile Include="OrdenCompra\Compra.cs" />
+    <Compile Include="OrdenCompra\ManejoDescuentos.cs" />
+    <Compile Include="OrdenCompra\OrdenCompra.cs" />
+    <Compile Include="Pagos.cs" />
+    <Compile Include="Pedidos.cs" />
+    <Compile Include="Remision.cs" />
+    <Compile Include="Seguridad\BitacoraSeguridad.cs" />
+    <Compile Include="Seguridad\PrivilegiosSeguridad.cs" />
+    <Compile Include="Seguridad\TiposUsuariosSeguridad.cs" />
+    <Compile Include="Seguridad\UsuariosSeguridad.cs" />
+    <Compile Include="Subrogacion\FacturasSubrogacion.cs" />
+    <Compile Include="TAE.cs" />
+    <Compile Include="UsuarioCajero.cs" />
+    <Compile Include="Factura\Factura.cs" />
+    <Compile Include="TipoMedicamento.cs" />
+    <Compile Include="Monedas.cs" />
+    <Compile Include="ValesDevolucion.cs" />
+    <Compile Include="TiposDevolucion.cs" />
+    <Compile Include="Sucursales.cs" />
+    <Compile Include="TiposPago.cs" />
+    <Compile Include="TiposMovimientoInventario.cs" />
+    <Compile Include="Medicos.cs" />
+    <Compile Include="Especialidades.cs" />
+    <Compile Include="Descuentos.cs" />
+    <Compile Include="TiposCliente.cs" />
+    <Compile Include="Impuestos.cs" />
+    <Compile Include="PaqueteDetalle.cs" />
+    <Compile Include="Paquete.cs" />
+    <Compile Include="TiposCambio.cs" />
+    <Compile Include="Helpers\ConnectionString.cs" />
+    <Compile Include="Helpers\CryptorEngine.cs" />
+    <Compile Include="Helpers\IsType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios.cs" />
+    <Compile Include="Valores.cs" />
+    <Compile Include="WebServices\ApiTL.cs" />
+    <Compile Include="WebServices\NADRO.cs" />
+    <Compile Include="WebServices\PFIZER.cs" />
+    <Compile Include="WebServices\TA.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIFModelo\SIFModelo.csproj">
+      <Project>{93306C15-240F-40EB-A89C-BCB6EF2A05EF}</Project>
+      <Name>SIFModelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

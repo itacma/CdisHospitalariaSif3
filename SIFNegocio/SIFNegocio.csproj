@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC94AE17-3DCE-49BA-9329-AB7AD4F56C17}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIFNegocio</RootNamespace>
+    <AssemblyName>SIFNegocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib">
+      <HintPath>Referencias\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.2, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Farmacia\Referencias\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Equin.ApplicationFramework.BindingListView">
+      <HintPath>Referencias\Equin.ApplicationFramework.BindingListView.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Farmacia\Referencias\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="sif_tools">
+      <HintPath>..\..\COMPRAS - copia\Farmacia\Referencias\sif_tools.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Almacen\Bultos.cs" />
+    <Compile Include="Apartado.cs" />
+    <Compile Include="CaducidadesSalidas.cs" />
+    <Compile Include="caducidades.cs" />
+    <Compile Include="CallCenter\ConsultasDerma.cs" />
+    <Compile Include="CallCenter\Horarios.cs" />
+    <Compile Include="CallCenter\QuejasSugerencias.cs" />
+    <Compile Include="Catalogo\CatalogoQuejasSugerencias.cs" />
+    <Compile Include="Catalogo\clienteHUP.cs" />
+    <Compile Include="Catalogo\ClienteSubrogacion.cs" />
+    <Compile Include="Catalogo\MotivoPedido.cs" />
+    <Compile Include="Catalogo\TiposMedicamentoCompras.cs" />
+    <Compile Include="Catalogo\Denominaciones.cs" />
+    <Compile Include="Catalogo\Valores.cs" />
+    <Compile Include="Compradores.cs" />
+    <Compile Include="cotizacionesClienteMayoristaNg.cs" />
+    <Compile Include="Devoluciones.cs" />
+    <Compile Include="Controlado.cs" />
+    <Compile Include="Cotizacion.cs" />
+    <Compile Include="EpGo\EpGoNegocioRemision.cs" />
+    <Compile Include="EpGo\InventarioService.cs" />
+    <Compile Include="EpGo\NegocioConfiguracionEpGo.cs" />
+    <Compile Include="EpGo\TestServiceEpGO.cs" />
+    <Compile Include="EpGo\VentaService.cs" />
+    <Compile Include="Extras\GoogleDriveUploader.cs" />
+    <Compile Include="Extras\Parametros.cs" />
+    <Compile Include="Helpers\ConnectionString.cs" />
+    <Compile Include="Helpers\CrystalReports.cs" />
+    <Compile Include="Helpers\Sesion.cs" />
+    <Compile Include="Helpers\SifUtils.cs" />
+    <Compile Include="Helpers\Ticket.cs" />
+    <Compile Include="Inventario\Ajustes.cs" />
+    <Compile Include="Inventario\Bonificaciones.cs" />
+    <Compile Include="Inventario\Conversiones.cs" />
+    <Compile Include="Inventario\Destrucciones.cs" />
+    <Compile Include="Inventario\InventarioFisico.cs" />
+    <Compile Include="Inventario\EOQ.cs" />
+    <Compile Include="Inventario\Equivalencias.cs" />
+    <Compile Include="Inventario\Faltantes.cs" />
+    <Compile Include="Inventario\Inventario.cs" />
+    <Compile Include="Inventario\Kardex.cs" />
+    <Compile Include="Inventario\PedidosAlmacen.cs" />
+    <Compile Include="Inventario\PNCNegocio.cs" />
+    <Compile Include="Inventario\Traspasos.cs" />
+    <Compile Include="ListDerechohabientes.cs" />
+    <Compile Include="LoggerHelper.cs" />
+    <Compile Include="Marketing\SendEmail.cs" />
+    <Compile Include="OfertasCompras.cs" />
+    <Compile Include="OrdenCompra\AjusteInventario.cs" />
+    <Compile Include="OrdenCompra\ArchivoOfertas.cs" />
+    <Compile Include="OrdenCompra\Bonificacion.cs" />
+    <Compile Include="OrdenCompra\Compras.cs" />
+    <Compile Include="OrdenCompra\InformacionMayorista.cs" />
+    <Compile Include="OrdenCompra\ManejoDescuentos.cs" />
+    <Compile Include="OrdenCompra\NotasDecredito.cs" />
+    <Compile Include="OrdenCompra\OrdenCompraRecibe.cs" />
+    <Compile Include="OrdenCompra\OrdenCompra.cs" />
+    <Compile Include="Pedidos.cs" />
+    <Compile Include="Extras\Carriers.cs" />
+    <Compile Include="Extras\CarrierSKU.cs" />
+    <Compile Include="Extras\Estado.cs" />
+    <Compile Include="Pagos.cs" />
+    <Compile Include="QuejasSug\CatQuejasSug.cs" />
+    <Compile Include="QuejasSug\CatQuejasSugTipo.cs" />
+    <Compile Include="Remision.cs" />
+    <Compile Include="ReportesAdmin\Comercializacion.cs" />
+    <Compile Include="ReportesAdmin\ReportesV1.cs" />
+    <Compile Include="Seguridad\Bitacora.cs" />
+    <Compile Include="Seguridad\Privilegios.cs" />
+    <Compile Include="Seguridad\TiposUsuarios.cs" />
+    <Compile Include="Seguridad\Usuarios.cs" />
+    <Compile Include="Service References\WS_NADRO\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Subrogacion\AnexoTipoValeForm.cs" />
+    <Compile Include="Subrogacion\Articulos.cs" />
+    <Compile Include="Subrogacion\Subrogacion.cs" />
+    <Compile Include="Subrogacion\Factura.cs" />
+    <Compile Include="Subrogacion\Valesubrogacion.cs" />
+    <Compile Include="UsuarioCajeros.cs" />
+    <Compile Include="Catalogo\Articulo.cs" />
+    <Compile Include="Catalogo\Bancos.cs" />
+    <Compile Include="Catalogo\ClasificacionesSSA.cs" />
+    <Compile Include="Catalogo\Cajero.cs" />
+    <Compile Include="Catalogo\ClienteConvenio.cs" />
+    <Compile Include="Catalogo\Cajas.cs" />
+    <Compile Include="Configuracion\Servidor.cs" />
+    <Compile Include="Catalogo\Clientes.cs" />
+    <Compile Include="Helpers\CryptorEngine.cs" />
+    <Compile Include="Helpers\Validadociones.cs" />
+    <Compile Include="Service References\WS_FEL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WS_PFIZER\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\TipoCambio.cs" />
+    <Compile Include="Catalogo\PaqueteDetalles.cs" />
+    <Compile Include="Catalogo\Paquetes.cs" />
+    <Compile Include="Catalogo\Impuestos.cs" />
+    <Compile Include="Catalogo\TipoCliente.cs" />
+    <Compile Include="Catalogo\Descuentos.cs" />
+    <Compile Include="Catalogo\Especialidades.cs" />
+    <Compile Include="Catalogo\Medicos.cs" />
+    <Compile Include="Catalogo\TiposMovimiento.cs" />
+    <Compile Include="Catalogo\TiposPago.cs" />
+    <Compile Include="Catalogo\Sucursales.cs" />
+    <Compile Include="Catalogo\TiposDevolucion.cs" />
+    <Compile Include="Catalogo\Monedas.cs" />
+    <Compile Include="Catalogo\TiposMedicamento.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Catalogo\Usuarios.cs" />
+    <Compile Include="Utilities\MensajesDialog.cs" />
+    <Compile Include="ValesDevolucion.cs" />
+    <Compile Include="WebServices\FEL.cs" />
+    <Compile Include="WebServices\NADRO.cs" />
+    <Compile Include="WebServices\OracleConnection.cs" />
+    <Compile Include="WebServices\PFIZER.cs" />
+    <Compile Include="WebServices\TAE.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Debug\SIFNegocio.dll.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\WS_FEL\ConexionRemota.wsdl" />
+    <None Include="Service References\WS_FEL\SIFNegocio.WS_FEL.RespuestaCancelacionR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_FEL\SIFNegocio.WS_FEL.RespuestaDatosSucursal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_FEL\SIFNegocio.WS_FEL.RespuestaOperacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.Articulo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.GetPromocionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.Paciente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.ResponseActivateCard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.ResponseBonus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.ResponseBonusList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.ResponseGetnfoDevolucionesProductos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.ResponseInfoProductCard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.ResponseLogin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.ResponseReposiciones.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.ResponseSales.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.ResponseStatementPatientPoints.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.Tarjeta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\SIFNegocio.WS_NADRO.UpdatePatientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_NADRO\WSCirculodelaSalud.wsdl" />
+    <None Include="Service References\WS_PFIZER\SIFNegocio.WS_PFIZER.Comprobante.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PFIZER\SIFNegocio.WS_PFIZER.Ticket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PFIZER\WSPrepago.wsdl" />
+    <None Include="SIFNegocioDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIFDatos\SIFDatos.csproj">
+      <Project>{F8BC169A-DED0-40C1-A4E2-F602EC7563BB}</Project>
+      <Name>SIFDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIFModelo\SIFModelo.csproj">
+      <Project>{D7641ACB-267B-4A3D-8B2A-20EBA04A7B93}</Project>
+      <Name>SIFModelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WS_FEL\" />
+    <WCFMetadataStorage Include="Service References\WS_NADRO\" />
+    <WCFMetadataStorage Include="Service References\WS_PFIZER\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_FEL\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_FEL\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_FEL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_PFIZER\WSPrepago.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_PFIZER\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_PFIZER\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_PFIZER\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_NADRO\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_NADRO\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_NADRO\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_FEL\ConexionRemota.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\BarcodeLib.dll" />
+    <Content Include="bin\Debug\DevComponents.DotNetBar2.dll" />
+    <Content Include="bin\Debug\Equin.ApplicationFramework.BindingListView.dll" />
+    <Content Include="bin\Debug\Equin.ApplicationFramework.BindingListView.pdb" />
+    <Content Include="bin\Debug\SIFDatos.dll" />
+    <Content Include="bin\Debug\SIFDatos.pdb" />
+    <Content Include="bin\Debug\SIFModelo.dll" />
+    <Content Include="bin\Debug\SIFModelo.pdb" />
+    <Content Include="bin\Debug\SIFNegocio.dll" />
+    <Content Include="bin\Debug\SIFNegocio.pdb" />
+    <Content Include="bin\Debug\sif_tools.dll" />
+    <Content Include="Referencias\BarcodeLib.dll" />
+    <Content Include="Referencias\Equin.ApplicationFramework.BindingListView.dll" />
+    <Content Include="Referencias\Equin.ApplicationFramework.BindingListView.pdb" />
+    <None Include="Service References\WS_NADRO\WSCirculodelaSalud1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

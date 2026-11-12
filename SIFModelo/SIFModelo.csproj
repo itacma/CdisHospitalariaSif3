@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7641ACB-267B-4A3D-8B2A-20EBA04A7B93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIFModelo</RootNamespace>
+    <AssemblyName>SIFModelo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;c</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Schema, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Data.Schema.UnitTesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Farmacia\Referencias\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apartado.cs" />
+    <Compile Include="ApartadoDetalle.cs" />
+    <Compile Include="AsignacionCompradores.cs" />
+    <Compile Include="BitEmbarque.cs" />
+    <Compile Include="CallCenter\CallCenterDataSet.cs">
+      <DependentUpon>CallCenterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\CallCenterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CallCenterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\Articulo.cs" />
+    <Compile Include="Catalogo\ArticuloBaja.cs" />
+    <Compile Include="Catalogo\ArticuloMayorista.cs" />
+    <Compile Include="Catalogo\Banco.cs" />
+    <Compile Include="Catalogo\Caja.cs" />
+    <Compile Include="Catalogo\Cajero.cs" />
+    <Compile Include="Catalogo\CatalogoDataSet.cs">
+      <DependentUpon>CatalogoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\CatalogoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatalogoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\CatDistribuidores.cs" />
+    <Compile Include="Catalogo\CatUnidadesDistribucion.cs" />
+    <Compile Include="Catalogo\ClasificacionSSA.cs" />
+    <Compile Include="Catalogo\Cliente.cs" />
+    <Compile Include="Catalogo\ClienteConvenio.cs" />
+    <Compile Include="Catalogo\Compradores.cs" />
+    <Compile Include="Catalogo\ClienteSubrogaccion.cs" />
+    <Compile Include="Catalogo\Institucion.cs" />
+    <Compile Include="Catalogo\TipoMedicamentoCompras.cs" />
+    <Compile Include="Catalogo\DireccionMedico.cs" />
+    <Compile Include="Catalogo\RecoleccionValores.cs" />
+    <Compile Include="Catalogo\ValeDevolucion.cs" />
+    <Compile Include="CatClavesSat.cs" />
+    <Compile Include="Clases\BancosVArray.cs" />
+    <Compile Include="Clases\BancosVArrayFactory.cs" />
+    <Compile Include="Clases\cfdv32.cs" />
+    <Compile Include="Clases\clsSMTP.cs" />
+    <Compile Include="Clases\ConfigDBSettings.cs" />
+    <Compile Include="Clases\ConfigSettings.cs" />
+    <Compile Include="Clases\DateArray.cs" />
+    <Compile Include="Clases\DateArrayFactory.cs" />
+    <Compile Include="Clases\StringArray.cs" />
+    <Compile Include="Clases\StringArrayFactory.cs" />
+    <Compile Include="Clases\DecimalArray.cs" />
+    <Compile Include="Clases\DecimalArrayFactory.cs" />
+    <Compile Include="Clases\SIFUtils.cs" />
+    <Compile Include="Cliente18.cs" />
+    <Compile Include="cliente_Hup.cs" />
+    <Compile Include="Configuracion\Aplicacion.cs" />
+    <Compile Include="Configuracion\configApiTL.cs" />
+    <Compile Include="Configuracion\MultiRecargas.cs" />
+    <Compile Include="Configuracion\Email.cs" />
+    <Compile Include="Configuracion\Factura.cs" />
+    <Compile Include="Configuracion\Pfizer.cs" />
+    <Compile Include="Configuracion\ServidorOracle.cs" />
+    <Compile Include="Catalogo\Descuento.cs" />
+    <Compile Include="Catalogo\DireccionCliente.cs" />
+    <Compile Include="Catalogo\Especialidad.cs" />
+    <Compile Include="Catalogo\Impuesto.cs" />
+    <Compile Include="Data\CatalogoDataSet.Designer.cs" />
+    <Compile Include="Denominacion.cs" />
+    <Compile Include="EpGol\InventarioBulkRequest.cs" />
+    <Compile Include="EpGol\InventarioRequest.cs" />
+    <Compile Include="EpGol\modelConfiguracionEpGo.cs" />
+    <Compile Include="EpGol\VentaDocumentoRequest.cs" />
+    <Compile Include="hupBnf.cs" />
+    <Compile Include="hupDReceta.cs" />
+    <Compile Include="hupEmp.cs" />
+    <Compile Include="hupMed.cs" />
+    <Compile Include="Inventarios\filtrosEoq.cs" />
+    <Compile Include="Inventarios\InventarioDataSet.cs">
+      <DependentUpon>InventarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\InventarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\MovimientoInventario.cs" />
+    <Compile Include="Inventarios\Inventario.cs" />
+    <Compile Include="Catalogo\Medico.cs" />
+    <Compile Include="Catalogo\Moneda.cs" />
+    <Compile Include="Catalogo\Paquete.cs" />
+    <Compile Include="Catalogo\PaqueteDetalle.cs" />
+    <Compile Include="Configuracion\TAE.cs" />
+    <Compile Include="Inventarios\SkuCaducidad.cs" />
+    <Compile Include="LTipoMK.cs" />
+    <Compile Include="Marketing\GuardarEmail.cs" />
+    <Compile Include="Marketing\GrupoEmail.cs" />
+    <Compile Include="Marketing\MGrupoSendEmail.cs" />
+    <Compile Include="Marketing\modelPersona.cs" />
+    <Compile Include="modeloCaducidades.cs" />
+    <Compile Include="MotivoPedido.cs" />
+    <Compile Include="Ofertas\listaOfertasVenta.cs" />
+    <Compile Include="Ofertas\listaOfertasVentaDet.cs" />
+    <Compile Include="Ofertas\ListaPromocionesActivas.cs" />
+    <Compile Include="OrdenCompra\ModoPago.cs" />
+    <Compile Include="OrdenCompra\OrdenCompraDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdenCompraDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenCompra\ReposisionProveedor.cs" />
+    <Compile Include="OrdenCompra\ReposisionProveedorDetalle.cs" />
+    <Compile Include="OrdenCompra\RepoProveedor.cs" />
+    <Compile Include="OrdenCompra\DevolucionProveedor.cs" />
+    <Compile Include="OrdenCompra\DevolucionProveedorDetalle.cs" />
+    <Compile Include="OrdenCompra\DevProveedor.cs" />
+    <Compile Include="OrdenCompra\InfromacionMayorista.cs" />
+    <Compile Include="OrdenCompra\OrdenCompra.cs" />
+    <Compile Include="OrdenCompra\TipoNcSaldoUtilizado.cs" />
+    <Compile Include="Proveedor.cs" />
+    <Compile Include="ReportesAdmin\ComercializacionMod.cs" />
+    <Compile Include="ReportesAdmin\PeriodoSaldo.cs" />
+    <Compile Include="ReportesAdmin\reportesUsuarios.cs" />
+    <Compile Include="ReportesAdmin\SaldoAutomatizado.cs" />
+    <Compile Include="ReportesAdmin\Saldos.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Sif3BitacoraSucesos.cs" />
+    <Compile Include="SubRogacion\CatalogoConvenio.cs" />
+    <Compile Include="Tipos\parmFac.cs" />
+    <Compile Include="Tipos\tipo6.cs" />
+    <Compile Include="Valesubrogacion.cs" />
+    <Compile Include="ControladoDetalle.cs" />
+    <Compile Include="Cotizacion.cs" />
+    <Compile Include="CotizacionDetalle.cs" />
+    <Compile Include="Devolucion.cs" />
+    <Compile Include="DevolucionDetalle.cs" />
+    <Compile Include="Extras\Carrier.cs" />
+    <Compile Include="Extras\CarrierSKU.cs" />
+    <Compile Include="Extras\Colonia.cs" />
+    <Compile Include="Extras\CPS.cs" />
+    <Compile Include="Extras\Estado.cs" />
+    <Compile Include="Extras\Municipio.cs" />
+    <Compile Include="Inventarios\ListaPrecios.cs" />
+    <Compile Include="Laboratorio.cs" />
+    <Compile Include="OrdenCompra\OrdenCompraDataSet.cs">
+      <DependentUpon>OrdenCompraDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuejasSugerencias\CatalogoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatalogoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenCompra\OfertaCompra.cs" />
+    <Compile Include="OrdenCompra\OfertasCompra.cs" />
+    <Compile Include="OrdenCompra\OrdenCompraCabecera.cs" />
+    <Compile Include="OrdenCompra\OrdenesCompraDataSet.cs">
+      <DependentUpon>OrdenesCompraDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenCompra\OrdenesCompraDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdenesCompraDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs" />
+    <Compile Include="PagosDetalle.cs" />
+    <Compile Include="Pedido.cs" />
+    <Compile Include="PedidoDetalle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Catalogo\Sucursal.cs" />
+    <Compile Include="Catalogo\TipoCambio.cs" />
+    <Compile Include="Catalogo\TipoCliente.cs" />
+    <Compile Include="Catalogo\TipoDevolucion.cs" />
+    <Compile Include="Catalogo\TipoMedicamento.cs" />
+    <Compile Include="Catalogo\TipoMovimiento.cs" />
+    <Compile Include="Catalogo\TipoPago.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="QuejasSugTipo\CatQuejasSug.cs" />
+    <Compile Include="QuejasSugTipo\CatQuejaSugSubTipo.cs" />
+    <Compile Include="Receta.cs" />
+    <Compile Include="Remision.cs" />
+    <Compile Include="RemisionDetalle.cs" />
+    <Compile Include="Seguridad\SeguridadDataSet.cs">
+      <DependentUpon>SeguridadDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\SeguridadDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeguridadDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SubRogacion\Sobrogacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sobrogacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tipos\ClaveTipoMedicamento.cs" />
+    <Compile Include="Tipos\TipoDescto.cs" />
+    <Compile Include="Tipos\TipoConsulta.cs" />
+    <Compile Include="Tipos\TipoDireccion.cs" />
+    <Compile Include="Tipos\TipoPago.cs" />
+    <Compile Include="Tipos\Tipos.cs" />
+    <Compile Include="Catalogo\Usuario.cs" />
+    <Compile Include="Catalogo\UsuarioCajero.cs" />
+    <Compile Include="Tipos\TiposCompras.cs" />
+    <Compile Include="Ventas\Controlado.cs" />
+    <Compile Include="Ventas\ControladoDataSet.cs">
+      <DependentUpon>ControladoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\ControladoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControladoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\CorteCajaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CorteCajaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\Carrier.cs" />
+    <Compile Include="Configuracion\Nadro.cs" />
+    <Compile Include="WebServices\FelControl.cs" />
+    <Compile Include="WebServices\MRespuestas.cs" />
+    <Compile Include="WebServices\Nadro.cs" />
+    <Compile Include="WebServices\NadroDetalle.cs" />
+    <Compile Include="WebServices\PfizerControl.cs" />
+    <Compile Include="WebServices\TAE.cs" />
+    <Compile Include="WebServices\TarjetaNadro.cs" />
+    <Compile Include="WebServices\TarjetaPfizer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Debug\SIFModelo.dll.config" />
+    <None Include="CallCenter\CallCenterDataSet.xsc">
+      <DependentUpon>CallCenterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CallCenter\CallCenterDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CallCenterDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CallCenter\CallCenterDataSet.xss">
+      <DependentUpon>CallCenterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Catalogo\CatalogoDataSet.xsc">
+      <DependentUpon>CatalogoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Catalogo\CatalogoDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CatalogoDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Catalogo\CatalogoDataSet.xss">
+      <DependentUpon>CatalogoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CatalogoDataSet.xsc">
+      <DependentUpon>CatalogoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CatalogoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CatalogoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CatalogoDataSet.xss">
+      <DependentUpon>CatalogoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Diagrama.cd" />
+    <None Include="Inventarios\InventarioDataSet.xsc">
+      <DependentUpon>InventarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventarios\InventarioDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventarioDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventarios\InventarioDataSet.xss">
+      <DependentUpon>InventarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="QuejasSugerencias\CatalogoDataSet.xsc">
+      <DependentUpon>CatalogoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuejasSugerencias\CatalogoDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CatalogoDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuejasSugerencias\CatalogoDataSet.xss">
+      <DependentUpon>CatalogoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrdenCompra\OrdenCompraDataSet.xsc">
+      <DependentUpon>OrdenCompraDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrdenCompra\OrdenCompraDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdenCompraDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OrdenCompra\OrdenCompraDataSet.xss">
+      <DependentUpon>OrdenCompraDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrdenCompra\OrdenesCompraDataSet.xsc">
+      <DependentUpon>OrdenesCompraDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrdenCompra\OrdenesCompraDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdenesCompraDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OrdenCompra\OrdenesCompraDataSet.xss">
+      <DependentUpon>OrdenesCompraDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\SeguridadDataSet.xsc">
+      <DependentUpon>SeguridadDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\SeguridadDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SeguridadDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\SeguridadDataSet.xss">
+      <DependentUpon>SeguridadDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SubRogacion\Sobrogacion.xsc">
+      <DependentUpon>Sobrogacion.xsd</DependentUpon>
+    </None>
+    <None Include="SubRogacion\Sobrogacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sobrogacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SubRogacion\Sobrogacion.xss">
+      <DependentUpon>Sobrogacion.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\ControladoDataSet.xsc">
+      <DependentUpon>ControladoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\ControladoDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControladoDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Ventas\ControladoDataSet.xss">
+      <DependentUpon>ControladoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\CorteCajaDataSet.xsc">
+      <DependentUpon>CorteCajaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\CorteCajaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CorteCajaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Ventas\CorteCajaDataSet.xss">
+      <DependentUpon>CorteCajaDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\SIFModelo.dll" />
+    <Content Include="bin\Debug\SIFModelo.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

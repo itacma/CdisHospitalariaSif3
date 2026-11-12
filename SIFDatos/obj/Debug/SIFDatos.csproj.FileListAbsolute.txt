@@ -1,0 +1,98 @@
+E:\Versiones en Produccion\ComprasB\SIFDatos\obj\Debug\SIFDatos.csprojResolveAssemblyReference.cache
+E:\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\SIFDatos.dll
+E:\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\SIFDatos.pdb
+E:\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\DevComponents.DotNetBar2.dll
+E:\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\Oracle.DataAccess.dll
+E:\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\SIFModelo.dll
+E:\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\SIFModelo.pdb
+E:\Versiones en Produccion\ComprasB\SIFDatos\obj\Debug\SIFDatos.dll
+E:\Versiones en Produccion\ComprasB\SIFDatos\obj\Debug\SIFDatos.pdb
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\SIFDatos.dll
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\SIFDatos.pdb
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\SIFModelo.dll
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFDatos\bin\Debug\SIFModelo.pdb
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFDatos\obj\Debug\SIFDatos.csprojResolveAssemblyReference.cache
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFDatos\obj\Debug\SIFDatos.dll
+C:\Users\VmjaDesarrollo\Documents\Versiones en Produccion\ComprasB\SIFDatos\obj\Debug\SIFDatos.pdb
+C:\CODIGO\COMPRAS\COMPRAS\SIFDatos\bin\Debug\SIFDatos.dll
+C:\CODIGO\COMPRAS\COMPRAS\SIFDatos\bin\Debug\SIFDatos.pdb
+C:\CODIGO\COMPRAS\COMPRAS\SIFDatos\bin\Debug\SIFModelo.dll
+C:\CODIGO\COMPRAS\COMPRAS\SIFDatos\bin\Debug\SIFModelo.pdb
+C:\CODIGO\COMPRAS\COMPRAS\SIFDatos\obj\Debug\SIFDatos.csprojResolveAssemblyReference.cache
+C:\CODIGO\COMPRAS\COMPRAS\SIFDatos\obj\Debug\SIFDatos.dll
+C:\CODIGO\COMPRAS\COMPRAS\SIFDatos\obj\Debug\SIFDatos.pdb
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFDatos\bin\Debug\SIFDatos.dll
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFDatos\bin\Debug\SIFDatos.pdb
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFDatos\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFDatos\bin\Debug\SIFModelo.dll
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFDatos\bin\Debug\SIFModelo.pdb
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFDatos\obj\Debug\SIFDatos.csprojResolveAssemblyReference.cache
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFDatos\obj\Debug\SIFDatos.dll
+C:\Versiones de produccion V2013\Compras2\ComprasB\SIFDatos\obj\Debug\SIFDatos.pdb
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\SIFDatos.dll
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\SIFDatos.pdb
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\SIFModelo.dll
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\SIFModelo.pdb
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\SIFModelo.dll.config
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\obj\Debug\SIFDatos.csprojAssemblyReference.cache
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\obj\Debug\SIFDatos.csproj.CoreCompileInputs.cache
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\obj\Debug\SIFDatos.csproj.CopyComplete
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\obj\Debug\SIFDatos.dll
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\obj\Debug\SIFDatos.pdb
+C:\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\SIFDatos.dll
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\SIFDatos.pdb
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\SIFModelo.dll
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\SIFModelo.pdb
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\bin\Debug\SIFModelo.dll.config
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\obj\Debug\SIFDatos.csprojAssemblyReference.cache
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\obj\Debug\SIFDatos.csproj.CoreCompileInputs.cache
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\obj\Debug\SIFDatos.csproj.CopyComplete
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\obj\Debug\SIFDatos.dll
+C:\Users\itacmaW2\Desktop\Versiones de Produccion 21-09-2018\compras\compras\SIFDatos\obj\Debug\SIFDatos.pdb
+C:\_codigosProduc\SifCompras\compras\SIFDatos\bin\Debug\SIFDatos.dll
+C:\_codigosProduc\SifCompras\compras\SIFDatos\bin\Debug\SIFDatos.pdb
+C:\_codigosProduc\SifCompras\compras\SIFDatos\bin\Debug\DevComponents.DotNetBar2.dll
+C:\_codigosProduc\SifCompras\compras\SIFDatos\bin\Debug\SIFModelo.dll
+C:\_codigosProduc\SifCompras\compras\SIFDatos\bin\Debug\SIFModelo.pdb
+C:\_codigosProduc\SifCompras\compras\SIFDatos\bin\Debug\SIFModelo.dll.config
+C:\_codigosProduc\SifCompras\compras\SIFDatos\obj\Debug\SIFDatos.csprojAssemblyReference.cache
+C:\_codigosProduc\SifCompras\compras\SIFDatos\obj\Debug\SIFDatos.csproj.CopyComplete
+C:\_codigosProduc\SifCompras\compras\SIFDatos\obj\Debug\SIFDatos.dll
+C:\_codigosProduc\SifCompras\compras\SIFDatos\obj\Debug\SIFDatos.pdb
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\bin\Debug\SIFDatos.dll.config
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\bin\Debug\SIFDatos.dll
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\bin\Debug\SIFDatos.pdb
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\bin\Debug\DevComponents.DotNetBar2.dll
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\bin\Debug\Oracle.DataAccess.dll
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\bin\Debug\SIFModelo.dll
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\bin\Debug\SIFModelo.pdb
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\bin\Debug\SIFModelo.dll.config
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\obj\Debug\SIFDatos.csproj.AssemblyReference.cache
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\obj\Debug\SIFDatos.csproj.CoreCompileInputs.cache
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\obj\Debug\SIFDatos.csproj.CopyComplete
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\obj\Debug\SIFDatos.dll
+C:\FlemingWorkspace\ComprasOFA\SIFDatos\obj\Debug\SIFDatos.pdb
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\SIFDatos.dll.config
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\SIFDatos.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\SIFDatos.pdb
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\DevComponents.DotNetBar2.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\log4net.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\Newtonsoft.Json.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\Oracle.DataAccess.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\SIFModelo.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\SIFModelo.pdb
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\SIFModelo.dll.config
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\log4net.xml
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\bin\Debug\Newtonsoft.Json.xml
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\obj\Debug\SIFDatos.csproj.AssemblyReference.cache
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\obj\Debug\SIFDatos.csproj.CoreCompileInputs.cache
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\obj\Debug\SIFDatos.csproj.CopyComplete
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\obj\Debug\SIFDatos.dll
+C:\FlemingWorkspace\CDISBuenos\ComprasOFA\SIFDatos\obj\Debug\SIFDatos.pdb
